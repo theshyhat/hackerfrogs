@@ -1,0 +1,39 @@
+These are the exact commands for completing the Overthewire's Bandit CTF, levels 6-10. Note that the passwords may or may not be correct, since the passwords for the Bandit CTF are changed periodically.
+
+Current Passwords (As of Jan 14 2024)
+bandit6:P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+bandit7:z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+bandit8:TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit9:EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+bandit10:G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+Bandit 6
+ssh bandit6@bandit.labs.overthewire.org -p2220
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+exit
+echo bandit7:z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S >> banditpass.txt
+
+Bandit 7
+ssh bandit7@bandit.labs.overthewire.org -p2220
+grep millionth data.txt
+exit 
+echo bandit8:TESKZC0XvTetK0S9xNwm25STk5iWrBvP >> banditpass.txt
+
+Bandit 8
+ssh bandit8@bandit.labs.overthewire.org -p2220
+cat data.txt | sort | uniq -c | sort
+exit
+echo bandit9:EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+Bandit 9
+ssh bandit9@bandit.labs.overthewire.org -p2220
+strings data.txt | grep ====
+exit
+echo bandit10:G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+Bandit 10
+ssh bandit10@bandit.labs.overthewire.org -p2220
+cat data.txt | base64 -d
+exit
+echo bandit11:6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
