@@ -1,0 +1,42 @@
+This document has code snippets for the HackerFrogs AfterSchool Python 4 Workshop
+
+Presentation
+
+country_capitals = {"England": "London", "Canada": "Ottawa"}
+for i, j in country_capitals.items():
+  print(i, j)
+
+friend_city = {'Carl': 'Toronto', 'Rachel': 'New York'}
+friend_city['Bobby'] = 'Texas'
+del friend_city['Carl']
+friend_city.pop('Rachel')
+print(friend_city)
+
+Quiz Q1
+
+fruit_colors = {'apple':'red', 'banana':'yellow'}
+for i in fruit_colors:
+  print(i)
+
+Quiz Q2
+
+fruit_colors = {'apple':'red', 'banana':'yellow'}
+fruit_colors['cherry'] = 'red'
+fruit_colors.update({'cherry': 'red'})
+fruit_colors + {'cherry': 'red'} 
+
+Quiz Q3
+
+fruit_colors = {'apple':'red', 'banana':'yellow'}
+fruit_colors['banana'] = False
+fruit_colors.pop('banana')
+del fruit_colors['banana']
+
+Review Exercise
+
+'name': 'player'
+'money': 0
+'health': 100
+
+damage()
+print(stats)
