@@ -1,0 +1,32 @@
+This document has code snippets for the HackerFrogs AfterSchool Python 5 Workshop
+
+---------
+Presentation
+---------
+greetings.py module contents
+
+def default_greeting():
+  print('Hello, friend! How are you?')
+
+-------
+Quiz Q1
+-------
+import random
+from random import *
+from random import randint
+
+-------
+Quiz Q2
+-------
+random(randint())
+random.randint()
+randint().random
+
+-------------
+Review Exercise
+-------------
+import random
+
+def roll_d6(num_rolls):
+  total = 0  
+  for x in range(num)rolls):
