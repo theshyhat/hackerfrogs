@@ -1,0 +1,1 @@
+These are folders and files associated with the HackerFrogs Cyber OSINT Party project, which documents information found about cybersecurity companies, podcasts, organizations, and content creators, through OSINT techniques.
