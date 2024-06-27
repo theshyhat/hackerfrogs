@@ -22,16 +22,18 @@ Tim Adams - Chief Financial Officer (O)
 # What big news stories have they been involved in?
 None found
 # What are some examples of media appearances they've been involved in?
-* Rapid7 CEO: Technology isn't designed to be 100% secure because we value speed
+* Rapid7 CEO: Technology isn't designed to be 100% secure because we value speed (Y)
 https://www.youtube.com/watch?v=jN9M9sgfJhg
-* Interview with Corey Thomas, CEO & Board Chair of Rapid7
+* Interview with Corey Thomas, CEO & Board Chair of Rapid7 (Y)
 https://www.youtube.com/watch?v=9HEHwD53rKM
 # What is their official website and their social media accounts?
-* LinkedIn
+* Official Website
+https://www.rapid7.com/
+* LinkedIn (O)
 https://www.linkedin.com/company/39624
-* Twitter / X
+* Twitter / X (O)
 https://twitter.com/Rapid7
-* Facebook
+* Facebook (O)
 https://www.facebook.com/rapid7
-* Instagram
+* Instagram (O)
 https://www.instagram.com/rapid7/
