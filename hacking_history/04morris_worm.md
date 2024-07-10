@@ -1,5 +1,5 @@
 # Target 04: Morris Worm
-## 
+## Research date: 2024-07-10
 ## What happened?
 
 ## When was the hack discovered?
