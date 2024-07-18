@@ -24,6 +24,7 @@ MS released a security patch and removal tool for this worm. Antivirus companies
 * widespread impact (423000 computers affected)
 * exploit of known vulnerability (patch was available already when this worm started spreading)
 * political motive (a message was sent to bill gates in the execution of the virus)
+* helpful worm (Welchia) was created to help users remove the virus and patch their systems
 ## Lessons Learned?
 * patch management (patch your systems and update your Windows in a timely manner)
 * public awareness campaigns (let the public know that there's a big bad virus out there, and they should be updating their Windows OS)
