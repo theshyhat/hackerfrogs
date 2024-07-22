@@ -41,4 +41,21 @@ https://www.facebook.com/CrowdStrike/
 * Instagram (O)
 https://www.instagram.com/crowdstrike/?hl=en
 * LinkedIn (O)
-https://www.linkedin.com/company/crowdstrike 
+https://www.linkedin.com/company/crowdstrike
+
+# CrowdStrike 2024 "Incident"
+## Research Date: 2024-07-22
+## What happened?
+
+## What was the timeline for the incident?
+
+## How many systems were affected?
+
+## What was the cause of the bug?
+
+## How was the situation resolved?
+
+## What was the aftermath of the event?
+
+## Lessons learned?
+
