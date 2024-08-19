@@ -2,6 +2,8 @@
 ## Research Date: 2024-08-19
 ## Terms to Learn
 - software vulnerability
+
+- 
 - rootkit
 - threat actor
 - APT (advanced persistent threat)
@@ -21,6 +23,9 @@
 - spoof an IP address
 - cryptography and hashing
 - encryption and decryption
+暗号化 (Angōka) - Encryption
+復号化 (Fukugouka) - Decryption
+- 
 - zero day exploit
 - botnet
 - DDOS attack
