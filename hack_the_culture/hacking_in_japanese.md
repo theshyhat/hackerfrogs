@@ -29,4 +29,5 @@
 - spam email
 - OSINT
 - doxxing
-- 
+- virtual machines
+- cloud computing
