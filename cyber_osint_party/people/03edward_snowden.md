@@ -7,14 +7,14 @@ June 21, 1983, Elizabeth City, North Carolina, U.S.
 ## Current / Previous Countries of Residence
 North Carolina, Maryland, Hawaii, Hong Kong, Russia
 ## Companies they've worked for
-    U.S. Army Reserve (2004): Snowden enlisted in the Army Reserve as a Special Forces candidate but was discharged after a few months due to breaking both legs in a training accident.
-    CIA (2006-2009): He worked as a systems administrator and telecommunications systems officer.
-    Dell (2009-2013): Snowden worked as a contractor for the NSA, assigned to various locations including Japan and Hawaii.
-    Booz Allen Hamilton (2013): He briefly worked for this consulting firm as an NSA contractor in Hawaii.
-    National Security Agency (NSA): While not directly employed by the NSA, Snowden worked as a contractor for the agency through Dell and Booz Allen Hamilton.
-    University of Maryland's Center for Advanced Study of Language (2005): He worked as a security guard.
-    Geneva, Switzerland (2007): While with the CIA, he was stationed under diplomatic cover in Geneva.
-    Post-2013: After leaking classified information, Snowden fled to Hong Kong and then to Russia, where he has remained since. He has engaged in speaking engagements, writing, and advocacy work related to privacy and digital rights.
+- U.S. Army Reserve (2004): Snowden enlisted in the Army Reserve as a Special Forces candidate but was discharged after a few months due to breaking both legs in a training accident.
+- CIA (2006-2009): He worked as a systems administrator and telecommunications systems officer.
+- Dell (2009-2013): Snowden worked as a contractor for the NSA, assigned to various locations including Japan and Hawaii.
+- Booz Allen Hamilton (2013): He briefly worked for this consulting firm as an NSA contractor in Hawaii.
+- National Security Agency (NSA): While not directly employed by the NSA, Snowden worked as a contractor for the agency through Dell and Booz Allen Hamilton.
+- University of Maryland's Center for Advanced Study of Language (2005): He worked as a security guard.
+- Geneva, Switzerland (2007): While with the CIA, he was stationed under diplomatic cover in Geneva.
+- Post-2013: After leaking classified information, Snowden fled to Hong Kong and then to Russia, where he has remained since. He has engaged in speaking engagements, writing, and advocacy work related to privacy and digital rights.
 ## Known associates
 Julian Assange (founder of WikiLeaks)
 ## Controversies / Notoriety
