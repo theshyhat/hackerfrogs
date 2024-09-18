@@ -25,10 +25,14 @@ apt update -y && apt install ~/Downloads/sleuthkit-java_4.12.1-1_amd64.deb -y
 #### 444 Installing Autopsy 444
 ~/Downloads/install_application.sh -z ~/Downloads/autopsy-4.21.0.zip -i /usr/local/bin/ -j /usr/lib/jvm/java-1.17.0-openjdk-amd64
 
-#### 555 Cleanup 555
+#### 555 Adding the autopsy app to the system PATH using a symbolic link 555
+ln -s /usr/local/bin/autopsy-4.21.0/bin/autopsy /usr/local/bin/autopsy
+
+#### 666 Cleanup 666
 rm ~/Downloads/autopsy-4.21.0.zip
 rm ~/Downloads/sleuthkit-java_4.12.1-1_amd64.deb
 rm ~/Downloads/install_application.sh
 rm ~/Downloads/install_prereqs_ubuntu.sh
 
+echo "You can run Autopsy with the following command 'autopsy --nosplash'"
 ```
