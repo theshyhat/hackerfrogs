@@ -8,13 +8,13 @@ As of the writing of this guide, the current version of Autopsy (version 4.21.0)
 
 wget -P ~/Downloads https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.21.0/autopsy-4.21.0.zip 
 wget -P ~/Downloads https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.12.1/sleuthkit-java_4.12.1-1_amd64.deb
-wget -P ~/Downloads https://raw.githubusercontent.com/sleuthkit/autopsy/develop/linux_macos_install_scripts/install_prereqs_ubuntu.sh
-chmod +x ~/Downloads/install_prereqs_ubuntu.sh
+wget -P ~/Downloads https://raw.githubusercontent.com/theshyhat/hackerfrogs/main/afterschool/04_digital_forensics/guides/kali_prereqs.sh
+chmod +x ~/Downloads/kali_prereqs.sh
 wget -P ~/Downloads https://raw.githubusercontent.com/sleuthkit/autopsy/develop/linux_macos_install_scripts/install_application.sh
 chmod +x ~/Downloads/install_application.sh
 
 #### 222 Running the prereqs script 222
-~/Downloads/install_prereqs_ubuntu.sh
+~/Downloads/kali_prereqs.sh
 
 #### 333 Removing the current version of the Sleuth kit and replacing it 333
 apt remove sleuthkit -y
@@ -32,7 +32,7 @@ ln -s /usr/local/bin/autopsy-4.21.0/bin/autopsy /usr/local/bin/autopsy
 rm ~/Downloads/autopsy-4.21.0.zip
 rm ~/Downloads/sleuthkit-java_4.12.1-1_amd64.deb
 rm ~/Downloads/install_application.sh
-rm ~/Downloads/install_prereqs_ubuntu.sh
+rm ~/Downloads/kali_prereqs.sh
 
 echo "You can run Autopsy with the following command 'autopsy --nosplash'"
 ```
