@@ -36,6 +36,10 @@ if ! dpkg -l | grep -q "kali-desktop-gnome"; then
     sudo apt -y install kali-desktop-gnome
 fi
 
+echo "Cleaning up..."
+sudo apt autoremove -y
+sudo apt clean
+
 echo "Autopsy prerequisites installed."
 echo "Java 17 installation: "
 update-java-alternatives -l | grep java-1.17
