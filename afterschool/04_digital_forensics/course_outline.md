@@ -29,5 +29,28 @@ https://play.picoctf.org/practice/challenge/30?category=4&difficulty=2&page=4&se
 ### Extensions
 https://play.picoctf.org/practice/challenge/52?category=4&difficulty=2&page=4&search=
 
-## 
+## Network Pcap Challenges
+#### pico - wireshark doo doo do do do do
+- follow HTTP stream
+- stream 5 contains an encrypted message (rot13)
+
+#### pico - wireshark two doo doo doo
+not appropriate
+
+#### pico - shark on wire 1
+- search for the string "pico" in packet bytes
+- follow the UDP stream
+
+#### pico - shark on wire 2
+not appropriate
+
+#### pico - advanced potion making
+- edit magic bytes for PNG file
+
+#### pico - torrent analyze
+
+Wireshark Skills
+
+
+
 
