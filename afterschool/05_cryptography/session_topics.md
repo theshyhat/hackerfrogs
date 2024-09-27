@@ -17,6 +17,7 @@ https://play.picoctf.org/practice/challenge/22?category=5&page=3
 #### pico - ASCII Numbers
 https://play.picoctf.org/practice/challenge/390?category=5&page=4
 ### Base 64
+#### cryptoHack - Base64
 #### pico - interencdec
 https://play.picoctf.org/practice/challenge/418?category=2&page=1
 #### pico - repetitions
@@ -58,6 +59,14 @@ https://play.picoctf.org/practice/challenge/312?category=2&page=1
 https://play.picoctf.org/practice/challenge/289?category=2&page=2
 ## XOR / OTP Cipher
 ### OTP Cipher
+#### cryptoHack - XOR Starter
+https://cryptohack.org/courses/intro/xor0/
+#### cryptoHack - XOR Properties
+https://cryptohack.org/courses/intro/xor1/
+#### cryptoHack - Favourite Byte
+https://cryptohack.org/courses/intro/xorkey0/
+#### cryptoHack - You either know, XOR you don't
+https://cryptohack.org/courses/intro/xorkey1/
 #### pico - Custom encryption
 https://play.picoctf.org/practice/challenge/412?category=2&page=1
 #### pico - Easy1
