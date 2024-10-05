@@ -8,3 +8,13 @@ https://www.youtube.com/watch?v=PRo8qq02bm4
 https://play.picoctf.org/practice/challenge/170?category=5&page=1&search=flag
 #### YouTube Walkthrough
 https://www.youtube.com/watch?v=Fai38Rjij7U
+# Making a New User in JS Linux:
+```
+useradd -m hackerfrog; echo "hackerfrog:frogpass" | chpasswd ; echo 'hackerfrog ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+```
+The new user created is named hackerfrog, and the user's password is frogpass
+# The Linux Filesystem Structure:
+### 1
+https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained
+### 2
+https://www.youtube.com/watch?v=42iQKuQodW4&t=26s
