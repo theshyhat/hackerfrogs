@@ -8,6 +8,10 @@ https://www.youtube.com/watch?v=PRo8qq02bm4
 https://play.picoctf.org/practice/challenge/170?category=5&page=1&search=flag
 #### YouTube Walkthrough
 https://www.youtube.com/watch?v=Fai38Rjij7U
+### Strings It
+https://play.picoctf.org/practice/challenge/37?category=5&page=3&search=
+#### YouTube Walkthrough
+https://www.youtube.com/watch?v=OLI18Ehs27c
 # Making a New User in JS Linux:
 ```
 useradd -m hackerfrog; echo "hackerfrog:frogpass" | chpasswd ; echo 'hackerfrog ALL=(ALL) ALL' | EDITOR='tee -a' visudo
