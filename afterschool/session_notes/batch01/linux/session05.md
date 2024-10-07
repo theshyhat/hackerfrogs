@@ -15,5 +15,12 @@ grep -r pico .
 cd ..
 rm -r bigzip
 ```
-### 
+### System Enumeration Script
+```
+#!/bin/bash
+echo "Your username is `whoami`"
+echo "The name of this host is `hostname`"
+echo "These are the users on the system with shell login:"
+cat /etc/passwd | grep -v nologin
+```
 
