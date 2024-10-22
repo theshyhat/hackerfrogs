@@ -24,3 +24,13 @@ if (number % 2) == 0:
 if (number % 2) == 1:
   print(f'{number} is an odd number!')
 ```
+```
+user_query = input("There's a party! Check if your name is on the list. Input name:")
+
+party_guests = ["John", "Sue", "Ashley"]
+
+if user_query in party_guests:
+    print(f"{user_query} is invited to the party!")
+else:
+    print(f"{user_query} is not on the guest list.")
+```
