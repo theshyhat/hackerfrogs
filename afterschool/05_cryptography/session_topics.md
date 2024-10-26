@@ -74,5 +74,48 @@ https://play.picoctf.org/practice/challenge/43?category=2&page=3
 #### pico - Easy Peasy
 https://play.picoctf.org/practice/challenge/125?category=2&page=3
 
-
+## Session Topics
+### Session 1 - Encoding Schemes
+#### ASCII Encoding / Conversion
+* Decimal to Hex to Binary
+  * Pico - Convertme.py (Decimal to Binary)
+  * Pico - Warmed Up (Hex to Decimal)
+  * Pico - 2Warm (Decimal to Binary)
+* Decimal / Hex / Binary to ASCII
+  * cryptoHack - ASCII
+  * cryptoHack - Hex
+#### Base64 Encoding
+* Base64 schema
+  * cryptoHack - Base64
+  * pico - interencdec
+  * pico - repetitions
+  * pico - Bases
+#### Morse Code
+* It's not a cipher
+  * pico - morse code
+  * pico - tapping
+### Session 2 - Classical Ciphers Part 1
+#### Caesar Cipher / ROT13
+* pico - caesar
+* pico - 13
+* pico - rotation
+#### A1Z26 Cipher
+* pico - The Numbers
+### Session 3 - Classical Ciphers Part 2
+#### Vigenere Cipher
+* pico - Vigenere
+### Session 4 - XOR and the OTP Cipher
+#### XOR Operation
+* cryptoHack - XOR Starter
+* cryptoHack - XOR Properties
+#### OTP Cipher
+#### Session 5 - XOR and the OTP Cipher
+#### cryptoHack - XOR Starter
+https://cryptohack.org/courses/intro/xor0/
+#### cryptoHack - XOR Properties
+https://cryptohack.org/courses/intro/xor1/
+#### cryptoHack - Favourite Byte
+https://cryptohack.org/courses/intro/xorkey0/
+#### cryptoHack - You either know, XOR you don't
+### Session 6 - Modern Encryption Overview
 
