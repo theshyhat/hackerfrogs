@@ -24,3 +24,49 @@ https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 ## File Upload Attacks
 ## Common Linux Priv Esc Techniques
 ## How to enumerate Linux from the inside
+
+## Session 1 - Networking Basics and Nmap Scanning
+### Networking Basics
+* IP addresses
+* Public vs Private Networks
+* TCP vs UDP ports
+### Nmap Usage
+* Legality of Using Nmap
+* Ping sweeping
+* TCP Port Scanning
+* UDP Port Scanning
+## Session 2 - Webserver Enumeration
+### Vulnerability Scanning
+* Using Nikto
+### Directory Busting
+* Using Dirb
+* Using Gobuster
+## Session 3 - Common Services
+### FTP
+* Using FTP
+### SMB
+* Using Enum4linux
+* Using Smbclient
+### Telnet
+* Using Telnet
+## Session 4 - Bruteforcing and Cracking
+### Brute-Forcing
+* Using Hydra
+### Cracking
+* Using John
+## Session 5 - Shell Access
+### Bind Shells
+* Using Bash
+* Using Netcat
+### Reverse Shells
+* Using Bash
+* Using Netcat
+### Stabalizing Netcat Shells
+* Using Python
+* 
+## Session 6 -
+## Session 7 -
+## Session 8 -
+
+
+
