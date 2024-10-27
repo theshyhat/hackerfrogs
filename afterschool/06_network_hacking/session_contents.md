@@ -63,8 +63,7 @@ https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 * Using Netcat
 ### Stabalizing Netcat Shells
 * Using Python
-* 
-## Session 6 -
+## Session 6 - 
 ## Session 7 -
 ## Session 8 -
 
