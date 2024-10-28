@@ -41,4 +41,24 @@ if number % 2 == 0:
 else:
   print(f"{number} is an odd number")
 ```
-
+```
+age = int(input("Please enter your age: "))
+if age < 0:
+  print("Invalid age. Please enter a positive number.")
+elif age <= 1:
+  print("You are an infant.")
+elif age <= 3:
+  print("You are a toddler.")
+elif age <= 12:
+  print("You are a child.")
+elif age <= 19:
+  print("You are a teenager.")
+elif age <= 35:
+  print("You are a young adult.")
+elif age <= 50:
+  print("You are an adult.")
+elif age <= 65:
+  print("You are middle-aged.")
+else:
+  print("You are a senior."))
+```
