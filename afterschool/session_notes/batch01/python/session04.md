@@ -62,3 +62,15 @@ elif age <= 65:
 else:
   print("You are a senior."))
 ```
+```
+print("There is a party going on!")
+
+checked_name = input("Which name do you want to check to see if they are invited?")
+
+party_guests = ["John", "Susan", "Michael", "Adabella"]
+
+if checked_name in party_guests:
+    print(f"{checked_name} is on the list!")
+else:
+    print(f"{checked_name} is not on the list!")
+```
