@@ -34,3 +34,11 @@ if user_query in party_guests:
 else:
     print(f"{user_query} is not on the guest list.")
 ```
+```
+number = int(input("Input a number"))
+if number % 2 == 0:
+  print(f"{number} is an even number")
+else:
+  print(f"{number} is an odd number")
+```
+
