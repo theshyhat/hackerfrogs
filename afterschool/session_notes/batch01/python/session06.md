@@ -16,3 +16,23 @@ def read_webpage(curl_command):
 
 read_webpage(curl_command)
 ```
+# Code Snippet 1
+```
+def greet_user(first_name='John', last_name='Doe'):
+  print(f'Hello {first_name} {last_name}!')
+
+greet_user(last_name='Smith')
+greet_user()
+```
+# Code Snippet 2
+```
+colors = ['blue', 'red', 'green', 'yellow']
+fruits = ['apple', 'orange', 'grape', 'banana', 'watermelon']
+
+def list_out(target):
+  for i in target:
+    print(i)
+
+list_out(colors)
+list_out(fruits)
+```
