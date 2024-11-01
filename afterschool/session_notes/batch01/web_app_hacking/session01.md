@@ -3,26 +3,20 @@
 # Natas CTF Links and Passwords
 ## Natas Level 0
 http://natas0.natas.labs.overthewire.org/
-username: natas0
-password: natas0
+#### username: natas0
+#### password: natas0
 ## Natas Level 1
 http://natas1.natas.labs.overthewire.org/
-username: natas1
-password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+#### username: natas1
+#### password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
 ## Natas Level 2
 http://natas2.natas.labs.overthewire.org/
-username: natas2
-password: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+#### username: natas2
+#### password: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
 ## Natas Level 3
 http://natas3.natas.labs.overthewire.org/
-username: natas3
-password: 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
-
-# Last Session's Exercises
-## WebDecode
-https://play.picoctf.org/practice/challenge/427?page=1&search=web
-#### YouTube walkthrough:
-https://www.youtube.com/watch?v=TdSmaAqt_jk
+#### username: natas3
+#### password: 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
 
 # This Session's Exercises
 ## where are the robots
