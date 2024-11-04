@@ -35,3 +35,15 @@ def level_4_pw_check():
 ```
 # More Python Education Resources
 https://www.reddit.com/r/hackerfrogs/comments/1bjpxmk/python_language_education_resources_online_and/
+
+```
+class HackerFrog:
+    def __init__(self, name, fave_subject):
+        self.name = name
+        self.fave_subject = fave_subject
+    HF_motto = "Hip hop and hack!"
+    
+Web_frog = HackerFrog("Web Frog", "web app hacking")
+
+print(Web_frog)
+```
