@@ -1,0 +1,70 @@
+# HackerFrogs AfterSchool - Web App Hacking Course
+## Session 2 - HTTP Headers and Cookies
+
+# TryHackMe.com signup (we'll be using this website next week)
+https://tryhackme.com/
+# Natas CTF Links and Passwords
+## Natas Level 4
+http://natas4.natas.labs.overthewire.org/
+#### username: natas4
+#### password: QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+### Curl Command
+curl -vv -u "natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ" http://natas4.natas.labs.overthewire.org/
+### Solution Command
+curl -vv -u "natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ" -H "Referer: http://natas5.natas.labs.overthewire.org/" http://natas4.natas.labs.overthewire.org/
+## Natas Level 5
+http://natas5.natas.labs.overthewire.org/
+#### username: natas5
+#### password: 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+### Curl Command
+curl -vv -u "natas5:0n35PkggAPm2zbEpOU802c0x0Msn1ToK" http://natas5.natas.labs.overthewire.org/
+### Solution Command
+curl -vv --cookie "loggedin=1" -u "natas5:0n35PkggAPm2zbEpOU802c0x0Msn1ToK" http://natas5.natas.labs.overthewire.org/
+
+# Last Session's Exercises
+## Cookies
+https://play.picoctf.org/practice/challenge/4?category=1&page=2&search=
+YouTube walkthrough:
+https://youtu.be/_yUeu0xfXZ8
+
+## includes
+https://play.picoctf.org/practice/challenge/274?category=1&page=1&search=
+YouTube walkthrough:
+https://youtu.be/ecnV7L3tzWQ
+
+## roboto sans
+https://play.picoctf.org/practice/challenge/291?category=1&page=3&search=
+YouTube walkthrough:
+https://youtu.be/b6ZjzsEAka0
+
+## secrets
+https://play.picoctf.org/practice/challenge/296?category=1&page=2&search=
+YouTube walkthrough:
+https://youtu.be/zAD2PH22Y5M
+
+# This Session's Exercises
+## Cookies
+https://play.picoctf.org/practice/challenge/173?category=1&page=1
+### YouTube walkthrough
+https://youtu.be/HERP6hCcXSk
+
+## Logon
+https://play.picoctf.org/practice/challenge/46?category=1&page=1
+### YouTube walkthrough
+https://youtu.be/HtYul9Xr0x8
+
+## picobrowser
+https://play.picoctf.org/practice/challenge/9?category=1&page=4
+### Solution Command
+curl -vv -A picobrowser https://jupiter.challenges.picoctf.org/problem/28921/flag
+### YouTube walkthrough
+https://youtu.be/dnhHerwGH2E
+
+## GET aHEAD
+https://play.picoctf.org/practice/challenge/132?category=1&page=1
+### YouTube walkthrough
+https://youtu.be/T11mJqIgy54
+
+# Extra Credit Challenge
+## Who are you?
+https://play.picoctf.org/practice/challenge/142?category=1&page=3
