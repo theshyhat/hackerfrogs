@@ -23,6 +23,7 @@ ssh2john id_rsa > id_rsa.hash
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.hash
 
 '
+useradd -m -s /bin/bash hackerfrog && echo "hackerfrog:hollywood" | chpasswd
 echo 'frog{z1p_h@sh_cr4cked}' > zip_flag.txt
 zip -P starwars zip_crack.zip zip_flag.txt
 echo 'hackerfrog:x:1000:1000::/home/hackerfrog:/bin/bash' > hackerfrog.passwd
