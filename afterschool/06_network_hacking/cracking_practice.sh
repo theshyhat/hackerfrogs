@@ -55,3 +55,4 @@ e4u9JlbJGQ01QGqsvzBPaTAoeisAhweX938yKJHW/XTJI6YQjc6tKXjkbkVgMnjgoB47C+
 jUgSoQ6SVzofG2riX2VV+/0hzlaa+An7Y9qg/P8fVSyXuQ+tggzb6shUehCrhTW4m9tux9
 rtefYsdrBabWSoMj/UDVWNOyrXqR4=
 -----END OPENSSH PRIVATE KEY-----' > id_rsa
+rm zip_flag.txt
