@@ -1,5 +1,5 @@
 #!/bin/bash
-/*
+: '
 This script is used with the HackerFrogs AfterSchool Network hacking course,
 and is meant to help teach hash cracking with the John the Ripper program.
 Here are instructions on how to complete the exercise:
@@ -22,7 +22,7 @@ Step 4: Crack the SSH key hash
 ssh2john id_rsa > id_rsa.hash
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.hash
 
-*/
+'
 echo 'frog{z1p_h@sh_cr4cked}' > zip_flag.txt
 zip -P starwars zip_crack.zip zip_flag.txt
 echo 'hackerfrog:x:1000:1000::/home/hackerfrog:/bin/bash' > hackerfrog.passwd
