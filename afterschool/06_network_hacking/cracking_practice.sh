@@ -1,4 +1,28 @@
 #!/bin/bash
+/*
+This script is used with the HackerFrogs AfterSchool Network hacking course,
+and is meant to help teach hash cracking with the John the Ripper program.
+Here are instructions on how to complete the exercise:
+
+Step 1: Run the script
+cd /tmp
+wget https://github.com/theshyhat/hackerfrogs/edit/main/afterschool/06_network_hacking/cracking_practice.sh
+chmod +x cracking_practice.sh
+./cracking_practice.sh
+
+Step 2: Crack the zip file hash
+zip2john zip_crack.zip > zip.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt zip.hash
+
+Step 3: Crack the Linux password hash
+unshadow hackerfrog.passwd hackerfrog.shadow > hackerfrog.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt hackerfrog.hash
+
+Step 4: Crack the SSH key hash
+ssh2john id_rsa > id_rsa.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.hash
+
+*/
 echo 'frog{z1p_h@sh_cr4cked}' > zip_flag.txt
 zip -P starwars zip_crack.zip zip_flag.txt
 echo 'hackerfrog:x:1000:1000::/home/hackerfrog:/bin/bash' > hackerfrog.passwd
