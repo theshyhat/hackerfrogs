@@ -18,11 +18,11 @@ for key in range(256):  # Possible values for a single byte (0x00 to 0xFF)
     result = xor(data, key)
     try:
         # Attempt to decode the result as an ASCII string
-        decoded = result.decode('ascii')
+        decoded = result.decode()
         if all(32 <= ord(c) <= 126 for c in decoded):  # Check for printable characters
             print(f"Key: {key}, Message: {decoded}")
     except UnicodeDecodeError:
         # Ignore decoding errors for non-ASCII results
         continue
 
-# print(xor(data, chr(16)).decode('ascii'))
+# print(xor(data, 16).decode())
