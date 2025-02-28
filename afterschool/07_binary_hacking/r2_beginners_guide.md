@@ -30,10 +30,10 @@ var_4h is typically stored at rbp-4 (common to x86-64 calling conventions)
 ```
 push - put a value on top of the memory stack
 mov - put a value into a register
-lea - load effective address
+lea - load effective address (used to load in variables)
 call - execute a function in the program
 nop - no operation
-pop - remove the top value from the memory stack - 
+pop - remove the top value from the memory stack
 ret - exit the function 
 endbr64 - marks the start of a function
 sub - allocate memory to the stack (?)
