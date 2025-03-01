@@ -24,6 +24,8 @@ ds
 ood
 ## examine memory address contents at specific address or register
 px <number of bytes to output> @ <address or register>
+## output the values of variables identified by analysis
+afvd
 ## Notes
 var_4h is typically stored at rbp-4 (common to x86-64 calling conventions)
 ## A limited number of Assembly instructions and their definitions
