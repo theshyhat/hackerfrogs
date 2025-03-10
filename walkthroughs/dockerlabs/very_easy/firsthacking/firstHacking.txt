@@ -1,0 +1,7 @@
+There's only one port open: 21
+
+We should search for a hack for this version of vsftpd: 2.3.4
+
+We find a command execution hack for that version of ftp, and we are acting as root
+
+Finis
