@@ -6,3 +6,5 @@
 * Obfuscated Code
 * Ghidra
 * Frida
+* Anti-Rerversing Protections
+* Packed binary analysis
