@@ -1,3 +1,5 @@
+# SSH Command
+ssh bandit5@bandit.labs.overthewire.org -p 2220
 # Username
 bandit5
 # Password
