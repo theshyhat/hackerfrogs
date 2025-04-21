@@ -5,12 +5,11 @@ bandit20
 # objective
 There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
 # method of solve
-The first step we should do is figure out which ports are listening on the localhost
+This SUID binary will connect to a specified port, and if the port service provides the password for the current level as output, the binary will then output the password for bandit 21, so the first step is to setup a listener on a localhost port:
 ```
-netstat -tulpn
+echo '0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO' | nc -nlvp 1234
 ```
-Next, we use Nmap to scan the ports and see what services are running on those ports
+Then we use the suconnect binary to access the listener we set up:
 ```
-nmap -vv -sV -T5 -p2232,2231,2230,2220,22,31046,31691,31960 localhost
+./suconnect 1234
 ```
-
