@@ -1,7 +1,10 @@
 # Session Topic
+## Picture File Forensics
 # Challenge 1: Pico Information
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/186
+### Method of Solve
+
 # Challenge 2: Glory of the Garden
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/44
