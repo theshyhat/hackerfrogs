@@ -71,6 +71,26 @@ ls
 cd base_images
 binwalk 2_c.jpg
 ```
-There's another embedded file in here: `3_c.jpg`. If there are more embedded images inside that one, we can recursively extract them with `binwalk`.
-> Step 6: Recursively extract any other images
-> Step 4: Copy the flag value then submit it to the challenge webpage to complete the exercise.
+There's another embedded file in here: `3_c.jpg`. If there are more embedded images inside that one, we can recursively extract them (extract them all at once) with `binwalk`.
+> Step 6: Recursively extract any other images with `binwalk`
+```
+binwalk -e -M 2_c.jpg
+```
+> Step 7: Move through the directories created until we find the challenge flag
+```
+cd _2_c.jpg.extracted/
+ls
+cd base_images
+ls
+cd _3_c.jpg.extracted/
+ls
+cd base_images
+ls
+cd _4_c.jpg.extracted/
+ls
+```
+> Step 8: Read the challenge flag
+```
+cat flag.txt
+```
+> Step 9: Copy the flag value then submit it to the challenge webpage to complete the exercise.
