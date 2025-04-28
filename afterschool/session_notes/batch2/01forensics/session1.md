@@ -3,6 +3,8 @@
 # Challenge 1: Pico Information
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/186
+### YouTube Walkthrough Link
+https://youtu.be/vhYbKAgijLg
 ### Method of Solve
 > Step 1: Create a directory to work inside of
 ```
@@ -26,6 +28,8 @@ echo 'cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9' | base64 -d
 # Challenge 2: Glory of the Garden
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/44
+## YouTube Walkthrough Link
+https://youtu.be/rloRz-PLiDk
 ### Method of solve
 > Step 1: Create a directory to work inside of
 ```
@@ -44,6 +48,8 @@ strings garden.jpg
 # Challenge 3: Matroyshka Doll
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/129
+## YouTube Walkthrough Link
+https://youtu.be/dArlzDgjH-Y
 ### Method of solve
 > Step 1: Create a directory to work inside of
 ```
