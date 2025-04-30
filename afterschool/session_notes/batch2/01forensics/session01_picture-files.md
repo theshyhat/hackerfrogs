@@ -1,5 +1,5 @@
 # HackerFrogs AfterSchool Forensics Session 1
-## Session Topic Picture File Forensics
+## Session Topic: Picture File Forensics
 # Challenge 1: Pico Information
 ## Pico Link
 https://play.picoctf.org/practice/challenge/186
