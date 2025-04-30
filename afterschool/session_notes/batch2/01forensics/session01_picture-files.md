@@ -6,7 +6,25 @@ https://play.picoctf.org/practice/challenge/186
 ### YouTube Walkthrough Link
 https://youtu.be/Wqtn8iJj3qE?t=740
 ### Method of Solve
-
+> Step 1: Create a directory to work inside of
+```
+mkdir information
+cd information
+```
+> Step 2: Download the challenge file
+```
+wget https://mercury.picoctf.net/static/b4d62f6e431dc8e563309ea8c33a06b3/cat.jpg
+```
+> Step 3: Examine the file with the `exiftool` command
+```
+exiftool cat.jpg
+```
+Notice that the `License` value looks like a base64 encoded string
+> Step 4: Decode the `License` value from the `exiftool` output
+```
+echo 'cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9' | base64 -d
+```
+> Step 5: Copy the flag value then submit it to the challenge webpage to complete the exercise.
 # Challenge 2: Glory of the Garden
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/44
