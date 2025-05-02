@@ -1,5 +1,6 @@
 # HackerFrogs AfterSchool - Forensics
 # Session Topic: Steganography
+If you don't have an account at TryHackMe, create one at this link: https://tryhackme.com/signup
 # Challenge 1: TryHackMe - Mom, are we going to be okay?
 ## TryHackMe Link (Task 4)
 https://tryhackme.com/r/room/ctfcollectionvol1
