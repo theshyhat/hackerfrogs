@@ -37,7 +37,7 @@
 * range force
 * ring zero ctf
 * security blue team
-* 
+* linux journey
 
 ## platform_name
 ### URL
