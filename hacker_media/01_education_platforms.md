@@ -159,8 +159,12 @@ Relatively user-friendly
 * pwn college
 * range force
 * ring zero ctf
-* security blue team
+* security blue team (securityblue.team)
 * linux journey
+* coursera cryptography
+* udemy cryptography for beginners
+* cryptopals
+* 
 
 ## platform_name
 ### URL
