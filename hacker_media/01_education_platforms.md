@@ -123,12 +123,114 @@ Web app specialists
 ### User-Friendliness
 Relatively user-friendly
 
+## Cyber Defenders
+### URL
+https://cyberdefenders.org
+### Free or Paid?
+Free and Paid
+### Cybersecurity Topics Covered
+* digital forensics
+* blue team topics
+* incident response
+### Target Audience
+* all levels of experience
+### User-Friendliness
+* search functions could be more user-friendly, and free labs are a bit difficult to find
+
+## Pwn College
+### https://pwn.college
+### Free or Paid?
+Free
+### Cybersecurity Topics Covered
+* binary hacking
+* reverse engineering
+* Linux
+### Target Audience
+* college-age students (all-ages)
+### User-Friendliness
+* very user friendly
+
+## Offensive Security
+### ULR
+https://www.offsec.com/
+### Free or Paid?
+Limited Free Resources, but majority paid
+### Cybersecurity Topics Covered
+* Windows network hacking
+* Linux network hacking
+* web app hacking
+* binary hacking
+* reverse engineering
+* defensive topics
+### Target Audience
+* intermediate / experienced users recommended
+### User-Friendliness
+* rather good user-friendliness
+
+## CryptoHack
+### URL
+https://cryptohack.org/
+### Free or Paid?
+Free
+### Cybersecurity Topics Covered
+* crytography
+### Target Audience
+* students interested in cryptography
+### User-Friendliness
+* quite user-friendly
+
+## Hackers Academy
+### URL
+https://hackersacademy.com
+### Free or Paid?
+Paid only
+### Cybersecurity Topics Covered
+* wifi hacking
+* web app hacking
+* cloud security
+* blue team
+* OSC analyst
+### Target Audience
+* general
+### User-Friendliness
+* unknown
+
+## Let's Defend
+### URL
+https://letsdefend.io/
+### Free or Paid?
+Free and Paid
+### Cybersecurity Topics Covered
+* incident response
+* digital forensics
+* SOC analyst
+* blue topics in general
+### Target Audience
+* blue team oriented cybersecurity students
+### User-Friendliness
+* rather user-friendly
+
+## StationX
+### URL
+https://www.stationx.net/
+### Free or Paid?
+Paid (Year Subscriptions)
+### Cybersecurity Topics Covered
+* all-round cybersecurity topics covered
+* Tech certification training (CompTIA, etc)
+### Target Audience
+* all-ages / experience
+### User-Friendliness
+* unknown
+
 ## platform_name
 ### URL
 ### Free or Paid?
 ### Cybersecurity Topics Covered
 ### Target Audience
 ### User-Friendliness
+
+
 > platform list
 * tryhackme
 * overthewire
