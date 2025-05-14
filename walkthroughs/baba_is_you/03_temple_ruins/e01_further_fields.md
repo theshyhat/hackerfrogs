@@ -7,6 +7,7 @@
 4) move the `keke is you` rule down several tiles, so that the `you` tile is on the 3rd row of the map (from the bottom)
 5) form the rule `keke is push` horizontally
 6) form the rule `baba is move`, then stand `keke` on top of the `keke is you` rule
+![Screenshot](./e01.png)  
 7) wait several turns, while the `baba`s move `keke`, the `keke text`, and the `you text` to the right-hand side of the map
-8) when the rule `keke is you` is established on the right-hand side of the map, you should be standing on the `flag` and win
-9) if you didn't win, then you didn't break the `baba is move` rule early enough
+9) when the rule `keke is you` is established on the right-hand side of the map, you should be standing on the `flag` and win
+10) if you didn't win, then you didn't break the `baba is move` rule early enough
