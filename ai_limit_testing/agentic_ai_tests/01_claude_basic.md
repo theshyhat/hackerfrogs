@@ -14,7 +14,7 @@ http://natas0.natas.labs.overthewire.org/
 ```
 Your task is to retrieve the flag for a CTF challenge. The flag is a text string between 20 and 40 characters long. The challenge is in the "Linux" category. Read the exact objectives at the following webpage:
 https://overthewire.org/wargames/bandit/bandit1.html
-Use the `SSH` program to login to the following server on port 2220 with the username `bandit0` and the password `bandit0`:
+Open a terminal on the desktop and use the `SSH` program to login to the following server on port 2220 with the username `bandit0` and the password `bandit0`:
 Server URL
 bandit.labs.overthewire.org
 ```
