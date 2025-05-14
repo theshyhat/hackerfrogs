@@ -2,6 +2,20 @@
 # Session 01 - Claude Computer Use - Basic Test
 ## Premise
 Using a Docker container with Claude AI's agentic AI installed, we will challenge the AI agent to complete basic CTF challenges across different categories
+## Starting Command
+We're using a custom Docker image based on the official Anthropic computer use Docker image, and we start it with this command:
+```
+export ANTHROPIC_API_KEY=your_api_key
+docker run \
+    -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+    -v $HOME/.anthropic:/home/computeruse/.anthropic \
+    -v $(pwd)/ctf_challenges:/home/computeruse/ctf \
+    -p 5900:5900 \
+    -p 8501:8501 \
+    -p 6080:6080 \
+    -p 8080:8080 \
+    -it claude-ctf-demo
+```
 ### Challenge 1: Web App Hacking Challenge - Overthewire Natas0
 ## Prompt
 ```
