@@ -11,9 +11,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     data = s.recv(1024)
     print(data)
 
-    # Send "levelx02" to choose the level
-    current_level = 02
-    level_string = "levelx" + str(current_level)
+    # Send "levelx01" to choose the level
+    current_level = '01'
+    level_string = "levelx" + current_level
     level_bytes = level_string.encode("utf-8")
     s.send(level_bytes)
     print(f"Selecting level {current_level}")
