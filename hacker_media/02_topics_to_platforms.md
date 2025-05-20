@@ -68,3 +68,4 @@
 * VulnLab https://www.vulnlab.com/
 * The Hackers Labs https://thehackerslabs.com/
 * A Game of Active Directory https://github.com/Orange-Cyberdefense/GOAD
+* Bad Blood https://github.com/davidprowe/BadBlood
