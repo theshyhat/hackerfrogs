@@ -266,7 +266,7 @@ Paid (Year Subscriptions)
 * coursera cryptography
 * udemy cryptography for beginners
 * cryptopals
-* 
+* https://github.com/project-sekai-ctf
 
 ## platform_name
 ### URL
