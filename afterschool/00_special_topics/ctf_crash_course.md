@@ -12,7 +12,7 @@
 * running Python scripts
 * * Pico - Python Wrangling https://play.picoctf.org/practice/challenge/166
   * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
-  * Pico - PW Crack 2 https://play.picoctf.org/practice/challenge/246
+  * Pico - Serpentine https://play.picoctf.org/practice/challenge/251
 ### Part 3: Intro to Cryptography
 * Base64 encoding
 * * Repetitions https://play.picoctf.org/practice/challenge/371
@@ -27,14 +27,16 @@
 * Robots.txt
 * * Pico - Where are the Robots https://play.picoctf.org/practice/challenge/4
   * Pico - Roboto Sans https://play.picoctf.org/practice/challenge/291
+* HTTP Cookies
+* * Pico - Power Cookie https://play.picoctf.org/practice/challenge/288
+  * Pico - Cookie Monster Secret Recipe https://play.picoctf.org/practice/challenge/469
 ### Part 5: Intro to Digital Forensics
 * Picture File Forensics
 * * Pico - Information https://play.picoctf.org/practice/challenge/186
   * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
 * Disk Image Forensics
-* * Pico - SleuthKit Intro
-  * Pico -
+* * Pico - SleuthKit Apprentice
 ### Part 6: Intro to Binary Hacking
 * Program Logic Flaws
 * * Pico RPS https://play.picoctf.org/practice/challenge/293
-  * Pico 
+  * Pico Clutter Overflow https://play.picoctf.org/practice/challenge/216
