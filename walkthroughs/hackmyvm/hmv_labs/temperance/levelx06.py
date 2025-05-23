@@ -6,37 +6,36 @@ PORT = 9988
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
-    # Connect to the host and receive the message / Conecta al host y recibes la intro general.
+    # Connect to the host and receive the message
     print('Receiving Intro')
     data = s.recv(1024)
     print(data)
 
-    # Send "levelx06" to choose the level / Envia levelx00 para elegir el nivel.
+    # Send "levelx06" to choose the level
     s.send(b'levelx06')
 
-    # Receive the challenge / Recibe el challenge.
+    # Receive the challenge
     print('Receiving challenge.')
     data2 = s.recv(1024)
     print(data2)
 
-    # Convert the bytes to a string
-    challenge_string = data2.decode("utf-8")
+    # Convert the bytes into a string
+    data_string = data2.decode('utf-8')
+    print(f"This is the string:\n{data_string}")
+    
+    # Run the len() function to get the length of the string
+    string_length = str(len(data_string))
+    print(f"This is the length of the string:\n{string_length}")
 
-    # Get the length of the string using the len function
-    length_of_string = len(challenge_string)
-    print(f"Length of string: {length_of_string}")
+    # Convert the string into bytes
+    length_bytes = string_length.encode("utf-8")
+    print(f"This is the length in bytes:\n{length_bytes}")
 
-    # Convert the integer to string
-    length_string = str(length_of_string)
+    # Send the challenge back
+    print('Sending challenge.')
+    s.send(length_bytes)
 
-    # Convert the string to bytes
-    answer_bytes = length_string.encode("utf-8")
-
-    # Send the challenge solved / Envia el resultado del challenge.
-    print('Sending answer...')
-    s.send(answer_bytes)
-
-    # Receive the flag / Recibe la flag.
-    print('Receiving flag...')
-    data3 = s.recv(1024)
-    print(data3)
+    # Receive the flag
+    print('Receiving flag')
+    data4 = s.recv(1024)
+    print(data4)
