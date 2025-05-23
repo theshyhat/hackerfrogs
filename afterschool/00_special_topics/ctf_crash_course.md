@@ -35,7 +35,7 @@
 * * Pico - Information https://play.picoctf.org/practice/challenge/186
   * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
 * Disk Image Forensics
-* * Pico - SleuthKit Apprentice
+* * Pico - SleuthKit Apprentice https://play.picoctf.org/practice/challenge/300
 ### Part 6: Intro to Binary Hacking
 * Program Logic Flaws
 * * Pico RPS https://play.picoctf.org/practice/challenge/293
