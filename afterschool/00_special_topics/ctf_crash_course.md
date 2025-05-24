@@ -9,6 +9,8 @@
 * * Pico - Tab Tab Attack https://play.picoctf.org/practice/challenge/176
   * Pico - Magikarp Ground Mission https://play.picoctf.org/practice/challenge/189
 ### Part 2: Python Programming for Beginners
+#### Website for testing out Python code
+`https://www.online-python.com/`
 * running Python scripts
 * * Pico - Python Wrangling https://play.picoctf.org/practice/challenge/166
   * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
