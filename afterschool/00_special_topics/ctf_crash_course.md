@@ -1,5 +1,7 @@
 # BSides Vancouver 2025 Workshop
 ## Title: CTF Crash Course with PicoCTF
+#### PicoCTF Registration Link
+`https://play.picoctf.org/register`
 ### Part 1: Navigating the Linux Terminal
 * SSH Login
 * * Pico - Super SSH https://play.picoctf.org/practice/challenge/424
@@ -41,4 +43,5 @@
 ### Part 6: Intro to Binary Hacking
 * Program Logic Flaws
 * * Pico RPS https://play.picoctf.org/practice/challenge/293
-  * Pico Clutter Overflow https://play.picoctf.org/practice/challenge/216
+* Buffer Overflow Vulnerabilities
+* * Pico Clutter Overflow https://play.picoctf.org/practice/challenge/216
