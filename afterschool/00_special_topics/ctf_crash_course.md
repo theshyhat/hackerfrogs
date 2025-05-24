@@ -51,7 +51,7 @@
 * * Overthewire - Bandit CTF Game https://overthewire.org/wargames/bandit/
 * * HackMyVM - Venus CTF Game https://hackmyvm.eu/venus/
 * Python Programming
-* * Python Essentials Course  https://www.netacad.com/courses/python-essentials-1?courseLang=en-US
+  * Python Essentials Course  https://www.netacad.com/courses/python-essentials-1?courseLang=en-US
   * https://www.w3schools.com/python/default.asp
 * Cryptography
 * Web App Hacking
