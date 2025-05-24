@@ -3,20 +3,21 @@
 #### PicoCTF Registration Link
 `https://play.picoctf.org/register`
 ### Part 1: Navigating the Linux Terminal
-* SSH Login
-* * Pico - Super SSH https://play.picoctf.org/practice/challenge/424
 * Downloading files
 * * Pico - Obedient Cat https://play.picoctf.org/practice/challenge/147
 * Navigation, listing contents, reading files, tab auto-complete
 * * Pico - Tab Tab Attack https://play.picoctf.org/practice/challenge/176
-  * Pico - Magikarp Ground Mission https://play.picoctf.org/practice/challenge/189
+* SSH Login
+* * Pico - Super SSH https://play.picoctf.org/practice/challenge/424
+* Capstone Exercise
+* * Pico - Magikarp Ground Mission https://play.picoctf.org/practice/challenge/189
 ### Part 2: Python Programming for Beginners
 #### Website for testing out Python code
 `https://www.online-python.com/`
 * running Python scripts
 * * Pico - Python Wrangling https://play.picoctf.org/practice/challenge/166
-  * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
-  * Pico - Serpentine https://play.picoctf.org/practice/challenge/251
+* * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
+* * Pico - Serpentine https://play.picoctf.org/practice/challenge/251
 ### Part 3: Intro to Cryptography
 * Base64 encoding
 * * Repetitions https://play.picoctf.org/practice/challenge/371
@@ -27,17 +28,17 @@
 ### Part 4: Beginner's Web App Security
 * HTTP Source
 * * Pico - Inspect HTML https://play.picoctf.org/practice/challenge/275
-  * Pico - Local Authority https://play.picoctf.org/practice/challenge/278
+* * Pico - Local Authority https://play.picoctf.org/practice/challenge/278
 * Robots.txt
 * * Pico - Where are the Robots https://play.picoctf.org/practice/challenge/4
-  * Pico - Roboto Sans https://play.picoctf.org/practice/challenge/291
+* * Pico - Roboto Sans https://play.picoctf.org/practice/challenge/291
 * HTTP Cookies
 * * Pico - Power Cookie https://play.picoctf.org/practice/challenge/288
-  * Pico - Cookie Monster Secret Recipe https://play.picoctf.org/practice/challenge/469
+* * Pico - Cookie Monster Secret Recipe https://play.picoctf.org/practice/challenge/469
 ### Part 5: Intro to Digital Forensics
 * Picture File Forensics
 * * Pico - Information https://play.picoctf.org/practice/challenge/186
-  * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
+* * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
 * Disk Image Forensics
 * * Pico - SleuthKit Apprentice https://play.picoctf.org/practice/challenge/300
 ### Part 6: Intro to Binary Hacking
@@ -45,3 +46,14 @@
 * * Pico RPS https://play.picoctf.org/practice/challenge/293
 * Buffer Overflow Vulnerabilities
 * * Pico Clutter Overflow https://play.picoctf.org/practice/challenge/216
+### Appendix: Further Learning Resources
+* Linux OS Operations
+* * Overthewire - Bandit CTF Game https://overthewire.org/wargames/bandit/
+* * HackMyVM - Venus CTF Game https://hackmyvm.eu/venus/
+* Python Programming
+* * Python Essentials Course  https://www.netacad.com/courses/python-essentials-1?courseLang=en-US
+  * https://www.w3schools.com/python/default.asp
+* Cryptography
+* Web App Hacking
+* Digital Forensics
+* Binary Hacking
