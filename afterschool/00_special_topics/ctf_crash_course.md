@@ -5,33 +5,103 @@
 ### Part 1: Navigating the Linux Terminal
 * Downloading files
   * Pico - Obedient Cat https://play.picoctf.org/practice/challenge/147
+    * key commands - `wget` `ls` `cat`
+```
+wget https://mercury.picoctf.net/static/a5683698ac318b47bd060cb786859f23/flag
+ls
+cat flag
+```   
 * Navigation, listing contents, reading files, tab auto-complete
   * Pico - Tab Tab Attack https://play.picoctf.org/practice/challenge/176
-* SSH Login
-  * Pico - Super SSH https://play.picoctf.org/practice/challenge/424
+    * key commands `wget` `ls` `unzip` `cd` `cat` `./<file_name>`
+```
+wget https://mercury.picoctf.net/static/659efd595171e4c40378be6a2e9b7298/Addadshashanammu.zip
+unzip Addadshashanammu.zip
+cd Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku
+./fang-of-haynekhtnamet
+```
 * Capstone Exercise
   * Pico - Magikarp Ground Mission https://play.picoctf.org/practice/challenge/189
+    * key commands `ssh` `pwd` `cat` `ls` `cd`
+```
+ssh ctf-player@venus.picoctf.net -p <port_number>
+ls
+cat 1of3.flag.txt
+cat instructions-to-2of3.txt
+cd /
+ls
+cat instructions-to-3of3.txt
+cd ~
+ls
+cat 3of3.flag.txt
+```
 ### Part 2: Python Programming for Beginners
 #### Website for testing out Python code
 `https://www.online-python.com/`
 * running Python scripts
-  * Pico - Python Wrangling https://play.picoctf.org/practice/challenge/166
+  * Pico - Runme.py https://play.picoctf.org/practice/challenge/250
+    * key commands `wget` `python`
+```
+wget https://artifacts.picoctf.net/c/34/runme.py
+ls
+python runme.py
+```
   * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
+    * key commands `wget` `python` `cat`
+```
+wget https://artifacts.picoctf.net/c/10/level1.py
+wget https://artifacts.picoctf.net/c/10/level1.flag.txt.enc
+python level1.py
+cat level1.py
+python level1.py
+```
+The password is `691d`
   * Pico - Serpentine https://play.picoctf.org/practice/challenge/251
+    * key commands `wget` `python` `nano`
+```
+wget https://artifacts.picoctf.net/c/35/serpentine.py
+ls
+python serpentine.py
+nano serpentine.py
+```
 ### Part 3: Intro to Cryptography
 * Base64 encoding
   * Repetitions https://play.picoctf.org/practice/challenge/371
+    * key commands `wget` `base64`
+```
+wget https://artifacts.picoctf.net/c/473/enc_flag
+ls
+cat enc_flag
+base64 -d enc_flag
+base64 -d enc_flag | base64 -d
+base64 -d enc_flag | base64 -d | base64 -d
+base64 -d enc_flag | base64 -d | base64 -d | base64 -d
+base64 -d enc_flag | base64 -d | base64 -d | base64 -d | base64 -d
+base64 -d enc_flag | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d
+```
 * ROT13 Cipher
   * Pico 13 https://play.picoctf.org/practice/challenge/62
+    * key commands `echo` `tr`
+```
+echo 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
 * Caesar Cipher
   * Pico Rotation https://play.picoctf.org/practice/challenge/373
+    * key commands `wget` `cat`
+#### website for solve
+`https://cryptii.com/pipes/caesar-cipher`
 ### Part 4: Beginner's Web App Security
 * HTTP Source
   * Pico - Inspect HTML https://play.picoctf.org/practice/challenge/275
+    * key steps `ctrl + u` to look at webpage source code
   * Pico - Local Authority https://play.picoctf.org/practice/challenge/278
+    * key steps `ctrl + u` to look at webpage source code
+    * click on login.php
+    * click on secure.js
+    * the valid login credentials are `admin` and `strongPassword098765`
 * Robots.txt
   * Pico - Where are the Robots https://play.picoctf.org/practice/challenge/4
-  * Pico - Roboto Sans https://play.picoctf.org/practice/challenge/291
+    * key steps: navigate to the `/robots.txt` endpoint on the website
 * HTTP Cookies
   * Pico - Power Cookie https://play.picoctf.org/practice/challenge/288
   * Pico - Cookie Monster Secret Recipe https://play.picoctf.org/practice/challenge/469
