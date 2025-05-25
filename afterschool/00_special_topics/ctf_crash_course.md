@@ -104,11 +104,24 @@ echo 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
     * key steps: navigate to the `/robots.txt` endpoint on the website
 * HTTP Cookies
   * Pico - Power Cookie https://play.picoctf.org/practice/challenge/288
+    * key steps: click on the `continue as guest` button
+    * access the cookies for the website by using the `web developer tools`
+    * edit the `isAdmin` cookie, changing the value from `0` to `1`
+    * refresh the web browser
   * Pico - Cookie Monster Secret Recipe https://play.picoctf.org/practice/challenge/469
+    * key steps: attempt a login with any username and password
+    * access the cookies for the website by using the `web developer tools`
+    * copy the value of the `secret recipe` cookie
+    * use the following terminal command to get the flag:
+```
+echo 'cGljb0NURntjMDBrMWVfbTBuc3Rlcl9sMHZlc19jMDBraWVzXzk2RjU4REFCfQ%3D%3D' | base64 -d
+```
 ### Part 5: Intro to Digital Forensics
 * Picture File Forensics
   * Pico - Information https://play.picoctf.org/practice/challenge/186
+    * key commands
   * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
+    * key commands
 * Disk Image Forensics
   * Pico - SleuthKit Apprentice https://play.picoctf.org/practice/challenge/300
 ### Part 6: Intro to Binary Hacking
