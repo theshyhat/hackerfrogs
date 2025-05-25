@@ -4,7 +4,7 @@ https://tinyurl.com/y4stu63n
 ## Title: CTF Crash Course with PicoCTF
 #### PicoCTF Registration Link
 `https://play.picoctf.org/register`
-### Part 1: Navigating the Linux Terminal (9:40 AM)
+### Part 1: Navigating the Linux Terminal (10:30 AM)
 * Downloading files
   * Pico - Obedient Cat https://play.picoctf.org/practice/challenge/147
     * key commands - `wget` `ls` `cat`
@@ -37,35 +37,6 @@ cd ~
 ls
 cat 3of3.flag.txt
 ```
-### Part 2: Python Programming for Beginners (10:30 AM)
-#### Website for testing out Python code
-`https://www.online-python.com/`
-* running Python scripts
-  * Pico - Runme.py https://play.picoctf.org/practice/challenge/250
-    * key commands `wget` `python`
-```
-wget https://artifacts.picoctf.net/c/34/runme.py
-ls
-python runme.py
-```
-  * Pico - PW Crack 1 https://play.picoctf.org/practice/challenge/245
-    * key commands `wget` `python` `cat`
-```
-wget https://artifacts.picoctf.net/c/10/level1.py
-wget https://artifacts.picoctf.net/c/10/level1.flag.txt.enc
-python level1.py
-cat level1.py
-python level1.py
-```
-The password is `691d`
-  * Pico - Serpentine https://play.picoctf.org/practice/challenge/251
-    * key commands `wget` `python` `nano`
-```
-wget https://artifacts.picoctf.net/c/35/serpentine.py
-ls
-python serpentine.py
-nano serpentine.py
-```
 ### Part 3: Intro to Cryptography (11:15 AM)
 * Base64 encoding
   * Repetitions https://play.picoctf.org/practice/challenge/371
@@ -92,7 +63,7 @@ echo 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
     * key commands `wget` `cat`
 #### website for solve
 `https://cryptii.com/pipes/caesar-cipher`
-### Part 4: Beginner's Web App Security
+### Part 4: Beginner's Web App Security (12:45 PM)
 * HTTP Source
   * Pico - Inspect HTML https://play.picoctf.org/practice/challenge/275
     * key steps `ctrl + u` to look at webpage source code
@@ -118,7 +89,7 @@ echo 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 echo 'cGljb0NURntjMDBrMWVfbTBuc3Rlcl9sMHZlc19jMDBraWVzXzk2RjU4REFCfQ%3D%3D' | base64 -d
 ```
-### Part 5: Intro to Digital Forensics (12:45 PM)
+### Part 5: Intro to Digital Forensics (1:30 PM)
 * Picture File Forensics
   * Pico - Information https://play.picoctf.org/practice/challenge/186
     * key commands `wget` `exiftool` `base64`
@@ -147,7 +118,7 @@ fsstat -o 360448 disk.flag.img
 fls -f ext4 -o 360448 -r disk.flag.img
 icat -f ext4 -o 360448 -r disk.flag.img 2371
 ```
-### Part 6: Intro to Binary Hacking (1:45 PM)
+### Part 6: Intro to Binary Hacking (2:15 PM)
 * Program Logic Flaws
   * Pico RPS https://play.picoctf.org/practice/challenge/293
     * key commands: `wget` `nc` `nano`
