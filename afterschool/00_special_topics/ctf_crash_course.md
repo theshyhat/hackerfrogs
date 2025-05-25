@@ -1,4 +1,6 @@
 # BSides Vancouver 2025 Workshop
+#### Short Link
+https://tinyurl.com/y4stu63n
 ## Title: CTF Crash Course with PicoCTF
 #### PicoCTF Registration Link
 `https://play.picoctf.org/register`
