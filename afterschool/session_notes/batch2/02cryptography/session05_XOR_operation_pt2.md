@@ -8,6 +8,10 @@ https://youtu.be/Q2xp-f31_Sk?t=884
 ### Method of Solve
 * Step 1: use the following command in the webshell terminal to start editing a file named `hextraordinary.py`:
 ```
+nano hextraordinary.py
+```
+* Step 2: paste the following Python code into the text editor:
+```
 hex1 = 0xc4115
 hex2 = 0x4cf8
 
@@ -15,9 +19,6 @@ one_xor_two = hex1 ^ hex2
 results_hex = hex(one_xor_two)
 
 print("The flag to submit is CTFlearn{" + str(results_hex) + "}")
-```
-* Step 2: paste the following Python code into the text editor:
-```
 ```
 * Step 3: Save the file by typing in `ctrl + x`, then `y`, then hit the enter key to confirm the filename.
 * Step 4: Use the following command to run the Python script:
@@ -74,24 +75,14 @@ Note that in the output, it looks like there's something like `myXORkey`
 * Step 6: Run the Python script again
 * Step 7: Copy the flag, which starts with `crypto`, and ends with `}`
 * Step 8: Submit the flag `crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}`
-# Challenge 3: PicoCTF Rail Fence
+# Challenge 3: PicoCTF Easy1
 ## PicoCTF Link
 https://play.picoctf.org/practice/challenge/289
 ## YouTube Walkthrough Link
 https://youtu.be/k0b6NBDcfTk?t=3393
 ### Method of solve
-#### METHOD 1 (Python)
-* Step 1: use the following command in the webshell terminal to start editing a file named `rail-fence.py`:
-```
-nano rail-fence.py
-```
-* Step 2: Copy and paste the following code into the nano editor:
-```
-```
-* Step 3: Save the file by typing in `ctrl + x`, then `y`, then hit the enter key to confirm the filename.
-* Step 4: Use the following command to run the Python script:
-```
-python rail-fence.py
-```
-* Step 5: Copy the flag, which starts with `picoCTF`, and ends with `}`
-* Step 6: on the PicoCTF challenge page, submit the flag
+* Step 1: Navigate to the following website
+`https://www.boxentriq.com/code-breaking/one-time-pad`
+* Step 2: In the `Encrypt` field, paste in `UFJKXQZQUNB`
+* Step 3: In the `Encryption Key` field, paste in `SOLVECRYPTO`
+* Step 4: Submit the flag picoCTF{CRYPTOISFUN}
