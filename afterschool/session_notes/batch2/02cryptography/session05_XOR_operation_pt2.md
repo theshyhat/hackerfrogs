@@ -77,9 +77,9 @@ Note that in the output, it looks like there's something like `myXORkey`
 * Step 8: Submit the flag `crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}`
 # Challenge 3: PicoCTF Easy1
 ## PicoCTF Link
-https://play.picoctf.org/practice/challenge/289
+https://play.picoctf.org/practice/challenge/43
 ## YouTube Walkthrough Link
-https://youtu.be/k0b6NBDcfTk?t=3393
+https://youtu.be/Q2xp-f31_Sk
 ### Method of solve
 * Step 1: Navigate to the following website
 `https://www.boxentriq.com/code-breaking/one-time-pad`
