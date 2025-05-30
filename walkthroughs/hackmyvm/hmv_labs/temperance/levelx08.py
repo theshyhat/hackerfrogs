@@ -3,55 +3,51 @@ import socket
 HOST = "temperance.hackmyvm.eu"
 PORT = 9988
 
-# Add numbers function code
-def add_2_numbers(num1, num2):
-    return num1 + num2
-
-# Connection code
-
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
-    # Connect to the host and receive the message / Conecta al host y recibes la intro general.
+    # Connect to the host and receive the message
     print('Receiving Intro')
     data = s.recv(1024)
     print(data)
 
-    # Send "levelx08" to choose the level / Envia levelx00 para elegir el nivel.
+    # Send "levelx08" to choose the level
     s.send(b'levelx08')
 
-    # Receive the challenge / Recibe el challenge.
+    # Receive the challenge
     print('Receiving challenge.')
     data2 = s.recv(1024)
     print(data2)
 
-    # Convert the bytes to a string
-    challenge_string = data2.decode("utf-8")
+    # Convert the hex bytes into a string
+    data_string = data2.decode('utf-8')
+    print(f"These are the numbers converted into a string:\n{data_string}")
 
-    # Convert the string into a list
-    challenge_list = [int(num) for num in challenge_string.split()]
+    # Convert the string into list
+    data_list = data_string.split()
+    print(f"This is the string converted to a list:\n{data_list}")
 
-    # Define the numbers to be added
-    num1 = challenge_list[0]
-    num2 = challenge_list[1]
-    print(f"First number to be added: {num1}")
-    print(f"Second number to be added: {num2}")
+    # Convert the list contents to integers
+    int_list = [int(i) for i in data_list]
+    print(f"This is the list items converted to integers:\n{int_list}")
 
-    # Run the add 2 numbers function
-    result_integer = add_2_numbers(num1,num2)
-    print(f"Result: {result_integer}")
+    # Add the two numbers and save the result as a variable
+    two_numbers_added = int_list[0] + int_list[1]
+    print(f"The result of the two numbers added together is {two_numbers_added}")
 
-    # Convert the integer to a string
-    result_string = str(result_integer)
+    # Convert the result to string
+    string_two_numbers = str(two_numbers_added)
+    print(f"This is the result converted to string:\n {string_two_numbers}")
 
     # Convert the string to bytes
-    answer_bytes = result_string.encode("utf-8")
+    bytes_two_numbers = string_two_numbers.encode('utf-8')
+    print(f"This is the result converted to bytes:\n {bytes_two_numbers}")
 
-    # Send the challenge solved / Envia el resultado del challenge.
-    print('Sending answer...')
-    s.send(answer_bytes)
+    # Send the challenge back
+    print('Sending challenge.')
+    s.send(bytes_two_numbers)
 
-    # Receive the flag / Recibe la flag.
-    print('Receiving flag...')
-    data3 = s.recv(1024)
-    print(data3)
+    # Receive the flag
+    print('Receiving flag')
+    data4 = s.recv(1024)
+    print(data4)
