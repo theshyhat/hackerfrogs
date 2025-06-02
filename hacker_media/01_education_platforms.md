@@ -271,6 +271,7 @@ Paid (Year Subscriptions)
 * smashthestack.org
 * pwn.tn
 * https://hack.arrrg.de/
+* https://pydefis.callicode.fr/
 
 ## platform_name
 ### URL
