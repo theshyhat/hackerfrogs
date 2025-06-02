@@ -272,6 +272,7 @@ Paid (Year Subscriptions)
 * pwn.tn
 * https://hack.arrrg.de/
 * https://pydefis.callicode.fr/
+* https://247ctf.com/
 
 ## platform_name
 ### URL
