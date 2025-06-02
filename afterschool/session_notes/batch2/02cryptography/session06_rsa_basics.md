@@ -44,3 +44,7 @@ python rsa_mini.py
 ```
 * Step 5: Copy the flag, which starts with `picoCTF`, and ends with `}`
 * Step 6: on the PicoCTF challenge page, submit the flag `picoCTF{n33d_a_lArg3r_e_d0cd6eae}`
+# Encrypting using RSA in Linux
+```
+
+```
