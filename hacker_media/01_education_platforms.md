@@ -270,6 +270,7 @@ Paid (Year Subscriptions)
 * exploit.education
 * smashthestack.org
 * pwn.tn
+* https://hack.arrrg.de/
 
 ## platform_name
 ### URL
