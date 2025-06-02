@@ -267,6 +267,8 @@ Paid (Year Subscriptions)
 * udemy cryptography for beginners
 * cryptopals
 * https://github.com/project-sekai-ctf
+* exploit.education
+* smashthestack.org
 
 ## platform_name
 ### URL
