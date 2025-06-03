@@ -1,7 +1,7 @@
 # key points
 * we can use the `text is weak` rule to destroy inconvenient rules that are getting in our way
 # method of solve
-1) form `baba is you`
+1) form `keke is baba`
 2) form `text is weak`
 3) destroy the `defeat` text tile by moving into it
 4) form `skull is push`
