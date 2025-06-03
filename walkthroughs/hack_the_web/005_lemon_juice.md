@@ -1,7 +1,7 @@
 # Category
 Web App
 # Concept
-* highlight text
+* highlighting text
 * the text is the same color as the page background
 # Method of solve
 * highlight the text
