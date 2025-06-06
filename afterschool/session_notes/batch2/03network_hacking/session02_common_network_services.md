@@ -1,6 +1,6 @@
 # HackerFrogs AfterSchool Network Hacking Session 2
 ## Session Topic: Common Network Services? /w TryHackMe
-# Challenge 1: TryHackMe 25 Days of Cyber Security - Task 11
+# Challenge 1: TryHackMe 25 Days of Cyber Security - Task 11 (FTP)
 ## TryHackMe Link (Task 11)
 https://tryhackme.com/room/learncyberin25days
 ### YouTube Walkthrough Link
@@ -13,23 +13,118 @@ https://youtu.be/9T8DC95PoxM?t=1049
 * Step 5: at the top of the webpage, copy the IP address under the `Target IP Address`. You can click on the icon to the right of the IP address to copy it to your clipboard
 * Step 6: click on the control bar located in the middle of the screen, then click on the clipboard button
 * Step 7: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
-* Step 8: paste the IP address into the terminal, then use the `ping` command like the following:
+* Step 8: paste the IP address into the terminal, then use the `ftp` command like the following:
 ```
-ping -c 4 <ip_address>
+ftp <ip_address>
 ```
-If we can contact the IP address, then we should see that the program report that all of the packets were received
-* Step 9: Use the following command to ping sweep the network range with the target machine and see what other machines are online
+We can login anonymously, so we enter `anonymous` as the username, and a blank password (just press the enter key).
+* Step 9: Use the following FTP command to see the contents of the directory
 ```
-nmap -sn 10.10.11.0/24
+ls
 ```
-You should see a few different IP addresses on the network return as `Host is up`
-* Step 10: Use the following command to see the networking information of the AttackBox:
+We see a few different directories, but there seems to only be one directory with content, the `public` directory
+* Step 10: Use the following command to move into the `public` directory in FTP
 ```
-ip a
+cd public
 ```
-The `inet` value under the `ens5` networking interface is our IP address on the network.
-* Step 11: Use the following command to scan the target machine using the Nmap program:
+* Step 11: Use the following command to see the directory contents
 ```
-nmap -vv -sCV -p- -T4 <IP_address>
+ls
 ```
-In the Nmap output, you should see that there are three ports open on the machine, 3389, 80, and 2222
+There are two files in the directory, `backup.sh`, and `shoppinglist.txt`
+* Step 12: Download the two files with the following two commands:
+```
+get backup.sh
+get shoppinglist.txt
+```
+Now that we've downloaded the files, we can exit the server and look at the file contents
+* Step 13: Use the following command to exit the FTP server
+```
+exit
+```
+* Step 14: Read the `shopping.txt` file with the following command
+```
+cat shoppinglist.txt
+```
+* Step 15: Go to the TryHackMe webpage, and navigate to the top of the webpage, and under the red Target Machine Information header, click on the red `Terminate` button
+# Challenge 2: TryHackMe 25 Days of Cyber Security - Task 12 (SMB)
+## TryHackMe Link (Task 12)
+https://tryhackme.com/room/learncyberin25days
+### YouTube Walkthrough Link
+https://youtu.be/9T8DC95PoxM?t=2042
+### Method of Solve
+* Step 1: click on the Task 12 header
+* Step 2: click on the green `Start Machine` button
+* Step 3: at the top of the webpage, copy the IP address under the `Target IP Address`. You can click on the icon to the right of the IP address to copy it to your clipboard
+* Step 4: click on the control bar located in the middle of the screen, then click on the clipboard button
+* Step 5: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
+* Step 6: paste the IP address into the terminal, then use the `enum4linux` command like the following:
+```
+enum4linux -S <ip_address>
+```
+This command gives us a list of fileshares that we can access. There's only one available: `/tbfc-santa`
+* Step 7: Use the following FTP command to see the contents of the directory
+```
+ls
+```
+We see a few different directories, but there seems to only be one directory with content, the `public` directory
+* Step 8: Use the following smbclient command to connect to the fileshare
+```
+smbclient //<IP_address>/tbfc-santa -N
+```
+Make sure you replace <IP_address> with your own IP address for the target machine. We are now connected anonymously to the SMB fileshare
+* Step 9: Use the following command to see the fileshare contents
+```
+dir
+```
+There is one file and one directory in the fileshare, but it looks like the directory is empty
+* Step 10: Download the file with the following command:
+```
+get note_from_mcskidy.txt
+```
+Now that we've downloaded the files, we can exit the server and look at the file contents
+* Step 11: Use the following command to exit the SMB server
+```
+exit
+```
+* Step 12: Read the `note_from_mcskidy.txt` file with the following command
+```
+cat note_from_mcskidy.txt
+```
+* Step 13: Go to the TryHackMe webpage, and navigate to the top of the webpage, and under the red Target Machine Information header, click on the red `Terminate` button
+# Challenge 2: TryHackMe 25 Days of Cyber Security - Task 15 (Telnet)
+## TryHackMe Link (Task 15)
+https://tryhackme.com/room/learncyberin25days
+### YouTube Walkthrough Link
+https://youtu.be/9T8DC95PoxM?t=2042
+### Method of Solve
+* Step 1: click on the Task 15 header
+* Step 2: click on the green `Start Machine` button
+* Step 3: at the top of the webpage, copy the IP address under the `Target IP Address`. You can click on the icon to the right of the IP address to copy it to your clipboard
+* Step 4: click on the control bar located in the middle of the screen, then click on the clipboard button
+* Step 5: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
+* Step 6: paste the IP address into the terminal, then use the `telnet` command like the following:
+```
+telnet <ip_address>
+```
+There's a set of credentials in the Telnet banner message, so login with the username `santa` and password `clauschristmas`. You will not see any output while you're typing in the password. This is normal.
+* Step 7: Use the following command to see the contents of the directory
+```
+ls
+```
+There are two files in this directory. Let's read them
+* Step 8: Use the following commands to read the files
+```
+cat christmas.sh
+cat cookies_and_milk.txt
+```
+It looks like the `christmas.sh` file creates a Christmas tree graphic in the terminal
+* Step 9: Use the following command to run the `christmas.sh` script
+```
+./christmas.sh
+```
+It's a pretty tree! We can use the `ctrl+x` keyboard shortcut to quit out of the script when we're ready
+* Step 10: Exit the server with the following command:
+```
+exit
+```
