@@ -35,6 +35,8 @@
   * PORP - Practical OSINT Research Professional
   * PMPA - Practical Mobile Pentest Associate
   * PMRP Practical IoT Pentest Associate
+* Security Blue Team
+  * Blue Team Level 1 (BTL1)
 
 # OSCP+
 # URL
