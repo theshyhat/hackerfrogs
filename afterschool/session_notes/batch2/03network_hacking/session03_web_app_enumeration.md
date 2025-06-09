@@ -1,6 +1,6 @@
 # HackerFrogs AfterSchool Network Hacking Session 3
 ## Session Topic: Web App Enumeration? /w TryHackMe
-# Challenge 1: TryHackMe 25 Days of Cyber Security - Task 11 (FTP)
+# Challenge 1: TryHackMe DVWA Room
 ## TryHackMe Link
 https://tryhackme.com/room/dvwa
 ### YouTube Walkthrough Link
