@@ -4,39 +4,39 @@ import codecs
 HOST = "temperance.hackmyvm.eu"
 PORT = 9988
 
-# Connection code
-
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
-    # Connect to the host and receive the message / Conecta al host y recibes la intro general.
+    # Connect to the host and receive the message
     print('Receiving Intro')
     data = s.recv(1024)
     print(data)
 
-    # Send "levelx09" to choose the level / Envia levelx00 para elegir el nivel.
+    # Send "levelx09" to choose the level
     s.send(b'levelx09')
 
-    # Receive the challenge / Recibe el challenge.
+    # Receive the challenge
     print('Receiving challenge.')
     data2 = s.recv(1024)
     print(data2)
 
-    # Convert the bytes to a string
-    challenge_string = data2.decode("ascii")
+    # Convert the bytes into a string
+    data_string = data2.decode('utf-8')
+    print(f"These are the bytes converted into a string:\n{data_string}")
 
-    # Run the ROT13 function on the string
-    rot13_decoded_string = codecs.encode(challenge_string, 'rot-13')
-    print(f"This is the ROT13 decoded string: {rot13_decoded_string}")
+    # Convert the string into a rot13 encoded string
+    data_rot13 = codecs.encode(data_string, 'rot13')
+    print(f"This is the string encoded in rot13:\n{data_rot13}")
 
     # Convert the string to bytes
-    answer_bytes = rot13_decoded_string.encode("ascii")
+    bytes_rot13 = data_rot13.encode('utf-8')
+    print(f"This is the rot13 string converted to bytes:\n {bytes_rot13}")
 
-    # Send the challenge solved / Envia el resultado del challenge.
-    print('Sending answer...')
-    s.send(answer_bytes)
+    # Send the challenge back
+    print('Sending challenge.')
+    s.send(bytes_rot13)
 
-    # Receive the flag / Recibe la flag.
-    print('Receiving flag...')
-    data3 = s.recv(1024)
-    print(data3)
+    # Receive the flag
+    print('Receiving flag')
+    data4 = s.recv(1024)
+    print(data4)
