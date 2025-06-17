@@ -10,3 +10,11 @@ qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
 ```
 git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
 ```
+* there's nothing in the git logs, and nothing in the git branches, but there's a weird looking tag
+```
+git show-ref --tags
+```
+* We can look at the the secret tag by using this command:
+```
+git show secret
+```
