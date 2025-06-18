@@ -1,59 +1,68 @@
-# HackerFrogs AfterSchool Network Hacking Session 6
-## Session Topic: Brute Force Attacks /w TryHackMe
+# HackerFrogs AfterSchool Network Hacking Session 7
+## Session Topic: File Transfers /w TryHackMe
 # Challenge 1: TryHackMe Crack the Hash Room
 ## TryHackMe Link
-https://tryhackme.com/room/hydra
+https://tryhackme.com/room/c2carnage
 ### YouTube Walkthrough Link
-https://youtu.be/pA24wtu_vmo?t=1145
+https://youtu.be/Efr6szwDcvs?t=962
 ### Method of Solve
-* Step 1: Click on the Task 3 header in the TryHackMe page, then click on the green "Start Machine" button
-* Step 2: go to the top of the webpage, and click on the "Start AttackBox" button located underneath the cloud icon with the santa hat on it
+* Step 1: Click on the Task 1 header in the TryHackMe page, then click on the green "Start Machine" button
+* Step 2: go to the top of the webpage, and click on the "Start AttackBox" button
 * Step 3: wait 2 minutes for the AttackBox to finish loading
 * Step 4: after the AttackBox finishes loading, at the bottom-middle of the TryHackMe webpage click on the "View in full screen" button, which looks like two arrows pointing away from each other
 * Step 5: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
-## Part 1: Setting Up Burp Suite
-* Step 1: On the AttackBox, start Burp Suite by clicking on the blue icon on the right-hand edge of the desktop
-* Step 2: Click on the `settings` button located at the upper-right corner of the Burp Suite interface
-* Step 3: In the settings menu, type the word `browser` into the search field at the top-left of the Settings window
-* Step 4: Underneath the `Browser running` project setting, click on the checkbox labeled `Allow Burp's browser to run without a sandbox`
-* Step 5: Close the settings window
-* Step 6: In Burp Suite, click on the `Proxy` tab, located in-between the `Target` and `Intruder` tabs 
-* Step 7: Click on the blue `Intercept on` button so that button reads `Intercept is off`
-* Step 8: Click on the `Open browser` button to start the Burp Suite browser
-## Part 2: Brute force attack the login page
-* Step 1: Go back to the TryHackMe webpage, and go to the top of the page. Underneath the `Target Machine Information` header, note the IP address
-* Step 2: In the AttackBox, use the Burp Suite browser to navigate to the following webpage `http://<IP_address>`
-Make sure to replace <IP_address> with the IP address you noted in Step 1 (the Target Machine Information IP)
-* Step 3: On the resulting webpage, try logging in with the following username and password: `molly` `test`
-* Step 4: Go to Burp Suite and click on the `Proxy` tab, then the `HTTP history` tab
-* Step 5: In the resulting list, scroll down to the bottom, and click on the row where the Method column is POST
-* Step 6: In the window that appears in the lower-left corner, right-click and select `Copy to file`
-* Step 7: Save the file as `request.txt`
-* Step 8: In the AttackBox terminal, use the following command to edit the `request.txt` file
+* Step 6: in the Carnage desktop, click on the terminal shortcut button to open a terminal
+## Part 1: Clipboard and Base64 File Transfer
+We will move a picture file from the Carnage machine to the AttackBox machine.
+* Step 1: In the Carnage terminal, use the following command to enter the Pictures directory:
 ```
-nano request.txt
+cd Pictures
 ```
-* Step 9: in the text editor, scroll down to the bottom and replace the word `test` with `FUZZ`
-* Step 10: Save the file by using the `ctrl+x` keyboard shortcut, then input `y`, then press the `enter` key
-* Step 11: Use the following FFuF command to brute force the login page:
+* Step 2: Use the following command to get the file contents of the `THM-Menu-Logo-2.png` picture file in Base64 encoding:
 ```
-ffuf -request request.txt -w /usr/share/wordlists/rockyou.txt -request-proto http
+cat THM-Menu-Logo-2.png | base64
 ```
-Don't wait for the command to finish, and use the `ctrl+c` keyboard to quit out of the command. Note that all of the incorrect logins have `Size: 56`
-* Step 12: Use the following FFuF command to filter out all output that returns `Size: 56`, so we only see successful logins
+* Step 3: Highlight all of the output from the previous command, (be careful to not highlight any other data) then copy the data to your clipboard with either the `ctrl+shift+c` keyboard shortcut, or right-clicking, and selecting `copy`
+* Step 4: In the AttackBox terminal, use the following command to create a file named `picture.b64` in the nano text editor
 ```
-ffuf -request request.txt -w /usr/share/wordlists/rockyou.txt -request-proto http -fs 56
+nano picture.b64
 ```
-The correct password comes back very quickly, and it's `sunshine`
-* Step 13: Use the username / password `molly` / `sunshine` to login to the webpage
-## Part 3: Brute forcing the SSH login
-* Step 1: In the AttackBox terminal, use the following command to brute force the SSH login using the Hydra program
+* Step 5: In the AttackBox desktop, click on the control bar button located on the left-middle edge of the window, then click on the `Clipboard` button, then paste the base64 data into the clipboard, then close the clipboard and the control bar
+* Step 6: in the AttackBox terminal, paste in the base64 data, then save the file by using the `ctrl+x` keyboard shortcut, then `y`, then the `enter` key
+* Step 7: Restore the picture file to its original form with the following command
 ```
-hydra -l molly -P /usr/share/wordlists/rockyou.txt <IP_address> ssh
+base64 -d picture.b64 > picture.png
 ```
-After a few moments, we should get the password, which is `butterfly`
-* Step 2: Login to SSH as molly with the following command
+* Step 8: Use the following command open the `picture.png` file and confirm that the file copied correctly
 ```
-ssh molly@<IP_address>
+xdg-open picture.png
 ```
-When prompted, use the password `butterfly`
+## Part 2: Python HTTP Server and Wget File Transfer
+In this transfer method, we'll be hosting files via the Python HTTP server and downloading the files using Wget
+* Step 1: In the Carnage terminal, use the following Python command to start the HTTP server
+```
+python3 -m http.server 8888
+```
+* Step 2: In the AttackBox terminal, use the following wget command to download the picture file from the Carnage machine:
+```
+wget http://<IP_address>:8888/THM-Menu-Logo-2.png
+```
+Make sure to replace <IP_address> with the IP address of the Carnage machine (it can be located on the terminal in the following format `ubuntu@<IP_address>`)
+* Step 3: Confirm that the file transferred successfully by using the following command
+```
+xdg-open THM-Menu-Logo-2.png
+```
+* Step 4: Delete the picture file in preparation for the next file transfer method
+```
+rm THM-Menu-Logo-2.png
+```
+## Part 3: Scp (SSH) File Transfer
+* Step 1: In the Carnage machine terminal, use the following command to transfer the picture file 
+```
+scp root@<AttackBox_IP>:/root/picture.png .
+```
+When prompted for the password, look at the AttackBox's URL address bar, and look for the value of `password=SOMETHING&`. The password is the value between the `=` sign and the `&` sign. Paste that into the Carnage machine clipboard from the control bar, then paste it into the terminal to submit the password
+* Step 2: Confirm the file transferred correctly by using the following command
+```
+xdg-open picture.png
+```
