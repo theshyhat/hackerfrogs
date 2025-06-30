@@ -1,5 +1,8 @@
 # username
 vortex1
+```
+ssh vortex1@vortex.labs.overthwire.org -p 2228
+```
 # password
 Gq#qu3bF3
 # objective
