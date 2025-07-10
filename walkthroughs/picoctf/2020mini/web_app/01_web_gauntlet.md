@@ -15,4 +15,6 @@ Web App
 * there is a filter on ???
 * the payload is `admin';`
 ## Round 4
+* there is a filter on the following characters `or and = like > < -- admin`
+* the payload is `ad'||'min';`
 ## Round 5
