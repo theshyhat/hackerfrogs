@@ -8,7 +8,7 @@ bandit29
 # method of solve
 * we need to git clone this level's repo as well
 ```
-git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
 ```
 * we look at the git logs for the master branch, and they indicate that the README.md file was redacted
 * we need to take a look at the different branches for the repo
