@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+body, html {
+    background-color: #f3f5f7;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    color: #474b50;
+}
+.form {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.form .form-label {
+    display: block;
+    padding: 20px 0 10px 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #474b50;
+}
+.form .form-group {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.form .form-group .form-icon-left, .form .form-group .form-icon-right {
+    fill: #c1c6cb;
+    width: 40px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    pointer-events: none;
+}
+.form .form-group .form-icon-left {
+    left: 0;
+}
+.form .form-group .form-icon-left + .form-input {
+    padding-left: 40px;
+}
+.form .form-group .form-icon-right {
+    right: 0;
+}
+.form .form-group .form-icon-right + .form-input {
+    padding-right: 40px;
+}
+.form .form-group:focus-within .form-icon-left {
+    fill: #989fa8;
+}
+.form .form-input {
+    width: 100%;
+    height: 43px;
+    border: 1px solid #dee1e6;
+    padding: 0 15px;
+    border-radius: 4px;
+    color: #000;
+}
+.form .form-input::placeholder {
+    color: #989fa8;
+}
+.form .form-link {
+    color: #2a8eeb;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+}
+.form .form-link:hover {
+    color: #136fc5;
+}
+.form p.register-link {
+    margin: 0;
+    padding: 20px 0 0 0;
+    font-size: 14px;
+    color: #6b7179;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+    border: 0;
+    background-color: #3e7bd6;
+    color: #FFFFFF;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    height: 42px;
+    box-shadow: 0px 0px 6px 1px rgba(45, 57, 68, 0.1);
+}
+.btn:hover {
+    background-color: #3172d3;
+}
+.login, .register {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    max-width: 95%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
+    border-radius: 5px;
+    margin: 100px auto;
+    padding: 35px;
+}
+.login h1, .register h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 0;
+    margin: 0;
+}
+.pad-1 { padding: 5px; }
+.mar-1 { margin: 5px; }
+.pad-2 { padding: 10px; }
+.mar-2 { margin: 10px; }
+.pad-3 { padding: 15px; }
+.mar-3 { margin: 15px; }
+.pad-4 { padding: 20px; }
+.mar-4 { margin: 20px; }
+.pad-5 { padding: 25px; }
+.mar-5 { margin: 25px; }
+.pad-bot-1 { padding-bottom: 5px; }
+.pad-top-1 { padding-top: 5px; }
+.pad-left-1 { padding-left: 5px; }
+.pad-right-1 { padding-right: 5px; }
+.pad-x-1 { padding-left: 5px; padding-right: 5px; }
+.pad-y-1 { padding-top: 5px; padding-bottom: 5px; }
+.mar-bot-1 { margin-bottom: 5px; }
+.mar-top-1 { margin-top: 5px; }
+.mar-left-1 { margin-left: 5px; }
+.mar-right-1 { margin-right: 5px; }
+.mar-x-1 { margin-left: 5px; margin-right: 5px; }
+.mar-y-1 { margin-top: 5px; margin-bottom: 5px; }
+.pad-bot-2 { padding-bottom: 10px; }
+.pad-top-2 { padding-top: 10px; }
+.pad-left-2 { padding-left: 10px; }
+.pad-right-2 { padding-right: 10px; }
+.pad-x-2 { padding-left: 10px; padding-right: 10px; }
+.pad-y-2 { padding-top: 10px; padding-bottom: 10px; }
+.mar-bot-2 { margin-bottom: 10px; }
+.mar-top-2 { margin-top: 10px; }
+.mar-left-2 { margin-left: 10px; }
+.mar-right-2 { margin-right: 10px; }
+.mar-x-2 { margin-left: 10px; margin-right: 10px; }
+.mar-y-2 { margin-top: 10px; margin-bottom: 10px; }
+.pad-bot-3 { padding-bottom: 15px; }
+.pad-top-3 { padding-top: 15px; }
+.pad-left-3 { padding-left: 15px; }
+.pad-right-3 { padding-right: 15px; }
+.pad-x-3 { padding-left: 15px; padding-right: 15px; }
+.pad-y-3 { padding-top: 15px; padding-bottom: 15px; }
+.mar-bot-3 { margin-bottom: 15px; }
+.mar-top-3 { margin-top: 15px; }
+.mar-left-3 { margin-left: 15px; }
+.mar-right-3 { margin-right: 15px; }
+.mar-x-3 { margin-left: 15px; margin-right: 15px; }
+.mar-y-3 { margin-top: 15px; margin-bottom: 15px; }
+.pad-bot-4 { padding-bottom: 20px; }
+.pad-top-4 { padding-top: 20px; }
+.pad-left-4 { padding-left: 20px; }
+.pad-right-4 { padding-right: 20px; }
+.pad-x-4 { padding-left: 20px; padding-right: 20px; }
+.pad-y-4 { padding-top: 20px; padding-bottom: 20px; }
+.mar-bot-4 { margin-bottom: 20px; }
+.mar-top-4 { margin-top: 20px; }
+.mar-left-4 { margin-left: 20px; }
+.mar-right-4 { margin-right: 20px; }
+.mar-x-4 { margin-left: 20px; margin-right: 20px; }
+.mar-y-4 { margin-top: 20px; margin-bottom: 20px; }
+.pad-bot-5 { padding-bottom: 25px; }
+.pad-top-5 { padding-top: 25px; }
+.pad-left-5 { padding-left: 25px; }
+.pad-right-5 { padding-right: 25px; }
+.pad-x-5 { padding-left: 25px; padding-right: 25px; }
+.pad-y-5 { padding-top: 25px; padding-bottom: 25px; }
+.mar-bot-5 { margin-bottom: 25px; }
+.mar-top-5 { margin-top: 25px; }
+.mar-left-5 { margin-left: 25px; }
+.mar-right-5 { margin-right: 25px; }
+.mar-x-5 { margin-left: 25px; margin-right: 25px; }
+.mar-y-5 { margin-top: 25px; margin-bottom: 25px; }
