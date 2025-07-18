@@ -189,3 +189,105 @@ h1, h2, h3, h4, h5, h6 {
 .mar-right-5 { margin-right: 25px; }
 .mar-x-5 { margin-left: 25px; margin-right: 25px; }
 .mar-y-5 { margin-top: 25px; margin-bottom: 25px; }
+
+.header {
+    background-color: #333941;
+    height: 60px;
+    width: 100%;
+}
+.header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 900px;
+    height: 100%;
+}
+.header .wrapper h1, .header .wrapper a {
+    display: inline-flex;
+    align-items: center;
+}
+.header .wrapper h1 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+.header .wrapper .menu {
+    display: flex;
+    align-items: center;
+}
+.header .wrapper .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 12px;
+    margin: 0 3px;
+    text-decoration: none;
+    color: #dddfe2;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+.header .wrapper .menu a svg {
+    fill: #dddfe2;
+    margin: 2px 8px 0 0;
+}
+.header .wrapper .menu a:hover, .header .wrapper .menu a:active {
+    color: #ebebec;
+}
+.header .wrapper .menu a:hover svg, .header .wrapper .menu a:active svg {
+    fill: #ebebec;
+}
+.header .wrapper .menu a:last-child {
+    margin-right: 0;
+}
+.content {
+    width: 900px;
+    margin: 0 auto;
+}
+.content .page-title {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 10px 0;
+}
+.content .page-title h2 {
+    margin: 0;
+    padding: 0 0 7px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #53585e;
+}
+.content .page-title p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #777e86;
+}
+.content .block {
+    box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.content .block p {
+    padding: 7px;
+    margin: 0;
+}
+.content .profile-detail {
+    display: flex;
+    flex-flow: column;
+    font-size: 18px;
+    padding: 5px 0;
+}
+.content .profile-detail strong {
+    display: block;
+    color: #92979e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
