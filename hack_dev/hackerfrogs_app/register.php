@@ -10,6 +10,7 @@ if (isset($_SESSION['account_loggedin'])) {
 <!DOCTYPE html>
 <html>
         <head>
+                <link href="style.css" rel="stylesheet" type="text/css">
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width,minimum-scale=1">
                 <title>Register</title>
