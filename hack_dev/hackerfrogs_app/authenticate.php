@@ -41,15 +41,15 @@ if ($stmt->num_rows > 0) {
         $_SESSION['account_name'] = $_POST['username'];
         $_SESSION['account_id'] = $id;
         // Output success message
-        echo 'Welcome back, ' . htmlspecialchars($_SESSION['account_name'], ENT_QUOTES) . '!';
+        header('Location: home.php');
         exit;
     } else {
         // Incorrect password
-        echo 'Incorrect username and/or password!';
+        echo 'Incorrect password!';
     }
 } else {
     // Incorrect username
-    echo 'Incorrect username and/or password!';
+    echo 'Incorrect username!';
 }
 
     // Close the prepared statement
