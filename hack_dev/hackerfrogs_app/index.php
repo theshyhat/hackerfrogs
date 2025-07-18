@@ -18,7 +18,7 @@ if (isset($_SESSION['account_loggedin'])) {
     <body>
         <div class="login">
 
-            <h1>Member Login</h1>
+            <h1>HackerFrogs Login</h1>
 
             <form action="authenticate.php" method="post" class="form login-form">
 
