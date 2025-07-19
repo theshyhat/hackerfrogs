@@ -6,64 +6,65 @@ import io
 HOST = "temperance.hackmyvm.eu"
 PORT = 9988
 
-# Writing the decode and extract zip function
+def extract_base64_zip(zip_data, extract_to_path="extracted_files"):
+    """
+    Decodes a Base64 encoded ZIP file, extracts its contents, and saves them.
 
-def decode_and_extract_zip(base64_zip):
+    Args:
+        base64_encoded_zip_data (str): The Base64 encoded string of the ZIP file.
+        extract_to_path (str): The directory where extracted files will be saved.
+    """
     try:
-        # Decode the base64 string
-        zip_data = base64.b64decode(base64_zip)
+        # 1. Create an in-memory file-like object
+        zip_file_in_memory = io.BytesIO(zip_data)
 
-        # Create an in-memory file-like object for the zip data
-        zip_file = io.BytesIO(zip_data)
+        # 2. Open the ZIP archive
+        with zipfile.ZipFile(zip_file_in_memory, 'r') as zip_ref:
+            # 3. Extract and process files
+            file_list = zip_ref.namelist()
+            print(f"Successfully extracted files to: {extract_to_path}")
+            print(f"These are the files in the archive:\n{file_list}")
+            # 4. Read the contents of the extracted file
+            for file in zip_ref.namelist():
+                with zip_ref.open(file) as f:
+                    return f.read()
 
-        # Open the zip archive
-        with zipfile.ZipFile(zip_file, 'r') as zf:
-            # List the files in the zip archive
-            file_name = zf.namelist()
-            print("File names in the archive:", file_name)
-
-            # Extract and display the contents of the file
-            with zf.open(file_name[0]) as file:
-                content = file.read().decode('utf-8') # assuming text files with utf-8 encoding
-                print(f"Contents of {file_name}:\n{content}\n")
-                return content
-
-    except (base64.binascii.Error, zipfile.BadZipFile, UnicodeDecodeError) as e:
-        print("Error processing the zip file:", str(e))
-
-# Connection code
+    except base64.binascii.Error as e:
+        print(f"Error decoding Base64 data: {e}. Ensure it's valid Base64.")
+    except zipfile.BadZipFile as e:
+        print(f"Error opening ZIP file: {e}. The decoded data might not be a valid ZIP archive.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
-    # Connect to the host and receive the message / Conecta al host y recibes la intro general.
+    # Connect to the host and receive the message
     print('Receiving Intro')
     data = s.recv(1024)
     print(data)
 
-    # Send "levelx19" to choose the level / Envia levelx00 para elegir el nivel.
+    # Send "levelx19" to choose the level
     s.send(b'levelx19')
 
-    # Receive the challenge / Recibe el challenge.
-    print('Receiving challenge...')
+    # Receive the challenge
+    print('Receiving challenge.')
     data2 = s.recv(1024)
     print(data2)
 
-    # Convert data2 to a string
-    b64_zip_string = data2.decode('utf-8')
+    # Convert the base64 string back into a zip file
+    zip_file = base64.b64decode(data2)
+    print(f"This is the original zip file:\n{zip_file}")
 
-    # Perform the decoding and extraction function
-    contents_string = decode_and_extract_zip(b64_zip_string)
-    print(f"Contents to be sent: {contents_string}")
+    # Run the zip file function
+    bytes = extract_base64_zip(zip_file)
+    print(f"This is the content of the text file:\n{bytes}")
 
-    # Convert the string to bytes
-    contents_bytes = contents_string.encode('utf-8')
+    # Send the challenge back
+    print('Sending challenge.')
+    s.send(bytes)
 
-    # Send the challenge solved / Envia el resultado del challenge.
-    print('Sending response...')
-    s.send(contents_bytes)
-
-    # Receive the flag / Recibe la flag.
-    print('Receiving flag...')
-    data3 = s.recv(1024)
-    print(data3)
+    # Receive the flag
+    print('Receiving flag')
+    data4 = s.recv(1024)
+    print(data4)
