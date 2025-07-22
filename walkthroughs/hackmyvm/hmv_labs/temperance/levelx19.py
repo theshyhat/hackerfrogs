@@ -6,7 +6,7 @@ import io
 HOST = "temperance.hackmyvm.eu"
 PORT = 9988
 
-def extract_base64_zip(zip_data, extract_to_path="extracted_files"):
+def extract_zip(zip_data, extract_to_path="extracted_files"):
     """
     Decodes a Base64 encoded ZIP file, extracts its contents, and saves them.
 
@@ -57,7 +57,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     print(f"This is the original zip file:\n{zip_file}")
 
     # Run the zip file function
-    bytes = extract_base64_zip(zip_file)
+    bytes = extract_zip(zip_file)
     print(f"This is the content of the text file:\n{bytes}")
 
     # Send the challenge back
