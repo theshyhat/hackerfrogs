@@ -20,5 +20,6 @@
 
 [Overthewire Natas](https://overthewire.org/wargames/natas/)
 * Web app CTF challenges
+
 [PicoCTF Web App Challenges](https://play.picoctf.org/practice?category=1)
 * Web app CTF challenges
