@@ -14,6 +14,6 @@
 
 [Online Python](https://www.online-python.com/)
 * Web-accessible Python interpreter
-# Language-Agnostic Challenges
+## Language-Agnostic Challenges
 [HackMyVM: Temperance](https://hackmyvm.eu/temperance)
 * Programming challenge labs
