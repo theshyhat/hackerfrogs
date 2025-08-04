@@ -10,5 +10,5 @@ We are given `sudo` permissions as the `arete` user with the `/bin/cp` binary
 sudo -l
 find / -group arete 2>/dev/null #find the password file
 LFILE=/run/lock/arete_pass.txt
-sudo -i arete /bin/cp "$LFILE" /dev/stdout
+sudo -u arete /bin/cp "$LFILE" /dev/stdout
 ```
