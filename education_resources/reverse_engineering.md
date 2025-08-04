@@ -9,6 +9,9 @@
 
 [0xinfection: x86 Assembly Course](https://0xinfection.github.io/reversing/pages/x86-course.html)
 * Another big course
+
+[Pwn College: Program Security - Reverse Engineering](https://pwn.college/program-security/reverse-engineering/)
+* 44 lessons
 ## C Language Courses and Modules
 [C Institute: C Essentials 1](https://www.netacad.com/courses/c-essentials-1)
 * 40-hour course
