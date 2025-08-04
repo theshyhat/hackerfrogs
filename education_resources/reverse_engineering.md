@@ -9,9 +9,6 @@
 
 [0xinfection: x86 Assembly Course](https://0xinfection.github.io/reversing/pages/x86-course.html)
 * Another big course
-
-[Pwn College: Program Security - Reverse Engineering](https://pwn.college/program-security/reverse-engineering/)
-* 44 lessons
 ## C Language Courses and Modules
 [C Institute: C Essentials 1](https://www.netacad.com/courses/c-essentials-1)
 * 40-hour course
@@ -21,6 +18,9 @@
 ## Reverse Engineering Courses and Modules
 [Nightmare: Reversing and BinEx Course](https://guyinatuxedo.github.io/)
 * Extensive Course
+
+[Pwn College: Program Security - Reverse Engineering](https://pwn.college/program-security/reverse-engineering/)
+* 44 lessons
 ## Revese Engineering Challenges and CTFs
 [PicoCTF: Reverse Engineering Challenges](https://play.picoctf.org/practice?category=3)
 * CTF challenges
