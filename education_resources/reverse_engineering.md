@@ -18,9 +18,6 @@
 
 [W3 Schools: C Tutorials](https://www.w3schools.com/c/index.php)
 * Series of interactive tutorials
-
-[Online Python](https://www.online-python.com/)
-* Web-accessible Python interpreter
 ## Reverse Engineering Courses and Modules
 [Nightmare: Reversing and BinEx Course](https://guyinatuxedo.github.io/)
 * Extensive Course
