@@ -27,4 +27,9 @@
 
 [Exploit Education: Phoenix](http://exploit.education/phoenix/)
 * 22 challenges
+## Utilities and Misc Items
+[Programiz: Online C Compiler](https://www.programiz.com/c-programming/online-compiler/)
+* Web-accessible C Compiler
 
+[Dogbolt: Decompiler Explorer](https://dogbolt.org/)
+* Online decompiler
