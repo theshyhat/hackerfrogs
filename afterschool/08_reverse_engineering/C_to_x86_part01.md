@@ -29,6 +29,23 @@ pop rbp
 ret
 ```
 ## Function Prologue and Epilogue
-The first two instructions and the last two instructions in any function in x86 assembly are going to save the calling function's frame to the memory stack (`push rbp`), then, then setup a new stack frame in it's place (`mov rbp, rsp`).
+### Prologue
+The first two instructions in any function in x86 assembly are going to save the calling function's frame to the memory stack (`push rbp`), then, then setup a new stack frame in it's place (`mov rbp, rsp`).
 
-The registers involved in this case are the `base pointer` (bp) which points to the 
+The registers involved in this case are the `base pointer` (bp) which points to the bottom of the memory stack, and the `stack pointer` (sp), which points to the top of the memory stack.
+
+This ensures that the contents of the stack are saved while the function runs.
+### Epilogue
+The last two instructions in any function in x86 assembly are going to restore the contents of the stack to its pre-function state (`pop rbp`), then return to program exection to the point after the function call (`ret`).
+
+This ensures that the contents of the stack are restored to the pre-function state when the function ends.
+
+## Recognizing Printf (and Puts)
+In C-compiled Linux binaries, the string to be printed must be loaded into the `di` (destination index) register before the `puts` function call is used to print the string to the console.
+
+So this series of instructions prints out "Hello World"
+```
+lea rax, str.Hello__World_
+mov rdi, rax
+call sym.imp.puts
+```
