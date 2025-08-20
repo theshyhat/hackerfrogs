@@ -15,7 +15,8 @@ int main() {
     printf("Hello, %s! Nice to meet you!\n", name);
     
     return 0;
-}```
+}
+```
 We can use these commands in Linux to compile the program and run Radare2 to examine the program in the disassembler
 ```
 gcc -o user_input user_input.c
