@@ -12,3 +12,14 @@
 * How has been your experience interacting with the local infosec community, attending local meetups, etc?
 * What's your opinion on the integration of AI tools into cybersecurity jobs? Will this make it harder for new people to break into the industry? 
 ## Links and Resources
+* layer 8 podcast
+* OSINT techniques by Michael Basil
+* Geoguesser (OSINT)
+* osint4fun.eu
+* https://gralhix.com/list-of-osint-exercises/
+* Darknet Diaries - Rachael, Tinker, Deviant, Alethe (Episode Titles)
+* Tracelabs CTF (OSINT) - Locating Missing Persons
+* 
+
+
+
