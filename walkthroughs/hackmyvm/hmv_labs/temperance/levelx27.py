@@ -21,7 +21,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     print(data2)
 
     # Convert the bytes into a string
-    url = data2.b64decode('utf-8')
+    url = data2.decode('utf-8')
     print(f"This is the URL converted to a string:\n{url}")
 
     # Get the URL response body
@@ -41,7 +41,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # Isolate the number
     target_list = target_string.split(":")
     target_num = target_list[2]
-    print(f"This is the number we need to send back:\n{target_number}")
+    print(f"This is the number we need to send back:\n{target_num}")
   
     # Convert the string into bytes
     bytes = target_num.encode('utf-8')
