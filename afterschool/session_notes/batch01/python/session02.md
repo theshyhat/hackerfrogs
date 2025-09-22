@@ -1,4 +1,4 @@
-# HackerFrogs AfterSchool Python Programming Basics Session 01
+# HackerFrogs AfterSchool Python Programming Basics Session 02
 ## Topic: Lists, List Methods, and Basic Arithmetic Operations
 ## This Session's Exercises
 ### fixme1.py
