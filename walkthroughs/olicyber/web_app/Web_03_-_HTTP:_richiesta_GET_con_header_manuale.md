@@ -26,7 +26,20 @@ if __name__ == "__main__":
 ```
 # Method of solve
 * according to the code, if there is a request header: `X-Password` with a value of `admin`, then the flag will be returned by the app
+## Curl
 * we can use the following curl command to supply the header and get the flag
 ```
 curl -v -H "X-Password: admin" http://web-03.challs.olicyber.it/flag
+```
+## Python
+```
+import requests
+
+URL = 'http://web-03.challs.olicyber.it/flag'
+
+custom_headers = {'X-Password': 'admin'}
+
+get_req = requests.get(URL, headers=custom_headers)
+req_text = get_req.text
+print(req_text)
 ```
