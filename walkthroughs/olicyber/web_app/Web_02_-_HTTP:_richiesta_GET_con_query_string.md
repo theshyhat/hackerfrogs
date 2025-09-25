@@ -29,3 +29,20 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 ```
 * according to code, the app is looking for the `id` URL parameter, and returns a special string is the `id` parameter is set to `flag`
+## Curl
+* all we need to do supply the URL with the parameters plugged in:
+```
+http://web-02.challs.olicyber.it/server-records?id=flag
+```
+## Python
+```
+import requests
+
+URL = 'http://web-02.challs.olicyber.it/server-records'
+
+URL_params = {'id': 'flag'}
+
+get_req = requests.get(URL, params=URL_params)
+req_text = get_req.text
+print(req_text)
+```
