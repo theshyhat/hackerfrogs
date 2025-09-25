@@ -88,7 +88,20 @@ if __name__ == "__main__":
 ```
 * the code has one set of data that is returned if content type is set to JSON, and another set of data that is returned if the content type is set to XML. The flag is in the XML data
 * the default content type is JSON
+## Curl
 * we can use the following curl command to complete the challenge
 ```
 curl -H "Accept: application/xml" -v http://web-04.challs.olicyber.it/users
+```
+## Python
+```
+import requests
+
+URL = 'http://web-04.challs.olicyber.it/users'
+
+custom_headers = {'Accept': 'application/xml'}
+
+get_req = requests.get(URL, headers=custom_headers)
+req_text = get_req.text
+print(req_text)
 ```
