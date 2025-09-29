@@ -27,6 +27,19 @@
 
 [Exploit Education: Phoenix](http://exploit.education/phoenix/)
 * 22 challenges
+
+[ROP Emporium](https://ropemporium.com/)
+* 10 challenges
+
+[OLIcyber: Sofware Hacking Challenges](https://training.olicyber.it/)
+* Dozens of challenges (Italian Language Website)
+
+[OverTheWire](https://overthewire.org/wargames/)
+* Many binary hacking challenges, including:
+  * Narnia - Start into binary exploitation (and reverse engineering)
+  * Behemoth - binary exploitation (and reverse engineering)
+  * Utumno - binary exploitation (and reverse engineering)
+  * Maze - binary exploitation (and reverse engineering)
 ## Utilities and Misc Items
 [Programiz: Online C Compiler](https://www.programiz.com/c-programming/online-compiler/)
 * Web-accessible C Compiler
