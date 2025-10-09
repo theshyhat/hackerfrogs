@@ -17,12 +17,19 @@ sort urls.txt | uniq > sorted_urls.txt
 ```
 * now we can feed this list of URLs into a bash script to get the flag
 ```
+#!/bin/bash
+
 while read url; do
     echo "Checking: $url"
-    curl -s "$url" | grep -i "flag"
-    if [ ! -n ]; then
+    
+    # Capture the grep result in a variable
+    result=$(curl -s "$url" | grep -i "flag")
+    
+    # Check if result is NOT empty (flag was found)
+    if [ -n "$result" ]; then
         echo "We found the flag! Exiting."
-        exit 1 # Exit with a non-zero status to indicate an error
+        echo "$result"  # Print the flag
+        exit 0  # Exit with success (0 = success, not 1)
     fi
 done < sorted_urls.txt
 ```
