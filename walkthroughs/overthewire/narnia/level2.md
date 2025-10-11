@@ -1,7 +1,7 @@
 # username / password
 narnia2 / 5agRAXeBdG
 # concept
-
+* stack buffer overflow via the command arguments
 # method of solve
 ```
 #include <stdio.h>
