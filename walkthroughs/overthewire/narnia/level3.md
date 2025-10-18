@@ -2,7 +2,6 @@
 narnia3 / 2xszzNl6uG
 # concept
 * stack buffer overflow
-* 
 # sourcecode
 ```
 #include <stdio.h>
@@ -66,6 +65,11 @@ char ofile[16] = "/dev/null";
 * the `second part` which comes after `/tmp/...narnia3/bigdirectoryname` will overwrite the `ofile` buffer, replacing the write file which is `/dev/null` by default
 * we want that second part to be `/tmp/...narnia3/link`, and we want this file to be a symbolic link to the to the `narnia4` user's password file:
 ```
-ln -s /etc/narnia_pass/narnia4 /tmp/...narnia3/link
+ln -s /etc/narnia_pass/narnia4 /tmp/...narnia3/bigdirectoryname/tmp/frog
+touch /tmp/frog
 ```
-* now we can put the whole payload together, which will take in 
+* now we can put the whole payload together, which will take in the big 32-byte directory name, followed by a shorter filepath in the `tmp` directory
+```
+/narnia/narnia3 /tmp/...narnia3/bigdirectoryname/tmp/frog
+```
+* the password will be copied to the `/tmp/frog` file
