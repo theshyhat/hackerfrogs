@@ -1,7 +1,8 @@
 # username / password
 narnia3 / 2xszzNl6uG
 # concept
-
+* stack buffer overflow
+* 
 # sourcecode
 ```
 #include <stdio.h>
@@ -48,3 +49,23 @@ int main(int argc, char **argv){
 }
 ```
 # method of solve
+* the way the binary works is that it takes in a file as an argument and copies the file's contents to another file, which by default is `/dev/null`
+* the code is vulnerable to stack buffer overflow due to its use of the following `strcpy` function:
+```
+strcpy(ifile, argv[1]);
+```
+* the associated buffer is this:
+```
+char ifile[32];
+```
+* which means that if the length of the command argument is in excess of 32 bytes, it will overflow into the other buffer, which is...
+```
+char ofile[16] = "/dev/null";
+```
+* so we can fill the `ifile` buffer with a directory that we control that is 32 bytes long, such as `/tmp/...narnia3/bigdirectoryname`
+* the `second part` which comes after `/tmp/...narnia3/bigdirectoryname` will overwrite the `ofile` buffer, replacing the write file which is `/dev/null` by default
+* we want that second part to be `/tmp/...narnia3/link`, and we want this file to be a symbolic link to the to the `narnia4` user's password file:
+```
+ln -s /etc/narnia_pass/narnia4 /tmp/...narnia3/link
+```
+* now we can put the whole payload together, which will take in 
