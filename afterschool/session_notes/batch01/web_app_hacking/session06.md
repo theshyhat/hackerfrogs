@@ -3,8 +3,8 @@
 
 # TryHackMe.com signup
 https://tryhackme.com/
-## TryHackMe SQL Injection room
-https://tryhackme.com/r/room/sqlinjectionlm
+## TryHackMe DVWA room
+https://tryhackme.com/room/dvwa
 
 # This session's challenges
 ## More SQLi
