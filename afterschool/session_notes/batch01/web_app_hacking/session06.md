@@ -4,7 +4,7 @@
 # TryHackMe.com signup
 https://tryhackme.com/
 ## TryHackMe DVWA room
-https://tryhackme.com/room/dvwa
+https://tryhackme.com/room/sqlinjectionlm
 
 # This session's challenges
 ## More SQLi
