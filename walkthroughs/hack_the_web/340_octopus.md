@@ -8,3 +8,7 @@ General
 * the challenge wants us to convert an octal number to a decimal number
 * the octal number is `2471`
 * we can use a web to convert this number `https://www.rapidtables.com/convert/number/octal-to-decimal.html`
+* we can also use this Bash command:
+```
+echo $((8#2471))
+```
