@@ -1,5 +1,5 @@
 # Overview
-As of the writing of this guide, the current version of Autopsy (version 4.21.0) is not easily installed on non-Windows systems. This guide's objective is to provide an easy-way to automate the installation of Autopsy on Kali Linux installations for cybersecurity students who want to learn disk image forensics. The current version of the installation script is tied to the links to Autopsy version 4.21.0 and Sleuthkit version 4.12.1. The script requires sudo permissions to run, because it downloads and installs a programs to you Kali Linux system.
+As of the writing of this guide, the current version of Autopsy (version 4.21.0) is not easily installed on non-Windows systems. This guide's objective is to provide an easy-way to automate the installation of Autopsy on Kali Linux installations for cybersecurity students who want to learn disk image forensics. The current version of the installation script is tied to the links to Autopsy version 4.21.0 and Sleuthkit version 4.12.1. The script requires sudo permissions to run, because it downloads and installs programs to you Kali Linux system.
 ## 
 ```
 #!/bin/bash
