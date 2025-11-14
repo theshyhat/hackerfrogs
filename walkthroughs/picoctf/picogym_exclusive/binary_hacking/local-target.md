@@ -13,9 +13,9 @@ This creates a pattern that can be retrieved and referenced to get the offset to
 We create a breakpoint at the 7th instruction, immediately after we provide user input
 
 Run the program
-
+```
 dc
-
+```
 Then at the point when we are prompted for input, paste in the ragg2 output string
 
 Then, at the breakpoint, we use the following instruction to output the values of variables
