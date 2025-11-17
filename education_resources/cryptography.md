@@ -14,3 +14,6 @@
 
 [OverTheWire: Krypton](https://overthewire.org/wargames/krypton/)
 * 7 challenges
+
+[Ring Zero CTF](https://ringzer0ctf.com/)
+* A generalist platform. Lots of free content
