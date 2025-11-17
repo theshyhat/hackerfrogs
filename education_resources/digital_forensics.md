@@ -24,3 +24,13 @@
 ## Memory Forensics Resources
 
 ## Steganography Resources
+
+## CTF / Challenge Platforms
+[Ring Zero CTF](https://ringzer0ctf.com/)
+* A generalist platform. Lots of free content
+
+[PicoCTF Cryptography Challenges](https://play.picoctf.org/practice?category=4)
+* A good mix of different types, especially PCAP
+
+
+
