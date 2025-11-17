@@ -46,6 +46,9 @@
 
 [Pwnable Kr](https://pwnable.kr/)
 * CTF challenges
+
+[Ring Zero CTF](https://ringzer0ctf.com/)
+* A generalist platform. Lots of free content
 ## Utilities and Misc Items
 [Programiz: Online C Compiler](https://www.programiz.com/c-programming/online-compiler/)
 * Web-accessible C Compiler
