@@ -18,3 +18,6 @@
 
 [Dockerlabs CTF Labs](https://dockerlabs.es/)
 * excellent challenges, but requires us to know how to install Docker containers
+
+[Standoff 365](https://standoff365.com/)
+* features a range of networked machines with a hidden internal network
