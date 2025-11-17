@@ -23,3 +23,6 @@
 
 [PicoCTF Web App Challenges](https://play.picoctf.org/practice?category=1)
 * Web app CTF challenges
+
+[Ring Zero CTF](https://ringzer0ctf.com/)
+* Web app CTF challenges
