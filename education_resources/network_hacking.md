@@ -21,3 +21,6 @@
 
 [Standoff 365](https://standoff365.com/)
 * features a range of networked machines with a hidden internal network
+
+[Echo Red CTF](https://echoctf.red/)
+* lots of free challenges
