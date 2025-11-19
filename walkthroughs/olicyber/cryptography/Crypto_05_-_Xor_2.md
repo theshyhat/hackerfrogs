@@ -12,12 +12,15 @@ import binascii
 # Ciphertext string
 ciphertext = '104e137f425954137f74107f525511457f5468134d7f146c4c'
 
-string = binascii.unhexlify(ciphertext)
+# Convert the hex string to bytes
+bytes = binascii.unhexlify(ciphertext)
 
-l = [c for c in string]
+# Turn the string variable into a list containing each character in the string as list contents
+list_of_bytes = [element for element in bytes]
 
-for i in range(256):
-     f = [chr(n^i) for n in l]
-     a = "".join(f)
-     print(f"Byte: {i} Message: {a}")
+# Run through all possible bytes (0-255) and print the result of XOR between that byte and the list of bytes in the 
+for num in range(256):
+     XOR_loop = [chr(element^num) for element in list_of_bytes]
+     message = "".join(XOR_loop)
+     print(f"Byte: {num} Message: {message}")
 ```
