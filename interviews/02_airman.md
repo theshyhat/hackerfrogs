@@ -1,4 +1,4 @@
-# Interview with RabbitHeart - 20+ Year Veteran 
+# Interview with Airman - 20+ Year Veteran of Infosec
 ### Interview Date: 2025, December 1st
 ## Main Topic Questions
 * What's your hacker origin story? Did you go to school for a computer-related program?
