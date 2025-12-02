@@ -56,4 +56,4 @@ http://<IP_ADDRESS_NOTED_FROM_Q1_ANSWER>
 ```
 username factory : password unranked-wisdom-anthem
 ```
-* after logged in, click on the `Urgent: Production & Shipping Request \u2014 1984000 Units (Next 2 Weeks)` email
+* after logged in, click on the `Urgent: Production & Shipping Request - 1984000 Units (Next 2 Weeks)` email
