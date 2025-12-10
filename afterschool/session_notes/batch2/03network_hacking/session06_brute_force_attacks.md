@@ -7,7 +7,7 @@ https://tryhackme.com/room/hydra
 https://youtu.be/pA24wtu_vmo?t=1145
 ### Method of Solve
 * Step 1: Click on the Task 3 header in the TryHackMe page, then click on the green "Start Machine" button
-* Step 2: go to the top of the webpage, and click on the "Start AttackBox" button located underneath the cloud icon with the santa hat on it
+* Step 2: go to the top of the webpage, and click on the "Start AttackBox" button located underneath the Hydra monster icon
 * Step 3: wait 2 minutes for the AttackBox to finish loading
 * Step 4: after the AttackBox finishes loading, at the bottom-middle of the TryHackMe webpage click on the "View in full screen" button, which looks like two arrows pointing away from each other
 * Step 5: in the AttackBox desktop, click on the terminal shortcut button to open a terminal
