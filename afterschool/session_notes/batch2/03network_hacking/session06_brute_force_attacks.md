@@ -1,6 +1,6 @@
 # HackerFrogs AfterSchool Network Hacking Session 6
 ## Session Topic: Brute Force Attacks /w TryHackMe
-# Challenge 1: TryHackMe Crack the Hash Room
+# Challenge 1: TryHackMe Hydra Room
 ## TryHackMe Link
 https://tryhackme.com/room/hydra
 ### YouTube Walkthrough Link
