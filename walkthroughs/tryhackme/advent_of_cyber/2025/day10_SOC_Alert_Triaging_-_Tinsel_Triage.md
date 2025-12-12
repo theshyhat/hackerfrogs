@@ -29,6 +29,7 @@ set query_now = datetime(2025-10-30T05:09:25.9886229Z);
 Syslog_CL
 | where host_s == 'websrv-01'
 | project _timestamp_t, host_s, Message
+| where Message contains "insert_module"
 ```
 * click the blue `Run` button
 * observe the file name on the last entry on the lowest results window
