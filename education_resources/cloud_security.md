@@ -6,6 +6,11 @@
 [flAWS CTF Challenges](http://flaws.cloud/)
 * A series of challenges which test AWS hacking techniques
 
+[Pwned Labs](https://pwnedlabs.io/)
+* Has many free security labs for both AWS and Azure security
 ## Azure Courses and Modules
 [Azure Security CTF](https://github.com/0tieno/Azure-Security-CTF)
 * A series of challenges which test Azure hacking techniques
+
+[Pwned Labs](https://pwnedlabs.io/)
+* Has many free security labs for both AWS and Azure security
