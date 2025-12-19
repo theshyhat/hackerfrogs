@@ -1,4 +1,4 @@
-# Interview with yanOkyanOk - Defcon CTF 2025 Winning Team Member (MapleBacon)
+# Interview with yan0kyan0k - Defcon CTF 2025 Winning Team Member (MapleBacon)
 ### Interview Date: 2025, December 22nd
 ## Main Topic Questions
 * What's your hacker origin story? Did you go to school for a computer-related program?
