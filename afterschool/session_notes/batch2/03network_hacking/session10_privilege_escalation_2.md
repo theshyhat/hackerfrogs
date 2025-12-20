@@ -54,7 +54,7 @@ This Bash script will start a Bash shell, and if it's opened with the `test` bin
 ./test
 ```
 * Step 7: In the TryHackMe page, go to the top of the page, then shut down the target machine by clicking on the `Terminate`, then `Terminate Machine` button below the red `Target Machine Information` header
-## Part B: Privilege Escalation via SUID Binaries
+## Part B: Privilege Escalation via Capabilities
 In this section, we'll be doing privilege escalation attacks via Linux Capabilities
 * Step 1: In the TryHackMe webpage, open the Task 8 header, then click on the `Start Machine` button
 * Step 2: After the terminal finishes initializing, use the following command to return a list of binaries with additional capabilities:
