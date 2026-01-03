@@ -33,4 +33,40 @@ There are many batteries in front of you. Find the maximum joltage possible from
 # Method of solve
 * this code will get the job done
 ```
+file_path = 'input.txt' # Replace with your file path
+
+with open(file_path, 'r') as file:
+    raw_list = file.readlines()
+
+# Stripping out newlines
+stripped_list = [item.strip() for item in raw_list]
+
+# Define a function that identifies the largest digit in a string
+def find_joltage_digits(string):
+  largest_digit = 0
+  largest_digit_pos = 0
+  second_largest = 0
+  second_digit_string = ""
+  combined_digit = 0
+  for index, digit in enumerate(string):
+    # first loop for largest_digit
+    if int(digit) > largest_digit:
+      largest_digit = int(digit)
+      largest_digit_pos = index
+      print(f"New largest digit found: {digit}")
+  second_digit_string = string[largest_digit_pos+1:]
+  for index, digit in enumerate(second_digit_string):
+    # second loop for second_digit
+    if int(digit) > second_largest:
+      second_largest = int(digit)
+      print(f"New second largest digit found: {digit}")
+  combined_digit = str(largest_digit) + str(second_largest)
+  print(second_digit_string)
+  return combined_digit
+
+print(stripped_list)
+
+example_string = '1423227252272621526413321222372262716572245627222222722214322422296247222255222727152334227522435572'
+
+print(find_joltage_digits(example_string))
 ```
