@@ -41,6 +41,9 @@ with open(file_path, 'r') as file:
 # Stripping out newlines
 stripped_list = [item.strip() for item in raw_list]
 
+# Define the list of joltages we need to add up later
+joltage_list = []
+
 # Define a function that identifies the largest digit in a string
 def find_joltage_digits(string):
   largest_digit = 0
@@ -48,25 +51,34 @@ def find_joltage_digits(string):
   second_largest = 0
   second_digit_string = ""
   combined_digit = 0
-  for index, digit in enumerate(string):
-    # first loop for largest_digit
+  global joltage_list
+
+  # First loop for largest digit
+  for index, digit in enumerate(string,1):
     if int(digit) > largest_digit:
-      largest_digit = int(digit)
-      largest_digit_pos = index
-      print(f"New largest digit found: {digit}")
-  second_digit_string = string[largest_digit_pos+1:]
+      if index != len(string):
+        largest_digit = int(digit)
+        largest_digit_pos = index
+        print(f"New largest digit found: {digit}")
+      else:
+        print("Uh-oh! The largest first digit is the last number!\nSkipping...")
+        continue
+  second_digit_string = string[largest_digit_pos:]
+  # Second loop for second largest digit
   for index, digit in enumerate(second_digit_string):
-    # second loop for second_digit
     if int(digit) > second_largest:
       second_largest = int(digit)
       print(f"New second largest digit found: {digit}")
   combined_digit = str(largest_digit) + str(second_largest)
-  print(second_digit_string)
+  joltage_list.append(int(combined_digit))
+  print(f"Added {combined_digit} to joltage list!")
   return combined_digit
 
-print(stripped_list)
+# Get all the joltage numbers
+for i in stripped_list:
+  find_joltage_digits(i)
 
-example_string = '1423227252272621526413321222372262716572245627222222722214322422296247222255222727152334227522435572'
-
-print(find_joltage_digits(example_string))
+print(f"These are all the joltage numbers:\n{joltage_list}")
+joltage_sum = sum(joltage_list)
+print(f"The sum of all the joltages is:\n{joltage_sum}")
 ```
