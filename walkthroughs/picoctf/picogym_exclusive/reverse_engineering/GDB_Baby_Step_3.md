@@ -13,6 +13,6 @@ pdf @ main          # disassemble the main function
 db 0x00401142       # set a breakpoint for the end of the function
 dc                  # run the program until the breakpoint
 dr eax              # examine the eax register value
-? 0x0004af4b        # get the conversion of the value in different units. we want the int32 one
 ```
-* the flag, with the PicoCTF flag wrapper is: `picoCTF{307019}`
+* the answer we're looking for is the value of `eax`, but in reverse order, due to little endian byte order
+* the flag, with the PicoCTF flag wrapper is: `picoCTF{0x6bc96222}`
