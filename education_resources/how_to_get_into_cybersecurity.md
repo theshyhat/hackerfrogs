@@ -33,6 +33,12 @@ Most cybersecurity training exercises (called CTFs or Capture the Flag) are grou
 
 [PicoCTF - Clutter Overflow Challenge](https://www.youtube.com/watch?v=fp1ONjpLTlw&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=111)
 
+## Cybersecurity Roles Quiz
+
+There's a quiz that you can take that may help you decide which cybersecurity role fits you best. Here's the link:
+
+[TryHackMe's Cybersecurity Career Quiz](https://tryhackme.com/careers/quiz)
+
 ## Learning Tech Fundamentals
 Doing almost any technical role in cybersecurity requires a basic knowledge of technical topics and computer networking. The following YouTube playlists are recommended as a minimum requirement for beginning training in technical cybersecurity roles. Keep in mind that these are not the only sources for learning basic tech knowledge, but recommendations:
 
