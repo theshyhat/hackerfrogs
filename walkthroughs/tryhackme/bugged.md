@@ -18,7 +18,8 @@ connect
 subscribe #
 ```
 * after subscribing, we begin to see messages coming in from different devices
-* this one, from the thermostat, looks suspicious
+* keep in mind that the topic endpoints, and the object ID numbers in the example commands below will likely be different than your instance's, since these values are randomized each time the machines are spun up
+* this message, from the thermostat, looks suspicious
 ```
 eyJpZCI6ImNkZDFiMWMwLTFjNDAtNGIwZi04ZTIyLTYxYjM1NzU0OGI3ZCIsInJlZ2lzdGVyZWRfY29tbWFuZHMiOlsiSEVMUCIsIkNNRCIsIlNZUyJdLCJwdWJfdG9waWMiOiJVNHZ5cU5sUXRmLzB2b3ptYVp5TFQvMTVIOVRGNkNIZy9wdWIiLCJzdWJfdG9waWMiOiJYRDJyZlI5QmV6L0dxTXBSU0VvYmgvVHZMUWVoTWcwRS9zdWIifQ==
 ```
