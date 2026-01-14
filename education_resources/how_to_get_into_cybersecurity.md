@@ -17,18 +17,27 @@ Most cybersecurity training exercises (called CTFs or Capture the Flag) are grou
 
 * Cryptography (Deciphering Secret Messages)
 
-[]()
+[PicoCTF - Rail Fence Challenge](https://www.youtube.com/watch?v=85mZ2y2MUwU&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=100)
 
-[]()
+[PicoCTF - Vigenere Challenge](https://www.youtube.com/watch?v=SAds8Hhigqo&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=102)
 
 * Reverse Engineering (Understanding Software Through Disassembly)
 
-[]()
+[PicoCTF - Packer Challenge](https://www.youtube.com/watch?v=UWx7kCZSN8Y&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=85)
 
-[]()
+[PicoCTF - PW Crack 3 Challenge](https://www.youtube.com/watch?v=Hx0U3ubBino&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=31)
 
 * Binary Exploitation (Exploiting Software Programming Flaws)
 
-[]()
+[PicoCTF - Buffer Overflow 0 Challenge](https://www.youtube.com/watch?v=yXPXXdrD2Ts&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=116)
 
-[]()
+[PicoCTF - Clutter Overflow Challenge](https://www.youtube.com/watch?v=fp1ONjpLTlw&list=PLzVrhECG8ZbLn2l6jbBVWEqsoo-oyxA7p&index=111)
+
+## Learning Tech Fundamentals
+Doing almost any technical role in cybersecurity requires a basic knowledge of technical topics and computer networking. The following YouTube playlists are recommended as a minimum requirement for beginning training in technical cybersecurity roles. Keep in mind that these are not the only sources for learning basic tech knowledge, but recommendations:
+
+[Professor Messer - A+ Training Course - Part 1](https://www.youtube.com/watch?v=bnEKY6UJfKc&list=PLG49S3nxzAnna96gzhJrzkii4hH_mgW4b&index=3)
+
+[Professor Messer - A+ Training Course - Part 2](https://www.youtube.com/playlist?list=PLG49S3nxzAnnes8ZGI-OBlKEukHCX46N8)
+
+[Professor Messer - Network+ Training Course](https://www.youtube.com/playlist?list=PLG49S3nxzAnl_tQe3kvnmeMid0mjF8Le8)
