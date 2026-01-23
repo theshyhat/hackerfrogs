@@ -39,6 +39,10 @@ There's a quiz that you can take that may help you decide which cybersecurity ro
 
 [TryHackMe's Cybersecurity Career Quiz](https://tryhackme.com/careers/quiz)
 
+There also a module on the TryHackMe website that gives a lot more information on different cybersecurity roles. You'll need to have a valid account there to complete the room, but there's a lot of good information in the module:
+
+[TryHackMe's Careers in Cyber Security Room](https://tryhackme.com/room/careersincyber)
+
 ## Learning Tech Fundamentals
 Doing almost any technical role in cybersecurity requires a basic knowledge of technical topics and computer networking. The following YouTube playlists are recommended as a minimum requirement for beginning training in technical cybersecurity roles. Keep in mind that these are not the only sources for learning basic tech knowledge, but recommendations:
 
