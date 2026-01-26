@@ -7,7 +7,7 @@ User aegle has a good memory for numbers.
 # method of solve
 * This challenge requires you to input a string of numbers into the `numbers binary`
 * `1 2 3 1 2 3 9 1 1 1 1 2 6`
-* We're workshopping a Python script to automate the process..
+* This Python script will automate the process. Run it from your Attacker machine, not the remote SSH terminal
 ```
 #!/usr/bin/env python3
 from pwn import ssh
