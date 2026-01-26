@@ -8,6 +8,14 @@ User aegle has a good memory for numbers.
 * This challenge requires you to input a string of numbers into the `numbers binary`
 * `1 2 3 1 2 3 9 1 1 1 1 2 6`
 * This Python script will automate the process. Run it from your Attacker machine, not the remote SSH terminal
+* The script requires the Python `pwn` module. If you don't have it installed, we suggest using a virtual environment to run the script:
+```
+python -m venv myenv
+vitualenv myenv
+source myenv/bin/activate
+pip install pwn
+```
+* and here's the actual script:
 ```
 #!/usr/bin/env python3
 from pwn import ssh
