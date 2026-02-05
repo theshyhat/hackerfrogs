@@ -17,3 +17,14 @@
 
 [Ring Zero CTF](https://ringzer0ctf.com/)
 * A generalist platform. Lots of free content
+
+## Cryptography Utility Websites
+[Crackstation Dot Net](https://crackstation.net/)
+* A site that can be used to crack simple hashes
+
+[Hashes Dot Net](https://hashes.com/en/decrypt/hash)
+* Another site that can be used to crack simple hashes
+
+[Dcode Dot Fr](https://www.dcode.fr/en)
+* A good site for decoding classical ciphers
+
