@@ -28,3 +28,5 @@
 [Dcode Dot Fr](https://www.dcode.fr/en)
 * A good site for decoding classical ciphers
 
+[M5D Decrypt Dot Net](https://md5decrypt.net)
+* Another site for cracking common hashing types
