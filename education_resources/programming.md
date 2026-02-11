@@ -14,6 +14,20 @@
 
 [Online Python](https://www.online-python.com/)
 * Web-accessible Python interpreter
+## JavaScript Courses and Modules
+[Net Academy: JavaScript Essentials 1](https://www.netacad.com/courses/javascript-essentials-1)
+* 40-hour course
+
+[Net Academy: JavaScript Essentials 2](https://www.netacad.com/courses/javascript-essentials-2)
+* 50-hour course
+
+## C++ Courses and Modules
+[Net Academy: C++ Essentials 1](https://www.netacad.com/courses/c-plus-plus-essentials-1)
+* 42-hour course
+
+[Net Academy: C++ Essentials 2](https://www.netacad.com/courses/c-plus-plus-essentials-2)
+* 42-hour course
+
 ## Language-Agnostic Challenges
 [HackMyVM: Temperance](https://hackmyvm.eu/temperance)
 * Programming challenge labs
