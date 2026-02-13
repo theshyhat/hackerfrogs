@@ -4,6 +4,7 @@
 ### Vancouver
 * [DC604](https://dc604.ca/)
   * monthly meetup - all topics
+  * last-confirmed: 2026 Jan
 ## United States of America
 # South America
 # Europe
