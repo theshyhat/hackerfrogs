@@ -16,7 +16,6 @@ All numbers in the elves' list are in feet. How many total square feet of wrappi
 # Concept
 * write some math functions in Python :D
 # Method of solve
-* this code is work in progress
 ```
 file_path = 'input.txt' # Replace with your file path
 
@@ -31,9 +30,19 @@ for i in raw_input:
 def calc_wrapping_paper(list):
   total = 0
   for i in list:
-    length = 0
-    width = 0
-    height = 0
+    dimensions = i.split('x')
+    l = int(dimensions[0])
+    w = int(dimensions[1])
+    h = int(dimensions[2])
+    surface_area = 2*l*w + 2*w*h + 2*h*l
+    surface_list = [l,w,h]
+    surface_list.sort()
+    smallest_surface = surface_list[0] * surface_list[1]
+    total_surface = surface_area + smallest_surface
+    total += total_surface
+  return total
+
+print(calc_wrapping_paper(mod_list))
 ```
 
 
