@@ -4,7 +4,7 @@
 ### Vancouver
 * [DC604](https://dc604.ca/)
   * monthly meetup - all topics
-## America
+## United States of America
 # South America
 # Europe
 # Asia
