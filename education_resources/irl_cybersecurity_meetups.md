@@ -8,5 +8,9 @@
 ## United States of America
 # South America
 # Europe
+## Malta
+### Sliema
+* [TechShift Community Malta](https://www.meetup.com/techshift-community-malta/)
+
 # Asia
 # Oceania
