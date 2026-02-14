@@ -14,4 +14,9 @@
   * last-confirmed: 2026 Feb
 
 # Asia
+# Africa
+## Nigeria
+### Lagos
+* [NaijaSecForce](https://www.meetup.com/naija-sec-force/)
+  * last-confirmed: 2025 Nov
 # Oceania
