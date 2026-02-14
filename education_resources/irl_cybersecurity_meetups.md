@@ -18,6 +18,10 @@
 * [Hack the Box Meetup: La Paz](https://www.meetup.com/hack-the-box-meetup-la-paz-bo/)
   * last-confirmed: 2025 Nov
 # Europe
+# Turkey
+## Istanbul
+* [Hack the Box Meetup Istanbul](https://www.meetup.com/hack-the-box-meetup-istanbul-tr)
+  * last-confirmed: 2026 Feb
 ## Germany
 ### Frankfurt
 * [OWASP Frankfurt](https://www.meetup.com/owasp-frankfurt/)
