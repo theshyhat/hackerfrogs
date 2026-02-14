@@ -13,6 +13,10 @@
 * [NYC 2600](https://nyc2600.net/)
   * last-confirmed: 2026 Feb
 # South America
+## Argentina
+### Buenos Aires
+* [AppSec Buenos Aires](https://www.meetup.com/es-es/appsecba/)
+  * 2025 Sep
 ## Bolivia
 ### La Paz
 * [Hack the Box Meetup: La Paz](https://www.meetup.com/hack-the-box-meetup-la-paz-bo/)
