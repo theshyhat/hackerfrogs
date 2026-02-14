@@ -22,8 +22,8 @@
 * [Hack the Box Meetup: La Paz](https://www.meetup.com/hack-the-box-meetup-la-paz-bo/)
   * last-confirmed: 2025 Nov
 # Europe
-# Turkey
-## Istanbul
+## Turkey
+### Istanbul
 * [Hack the Box Meetup Istanbul](https://www.meetup.com/hack-the-box-meetup-istanbul-tr)
   * last-confirmed: 2026 Feb
 ## Germany
@@ -53,12 +53,12 @@
 * [Hack the Box Mumbai Meetup](https://www.meetup.com/hack-the-box-meetup-mumbai-in/)
   * last-confirmed: 2026 Jan
 # Africa
-# The Gambia
-## Banjul
+## The Gambia
+### Banjul
 * [Hack the Box Meetup Banjul](https://www.meetup.com/hack-the-box-meetup-banjul-gm/events/)
   * last-confirmed: 2026 Feb
-# Morocco
-## Casablanca
+## Morocco
+### Casablanca
 * [Hack the Box Meetup Casablanca](https://www.meetup.com/hack-the-box-meetup-casablanca-ma/)
   * last-confirmed: 2025 Oct
 ## Nigeria
