@@ -14,6 +14,10 @@
   * last-confirmed: 2026 Feb
 
 # Asia
+## India
+### Mumbai
+* [Hack the Box Mumbai Meetup](https://www.meetup.com/hack-the-box-meetup-mumbai-in/)
+  * last-confirmed: 2026 Jan
 # Africa
 ## Nigeria
 ### Lagos
