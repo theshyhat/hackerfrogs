@@ -53,6 +53,10 @@
 * [Hack the Box Mumbai Meetup](https://www.meetup.com/hack-the-box-meetup-mumbai-in/)
   * last-confirmed: 2026 Jan
 # Africa
+# The Gambia
+## Banjul
+* [Hack the Box Meetup Banjul](https://www.meetup.com/hack-the-box-meetup-banjul-gm/events/)
+  * last-confirmed: 2026 Feb
 # Morocco
 ## Casablanca
 * [Hack the Box Meetup Casablanca](https://www.meetup.com/hack-the-box-meetup-casablanca-ma/)
