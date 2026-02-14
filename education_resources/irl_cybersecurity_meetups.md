@@ -17,6 +17,10 @@
   * last-confirmed: 2026 Feb
 
 # Asia
+## Pakistan
+### Islamabad
+* [Hack the Box Meetup Pakistan](https://www.meetup.com/hack-the-box-meetup-pakistan/)
+  * 2026 Jan
 ## Indonesia
 ### Jakarta
 * [Hack the Box Meetup Indonesia](https://www.meetup.com/hack-the-box-meetup-indonesia/)
