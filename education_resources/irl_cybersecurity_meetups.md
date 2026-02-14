@@ -13,6 +13,10 @@
 * [NYC 2600](https://nyc2600.net/)
   * last-confirmed: 2026 Feb
 # South America
+## Bolivia
+### La Paz
+* [Hack the Box Meetup: La Paz](https://www.meetup.com/hack-the-box-meetup-la-paz-bo/)
+  * last-confirmed: 2025 Nov
 # Europe
 ## The Netherlands
 ### Amsterdam
