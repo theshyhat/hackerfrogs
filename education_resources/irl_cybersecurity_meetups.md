@@ -14,6 +14,10 @@
   * last-confirmed: 2026 Feb
 
 # Asia
+## Indonesia
+### Jakarta
+* [Hack the Box Meetup Indonesia](https://www.meetup.com/hack-the-box-meetup-indonesia/)
+  * last-confrimed: 2025 Oct
 ## India
 ### Mumbai
 * [Hack the Box Mumbai Meetup](https://www.meetup.com/hack-the-box-meetup-mumbai-in/)
