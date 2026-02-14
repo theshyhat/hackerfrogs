@@ -26,6 +26,7 @@
 # Morocco
 ## Casablanca
 * [Hack the Box Meetup Casablanca](https://www.meetup.com/hack-the-box-meetup-casablanca-ma/)
+  * last-confirmed: 2025 Oct
 ## Nigeria
 ### Lagos
 * [NaijaSecForce](https://www.meetup.com/naija-sec-force/)
