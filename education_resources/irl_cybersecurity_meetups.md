@@ -11,6 +11,7 @@
 ## Malta
 ### Sliema
 * [TechShift Community Malta](https://www.meetup.com/techshift-community-malta/)
+  * last-confirmed: 2026 Feb
 
 # Asia
 # Oceania
