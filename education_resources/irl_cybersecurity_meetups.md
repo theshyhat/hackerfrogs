@@ -23,6 +23,9 @@
 * [Hack the Box Mumbai Meetup](https://www.meetup.com/hack-the-box-meetup-mumbai-in/)
   * last-confirmed: 2026 Jan
 # Africa
+# Morocco
+## Casablanca
+* [Hack the Box Meetup Casablanca](https://www.meetup.com/hack-the-box-meetup-casablanca-ma/)
 ## Nigeria
 ### Lagos
 * [NaijaSecForce](https://www.meetup.com/naija-sec-force/)
