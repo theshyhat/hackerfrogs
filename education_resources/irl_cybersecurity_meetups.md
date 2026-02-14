@@ -6,6 +6,9 @@
   * monthly meetup - all topics
   * last-confirmed: 2026 Jan
 ## United States of America
+### New York City
+* [NYC 2600](https://nyc2600.net/)
+  * last-confirmed: 2026 Feb
 # South America
 # Europe
 ## Malta
