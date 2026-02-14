@@ -11,6 +11,10 @@
   * last-confirmed: 2026 Feb
 # South America
 # Europe
+## The Netherlands
+### Amsterdam
+* [OWASP Netherlands Chapter](https://www.meetup.com/owasp-chapter-netherlands-meetup/)
+  * last-confirmed: 2025 Dec
 ## Malta
 ### Sliema
 * [TechShift Community Malta](https://www.meetup.com/techshift-community-malta/)
