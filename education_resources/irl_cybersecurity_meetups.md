@@ -1,6 +1,9 @@
 # Community-Compiled List of IRL Cybersecurity Meetups
 # North America
 ## Canada
+### Ottawa
+* [Canadian Cyber Forum](https://www.meetup.com/ottawa-cyber-security-meetup/)
+  * last-confirmed: 2025 Dec
 ### Vancouver
 * [DC604](https://dc604.ca/)
   * monthly meetup - all topics
