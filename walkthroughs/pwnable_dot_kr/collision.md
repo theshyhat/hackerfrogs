@@ -97,8 +97,26 @@ unsigned long check_password(const char* p){
 * if we take the sum of the hexadecimal values before the value `0x712C593C`, we get the hex value `0xB0B0B0B0`
   * if we subtract `0xB0B0B0B0` from the hashcode, `0x21DD09EC`, the result is `-0x8ED3A6C4`
   * we would assume that the final set of hex values to add to `0xB0B0B0B0` to arrive at the `hashcode`:`0x21DD09EC` would be a positive number, but the reality is...
-  * `-0x8ED3A6C4` and `0x712C593C` are the same number in terms of 
+  * `-0x8ED3A6C4` and `0x712C593C` are the same number in terms of 32-bit arithmetic
+    * we convert `-0x8ED3A6C4` to `0x712C593C` by adding the value `0x100000000` to `-0x8ED3A6C4`
 ## Payload 2 (Non-Printable Characters)
 ```
 ./col "$(printf '\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\xE8\x05\xD9\x1D')"
 ```
+* once again, we have to add the four sets of four bytes together:
+```
+  0x01010101
++ 0x01010101
++ 0x01010101
++ 0x01010101
+------------
+  0x04040404
+```
+* then we subtract this number from the `hashcode` value
+```
+  0x21DD09EC
+- 0x04040404
+------------
+  0x1DD905E8
+```
+* if we keep in mind the little endian byte order, the last 4 bytes we give to the payload is `0xE805D91D`
