@@ -19,4 +19,51 @@ For example:
 * recording 2D coordinates
 # Code
 ```
+def visited_houses(list):
+  current_position = [0,0]
+  visited_positions = []
+  visited_total = 0
+  current_direction = ''
+  # set the direction
+  for i in list:
+    if i == '^':
+      current_direction = "n"
+    elif i == 'v':
+      current_direction = "s"
+    elif i == '<':
+      current_direction = "w"
+    else:
+      current_direction = "e"
+    # set the position
+    if current_direction == "n":
+      current_position[0] = current_position[0] + 1
+    elif current_direction == "s":
+      current_position[0] = current_position[0] - 1
+    elif current_direction == "w":
+      current_position[1] = current_position[1] - 1
+    else:
+      current_position[1] = current_position[1] + 1
+    # add the current position to the visited list
+    visited_positions.append(tuple(current_position))
+  # total up the unique visited location
+  unique_values_set = set(visited_positions)
+#  unique_values_set = {item for sublist in visited_positions for item in sublist}
+  # put the number of items in visited positions as a total
+  visited_total = len(unique_values_set)
+  visited_total = visited_total + 1
+  return visited_total
+
+file_path = 'input.txt' # Replace with your file path
+
+with open(file_path, 'r') as file:
+    raw_input = file.readlines()
+
+mod_list = []
+
+for i in raw_input[0]:
+  mod_list.append(i)
+
+mod_list.pop()
+
+print(visited_houses(mod_list))
 ```
