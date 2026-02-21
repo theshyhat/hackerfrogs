@@ -4,7 +4,7 @@ https://play.picoctf.org/practice/challenge/7
 * JAVA code analysis
 # Method of solve
 * here is the source code:
-```java
+```Java
 import java.util.*;
 
 class VaultDoorTraining {
