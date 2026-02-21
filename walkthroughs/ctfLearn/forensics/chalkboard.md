@@ -9,3 +9,5 @@ https://ctflearn.com/challenge/972
 ```
 strings 972 | head
 ```
+* we also have to solve the math equations
+* x = 2, and y = 5
