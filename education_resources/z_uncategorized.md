@@ -4,3 +4,13 @@
 
 [Harvard CS50 Course](https://harvardonline.harvard.edu/course/cs50-introduction-computer-science)
 * a course for learning a lot of computer science concepts
+
+# Network / Web Hacking Tools
+## Privilege Escalation Scripts
+### Linux
+[LinPEAS by Carlos Polop](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)
+### Docker
+[Deepce Docker Privilege Escalation](https://github.com/stealthcopter/deepce)
+### Windows
+[WinPEAS by Carlos Polop](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
+
