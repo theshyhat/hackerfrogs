@@ -16,6 +16,7 @@
 * Web-accessible Python interpreter
 
 [Introduction to Python for Offensive Security by Red Team Leaders](https://courses.redteamleaders.com/courses/ce82d160-2ef7-4f2c-8b15-e5ea742b1877)
+* cover the following Python modules: `socket`, `asyncio`, `httpx`, `shodan`, `censys`, `ja3`, and `hashlib`
 ## JavaScript Courses and Modules
 [Net Academy: JavaScript Essentials 1](https://www.netacad.com/courses/javascript-essentials-1)
 * 40-hour course
