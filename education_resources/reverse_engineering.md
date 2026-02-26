@@ -9,6 +9,10 @@
 
 [0xinfection: x86 Assembly Course](https://0xinfection.github.io/reversing/pages/x86-course.html)
 * Another big course
+
+[Exercism: x86-64 Assembly Track](https://exercism.org/tracks/x86-64-assembly)
+* Another course
+
 ## C Language Courses and Modules
 [C Institute: C Essentials 1](https://www.netacad.com/courses/c-essentials-1)
 * 40-hour course
