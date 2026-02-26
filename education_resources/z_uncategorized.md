@@ -5,6 +5,10 @@
 [Harvard CS50 Course](https://harvardonline.harvard.edu/course/cs50-introduction-computer-science)
 * a course for learning a lot of computer science concepts
 
+# Bug Bounty Resources
+## Courses / Education Modules
+[Bug Bounty Masterclass by Wiz](https://www.wiz.io/bug-bounty-masterclass/foundations/what-is-bug-bounty)
+
 # Network / Web Hacking Tools
 ## Privilege Escalation Scripts
 ### Linux
