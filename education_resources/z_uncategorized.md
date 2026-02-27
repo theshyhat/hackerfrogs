@@ -18,3 +18,5 @@
 ### Windows
 [WinPEAS by Carlos Polop](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
 
+## Misc Tools
+[LOLGlobs: Wildcard Command Line Evasion](https://0xv1n.github.io/LOLGlobs/)
