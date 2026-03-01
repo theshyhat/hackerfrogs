@@ -1,4 +1,6 @@
-# username / password
+# SSH Command / Creds
+ssh narnia2@narnia.labs.overthewire.org -p2226
+
 narnia2 / 5agRAXeBdG
 # concept
 * stack buffer overflow via binary command arguments
