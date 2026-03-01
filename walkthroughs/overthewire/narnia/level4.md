@@ -113,3 +113,7 @@ px @ esp-60
 ```
 
 ```
+
+```Bash
+cat /etc/narnia_pass/narnia5
+```
