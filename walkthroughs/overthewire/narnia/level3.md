@@ -1,4 +1,6 @@
-# username / password
+# SSH Command / Creds
+ssh narnia3@narnia.labs.overthewire.org -p2226
+
 narnia3 / 2xszzNl6uG
 # concept
 * stack buffer overflow
