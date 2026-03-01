@@ -1,4 +1,6 @@
-# username / password
+# SSH Command / Creds
+ssh narnia1@narnia.labs.overthewire.org -p2226
+
 narnia1 / WDcYUTG5ul
 # concept
 * arbitrary ret() function abuse
