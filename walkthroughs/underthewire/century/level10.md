@@ -10,6 +10,7 @@ The password for Century11 is the 10th and 8th word of the Windows Update servic
 ```PowerShell
 Get-CimInstance Win32_Service -Filter 'Name = "wuauserv"' | Select-Object Name, Description
 ```
-* now we need to find a way to select only the 10th and 8th word...
+* now we need to find a way to select only the 10th and 8th word, and also select the name of the file to concat them all together:
 ```PowerShell
+((Get-CimInstance Win32_Service -Filter 'Name = "wuauserv"').Description -split "\s+")[9] + ((Get-CimInstance Win32_Service -Filter 'Name = "wuauserv"').Description -split "\s+")[7] + (Get-ChildItem -Path "C:\users\century10\desktop\110").Name
 ```
