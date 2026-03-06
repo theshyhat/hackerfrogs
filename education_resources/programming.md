@@ -31,6 +31,16 @@
 [Net Academy: C++ Essentials 2](https://www.netacad.com/courses/c-plus-plus-essentials-2)
 * 42-hour course
 
+## General Programming Language Learning Platforms
+[Exercism](https://exercism.org/)
+* has a lot of different courses for languages, including `Python`, `x86 Asm`, `PHP`, `Rust`, `Go`, `Java`, etc, etc
+
+[W3 Schools](https://www.w3schools.com/)
+* a popular website that covers a lot of different languages
+
+[Codecademy](https://www.codecademy.com/)
+* a very well-established learning platform with free content for less-popular languages
+
 ## Language-Agnostic Challenges
 [HackMyVM: Temperance](https://hackmyvm.eu/temperance)
 * Programming challenge labs
