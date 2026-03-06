@@ -18,7 +18,7 @@ For example:
 # Concept
 * recording 2D coordinates
 # Code
-```
+```Python
 def visited_houses(list):
   current_position = [0,0]
   visited_positions = []
@@ -47,8 +47,6 @@ def visited_houses(list):
     visited_positions.append(tuple(current_position))
   # total up the unique visited location
   unique_values_set = set(visited_positions)
-#  unique_values_set = {item for sublist in visited_positions for item in sublist}
-  # put the number of items in visited positions as a total
   visited_total = len(unique_values_set)
   visited_total = visited_total + 1
   return visited_total
