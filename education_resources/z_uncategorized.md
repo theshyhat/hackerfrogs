@@ -18,6 +18,10 @@
 ### Windows
 [WinPEAS by Carlos Polop](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
 
+## Payload Creation Tools
+[Revshells (For Reverse Shell Payloads)](https://www.revshells.com/)
+[Payload Playground (A lot of different payload creation tools)](https://payloadplayground.com/)
+
 ## Misc Tools
 [LOLGlobs: Wildcard Command Line Evasion](https://0xv1n.github.io/LOLGlobs/)
 
