@@ -25,5 +25,22 @@
 ## Misc Tools
 [LOLGlobs: Wildcard Command Line Evasion](https://0xv1n.github.io/LOLGlobs/)
 
+# Steganography Tools
+## For JPG Images
+[Steghide](https://github.com/StefanoDeVuono/steghide)
+* for file formats such as `JPEG`, `JPG`, `BMP`, `WAV` and `AU`
+
+[Stegseek](https://github.com/RickdeJager/stegseek)
+* brute forcing tool for steganography
+* for file formats such as `JPEG`, `JPG`, `BMP`, `WAV` and `AU`
+
+[Zsteg](https://github.com/zed-0xff/zsteg)
+* for file formats such as `PNG`, and `BMP`
+
+
+
+## Online Tools
+[Aperi Solve](https://aperisolve.com/)
+
 # List of CTF Sites
 [Wargame Nexus](https://github.com/zardus/wargame-nexus)
