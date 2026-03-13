@@ -20,3 +20,6 @@
 
 ## Misc Tools
 [LOLGlobs: Wildcard Command Line Evasion](https://0xv1n.github.io/LOLGlobs/)
+
+# List of CTF Sites
+[Wargame Nexus](https://github.com/zardus/wargame-nexus)
