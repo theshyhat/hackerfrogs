@@ -25,7 +25,10 @@
 
 [Pwn College: Program Security - Reverse Engineering](https://pwn.college/program-security/reverse-engineering/)
 * 44 lessons
-## Revese Engineering Challenges and CTFs
+
+[Hackaday: Introduction to Reverse Engeering With Ghidra](https://hackaday.io/course/172292-introduction-to-reverse-engineering-with-ghidra)
+* 7 session course
+## Reverse Engineering Challenges and CTFs
 [PicoCTF: Reverse Engineering Challenges](https://play.picoctf.org/practice?category=3)
 * CTF challenges
 
