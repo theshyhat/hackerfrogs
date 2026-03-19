@@ -6,6 +6,10 @@ https://hackmyvm.eu/machines/machine.php?vm=Doll
 * sudo fzf command execution
 # Method of solve
 ## Starting Scans
+* this Nmap scan will scan all the ports on the server:
+```
+nmap -vv -sCV -p- -T4 192.168.212.31
+```
 * the system has two ports exposed, `22` and `1007`
 * `1007` is a Docker registry API
 * we navigate to the following endpoint on the Docker registry to find what containers it is hosting:
