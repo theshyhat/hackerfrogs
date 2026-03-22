@@ -24,6 +24,42 @@ Now calculate gcd⁡(a,b)gcd(a,b) for a=66528,b=52920a=66528,b=52920 and enter i
   * the module operator in Python is `%`, and an example equation is `9 % 4 = 1`, since the remainder after dividing 9 by 4 is 1.
 * The  
 # Method of solve
+* this first Python script serves to teach the concepts of the GCD function while it runs:
+```Python
+'''
+This program defines how to determine the Greatest Common Divisor (GCD) between two numbers.
+That is, the largest number that can evenly divide both numbers
+'''
+
+def gcd(a, b):
+    start_a = a
+    start_b = b
+    round = 1
+    if a == b:
+        print('A and B are equal. Quitting...')
+        return
+    print(f"Initial values: a: {a}, b: {b}")
+    if b > a:
+        print('B is larger than A: Reversing values...')
+        new_a = b
+        new_b = a
+        a = new_a
+        b = new_b
+        print(f"New values - a: {a} b: {b}")
+    print("\nIn each round, we divide a by b, but only return the remainder of the division.")
+    print("Then b becomes a in the next round, and the division remainder becomes b.")
+    print("We repeat this process until the remainder from dividing a by b is zero.")
+    print("When that happens, the b value in that round is the GDC of the initial a and b values.\n")
+    while True:
+        mod_result = a % b
+        print(f"Round {round}: a={a}, b={b}, division remainder result is {mod_result}.")
+        a, b = b, a % b
+        if b == 0:
+            print(f"The GCD of {start_a}, and {start_b} is {a}")
+            return a
+        round += 1
+```
+
 * there is a GCD function in Python's `Math` module:
 ```Python
 import math
