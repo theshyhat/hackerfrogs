@@ -22,7 +22,11 @@ Now calculate gcd⁡(a,b)gcd(a,b) for a=66528,b=52920a=66528,b=52920 and enter i
 * the GCD is the largest number that divides evenly into two integers
 * this is a good introduction to the modulo operation, which returns the remainder after division
   * the module operator in Python is `%`, and an example equation is `9 % 4 = 1`, since the remainder after dividing 9 by 4 is 1.
-* The  
+# Key Math Terms
+* prime: a prime number is a number that can only be evenly divided by the number 1 and by the number itself.
+* coprime: two numbers that are prime numbers.
+* GCD: Greatest Common Divisor, the largest number that can divide evenly into two integers.
+* Euclid's algorithm: the equation that calculates GCD, where GCD(a,b) = aa mod b
 # Method of solve
 * this first Python script serves to teach the concepts of the GCD function while it runs:
 ```Python
