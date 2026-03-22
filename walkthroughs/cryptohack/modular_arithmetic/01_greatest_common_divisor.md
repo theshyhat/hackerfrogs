@@ -11,13 +11,18 @@ Now imagine we take a=11,b=17a=11,b=17. Both aa and bb are prime numbers. As a p
 
 We say that for any two integers a,ba,b, if gcd⁡(a,b)=1gcd(a,b)=1 then aa and bb are coprime integers.
 
-If aa and bb are prime, they are also coprime. If aa is prime and b<ab<a then aa and bb are coprime.
+If `a` and `b` are prime, they are also coprime. If `a` is prime and `b` < `ab` < `a` then `a` and `b` are coprime.
 
 There are many tools to calculate the GCD of two integers, but for this task we recommend looking up Euclid's Algorithm.
 
-Try coding it up; it's only a couple of lines. Use a=12,b=8a=12,b=8 to test it.
+Try coding it up; it's only a couple of lines. Use a=12,b=8 to test it.
 
 Now calculate gcd⁡(a,b)gcd(a,b) for a=66528,b=52920a=66528,b=52920 and enter it below. 
+# Notes
+* the GCD is the largest number that divides evenly into two integers
+* this is a good introduction to the modulo operation, which returns the remainder after division
+  * the module operator in Python is `%`, and an example equation is `9 % 4 = 1`, since the remainder after dividing 9 by 4 is 1.
+* The  
 # Method of solve
 * there is a GCD function in Python's `Math` module:
 ```Python
