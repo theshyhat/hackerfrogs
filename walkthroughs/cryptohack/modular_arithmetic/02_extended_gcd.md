@@ -16,6 +16,8 @@ p⋅u+q⋅v=gcd(p,q)
 Enter whichever of `u` and `v` is the lower number as the flag.
 # Math Terms
 * Extended Euclidean algorithm - an algorithm that calculates the GCD of two numbers as well as the GCD value's Bezout coefficient
+* Bezout coefficient - two numbers that express the GCD of two integers as a linear combination of those integers
+  * when discussing the extended GCD algorithm, we use this equation: `ax + by = gcd(a,b)`, where the Bezout coefficients are represented by x and y
 # Method of solve
 ```Python
 '''
