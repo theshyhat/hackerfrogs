@@ -18,3 +18,26 @@
 * Favorite programming language?
 * Favorite infosec conference or event?
 *
+
+## Viewer-Submitted Questions
+### YouTube
+@YeSecurty
+What is the best way to implement a security gate into a pipeline? Is it using OPA? 
+
+Is the Vulnerability Management Act still the best practice these days?
+
+Will ai replacing devsecops engineers?
+
+@kendallwilliamsjr3308
+How do you get role in that’s field ? 
+
+@kelvruhari8726
+Why is it hard for dev to work with security people? Dev seems to know it all and provided it work, as a security to ou can't advice them 
+### Discord
+@SegmentationFault
+What are your thoughts on current CICD security. Pipeline security, SAST DAST scanners.
+
+What do you currently use to secure docker runtime. 
+
+Do you have a favorite shell command
+(how the heck do you learn k8s /s)
