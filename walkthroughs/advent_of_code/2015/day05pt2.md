@@ -25,7 +25,11 @@ How many strings are nice under these new rules?
 ```Python
 '''
 For this challenge, we need to sort through strings
-- 
+- It contains a pair of any two letters that appears
+  at least twice in the string without overlapping,
+  like xyxy (xy) or aabcdefgaa (aa)
+- It contains at least one letter which repeats with
+  exactly one letter between them, like xyx, abcdefeghi (efe), or even aaa
 - return the number of strings that qualify
 '''
 
@@ -33,17 +37,29 @@ file_path = 'input.txt' # Replace with your file path
 
 format_list = []
 nice_words = 0
-vowels = ["a","e","i","o","u"]
 
 def has_double_pairs(word):
+  has_double = False
   n = 2
-  pair_list = [word[i:i+n] for i in range(0, len(word), n)]
-  return pair_list
-'''
-def how_many_nice(list_of_words):
-  global nice_words
+  pair_list = [word[i:i+n] for i in range(0, len(word))]
+  pair_list.pop()
+  # we use the count method to count if any of the items
+  # appear more than once
+  for i in pair_list:
+    if pair_list.count(i) >= 2:
+      print(f"Pair match found: {i}")
+      has_double = True
+      break 
+  return has_double
 
-'''
+def has_double_w_spacer(word):
+  double_w_spacer = False
+  for i in range(2, len(word)):  # i is the actual index
+    if word[i] == word[i - 2]:  # compare character at i with character at i-2      double_w_spacer = True
+      print(f"Match with spacer found: {i} and {word[i-2]}")
+      double_w_spacer = True
+      break
+  return double_w_spacer
 
 with open(file_path, 'r') as file:
   raw_input = file.readlines()
@@ -51,6 +67,10 @@ with open(file_path, 'r') as file:
 for i in raw_input:
   format_list.append(i[:-1])
 
-print(has_double_pairs(format_list))
+for i in format_list:
+  if has_double_pairs(i) and has_double_w_spacer(i):
+    nice_words += 1
+
+print(nice_words)
 ```
 
