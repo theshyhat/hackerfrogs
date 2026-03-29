@@ -42,14 +42,16 @@ def has_double_pairs(word):
   has_double = False
   n = 2
   pair_list = [word[i:i+n] for i in range(0, len(word))]
+  print(pair_list) 
   pair_list.pop()
   # we use the count method to count if any of the items
   # appear more than once
-  for i in pair_list:
-    if pair_list.count(i) >= 2:
-      print(f"Pair match found: {i}")
-      has_double = True
-      break 
+  for i, pair1 in enumerate(pair_list):
+    # Mark this pair as used by looking for same pair starting 2+ positions later
+    for j in range(i + 2, len(pair_list)):
+      if pair_list[j] == pair1:
+        has_double = True
+        return has_double
   return has_double
 
 def has_double_w_spacer(word):
