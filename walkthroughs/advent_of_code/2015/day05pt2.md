@@ -42,7 +42,6 @@ def has_double_pairs(word):
   has_double = False
   n = 2
   pair_list = [word[i:i+n] for i in range(0, len(word))]
-  print(pair_list) 
   pair_list.pop()
   # we use the count method to count if any of the items
   # appear more than once
@@ -56,9 +55,10 @@ def has_double_pairs(word):
 
 def has_double_w_spacer(word):
   double_w_spacer = False
-  for i in range(2, len(word)):  # i is the actual index
-    if word[i] == word[i - 2]:  # compare character at i with character at i-2      double_w_spacer = True
-      print(f"Match with spacer found: {i} and {word[i-2]}")
+  # i is the actual index
+  for i in range(2, len(word)):
+    # compare character at i with character at i-2
+    if word[i] == word[i - 2]:
       double_w_spacer = True
       break
   return double_w_spacer
