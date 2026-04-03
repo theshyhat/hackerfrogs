@@ -22,11 +22,76 @@ For example:
 After following the instructions, how many lights are lit?
 
 # Code
-```Python
+'''Python
+'''
+- In the program, we need lists that represent lights that need
+  to be either on or off, and there are 1 million lights
+- This program needs to set items in lists to either Off or On (0 or 1)
+- There are 3 operations that will happen to the items
+  - "turn on" the items (set them to 1)
+  - "turn off" the items (set them to 0)
+  - "toggle" the items (switch the values from 0 to 1, or vice versa)
+- At the end, we need to return the number of items in the
+  list that are set to 1
+
+two major lists, x and y lists, and each one of those will have 
+
+main list = grid
+
+x list = grid[0]
+y list = grid[1]
+
+x list lights
+y list lights
+'''
+
+def turn_on(x1, y1, x2, y2):
+  # set all of the lights in the x,y coordinates to on (1)
+  # turn_on(0,0,1,1) <-- should turn on four lights
+  x = x1 
+  y = y1
+  while x <= x2:
+    while y <= y2:
+      grid[x][y] = True
+      y += 1
+    x += 1
+    y = y1
+
+def turn_off(x, y):
+  x = x1 
+  y = y1
+  while x <= x2:
+    while y <= y2:
+      grid[x][y] = False
+      y += 1
+    x += 1
+    y = y1
+
+def toggle(x, y):
+  x = x1 
+  y = y1
+  while x <= x2:
+    while y <= y2:
+      if grid[x][y] == False:
+        grid[x][y] = True
+      else:
+        grid[x][y] = False
+      y += 1
+    x += 1
+    y = y1
+
+width = 5
+height = 5
+
+grid = [[False for x in range(width)] for y in range(height)]
+print(grid)
+
+turn_on(0,0,2,2)
+print(grid)
+'''
 file_path = 'input.txt' # Replace with your file path
 
 with open(file_path, 'r') as file:
   raw_input = file.readlines()
-
-print(raw_input)
-```
+'''
+'''
