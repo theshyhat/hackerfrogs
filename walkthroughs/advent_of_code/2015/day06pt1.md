@@ -33,17 +33,20 @@ After following the instructions, how many lights are lit?
   - "toggle" the items (switch the values from 0 to 1, or vice versa)
 - At the end, we need to return the number of items in the
   list that are set to 1
-
-two major lists, x and y lists, and each one of those will have 
-
-main list = grid
-
-x list = grid[0]
-y list = grid[1]
-
-x list lights
-y list lights
 '''
+
+# Define the Grid As a List of Lists
+
+width = 1000
+height = 1000
+
+grid = [[False for x in range(width)] for y in range(height)]
+
+true_count = sum(sum(row) for row in grid)
+
+print(true_count)
+
+# Define the three operations we can apply to the Grid list contents
 
 def turn_on(x1, y1, x2, y2):
   # set all of the lights in the x,y coordinates to on (1)
@@ -52,46 +55,67 @@ def turn_on(x1, y1, x2, y2):
   y = y1
   while x <= x2:
     while y <= y2:
-      grid[x][y] = True
+      grid[y][x] = True
       y += 1
     x += 1
     y = y1
 
-def turn_off(x, y):
+def turn_off(x1, y1, x2, y2):
   x = x1 
   y = y1
   while x <= x2:
     while y <= y2:
-      grid[x][y] = False
+      grid[y][x] = False
       y += 1
     x += 1
     y = y1
 
-def toggle(x, y):
+def toggle(x1, y1, x2, y2):
   x = x1 
   y = y1
   while x <= x2:
     while y <= y2:
-      if grid[x][y] == False:
-        grid[x][y] = True
-      else:
-        grid[x][y] = False
+      grid[y][x] = not grid[y][x]
       y += 1
     x += 1
     y = y1
 
-width = 5
-height = 5
+# Create a function to run the operations
 
-grid = [[False for x in range(width)] for y in range(height)]
-print(grid)
+def choose_an_operation(order_str):
+  order_list = order_str.split()
+  start_x = int(order_list[-5])
+  start_y = int(order_list[-4])
+  end_x = int(order_list[-2])
+  end_y = int(order_list[-1])
+  current_order = order_list[-6]
 
-turn_on(0,0,2,2)
-print(grid)
-'''
+  if current_order == 'toggle':
+    toggle(start_x,start_y,end_x,end_y)
+  elif current_order == 'on':
+    turn_on(start_x,start_y,end_x,end_y)
+  else:
+    turn_off(start_x,start_y,end_x,end_y)
+
+# Create the command input list
+
 file_path = 'input.txt' # Replace with your file path
 
 with open(file_path, 'r') as file:
   raw_input = file.readlines()
-'''
+
+# Format the instruction strings
+
+format_list = []
+
+for i in raw_input:
+  temp_str = i[:-1]
+  rep_str = temp_str.replace(",", " ")
+  format_list.append(rep_str)
+
+for i in format_list:
+  choose_an_operation(i)
+
+true_count = sum(sum(row) for row in grid)
+print(true_count)
 '''
