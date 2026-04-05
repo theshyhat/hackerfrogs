@@ -22,7 +22,7 @@ For example:
 After following the instructions, how many lights are lit?
 
 # Code
-'''Python
+```Python
 '''
 - In the program, we need lists that represent lights that need
   to be either on or off, and there are 1 million lights
@@ -119,3 +119,4 @@ for i in format_list:
 true_count = sum(sum(row) for row in grid)
 print(true_count)
 '''
+```
