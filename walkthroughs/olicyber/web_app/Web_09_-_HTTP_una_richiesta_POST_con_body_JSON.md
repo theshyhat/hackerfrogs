@@ -9,3 +9,26 @@ https://training.olicyber.it/challenges#challenge-348
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"username": "admin","password": "admin"}' -v http://web-09.challs.olicyber.it/login
 ```
+## Python solution
+```Python
+import requests
+
+URL = 'http://web-09.challs.olicyber.it/login'
+
+data = {
+  "username":"admin",
+  "password":"admin" 
+} 
+ 
+headers = {   
+  "Content-Type":"application/json"
+}
+ 
+# Make a post request to the endpoint
+# and save the reponse body
+post_req = requests.post(URL, json=data, headers=headers)
+req_body = post_req.text
+
+# Print the response body
+print(req_body)
+```
