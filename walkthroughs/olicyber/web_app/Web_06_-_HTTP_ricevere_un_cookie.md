@@ -60,4 +60,23 @@ curl -v http://web-06.challs.olicyber.it/token
 ```
 curl -b "token=previous_command_cookie_value" -v http://web-06.challs.olicyber.it/flag
 ```
+## Python solution
+```Python
+import requests
 
+token_URL = 'http://web-06.challs.olicyber.it/token'
+flag_URL = 'http://web-06.challs.olicyber.it/flag'
+
+my_cookies = {}
+
+# Make a request to the token endpoint 
+# and save the received cookie
+token_req = requests.get(token_URL)
+my_cookies = token_req.cookies.get_dict()
+
+# Use the cookie in the request to the flag
+# endpoint, then print out the response body
+flag_req = requests.get(flag_URL, cookies=my_cookies)
+flag_text = flag_req.text
+print(flag_text)
+```
