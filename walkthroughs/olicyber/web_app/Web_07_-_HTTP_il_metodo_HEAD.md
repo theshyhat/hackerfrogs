@@ -34,3 +34,17 @@ if __name__ == "__main__":
 ```
 curl -v -X HEAD http://web-07.challs.olicyber.it/
 ```
+## Python solution
+```Python
+import requests
+
+URL = 'http://web-07.challs.olicyber.it/'
+
+# Make a request to the endpoint 
+# and save the reponse headers
+head_req = requests.head(URL)
+res_headers = head_req.headers           
+
+# Print the response headers
+print(res_headers)
+```
