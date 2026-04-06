@@ -14,3 +14,26 @@ http://web-08.challs.olicyber.it/login
 ```
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=admin&password=admin" -v http://web-08.challs.olicyber.it/login
 ```
+## Python solution
+```Python
+import requests
+
+URL = 'http://web-08.challs.olicyber.it/login'
+
+data = {
+  "username":"admin",
+  "password":"admin" 
+} 
+ 
+headers = {   
+  "Content-Type":"application/x-www-form-urlencoded"
+}
+ 
+# Make a post request to the endpoint
+# and save the reponse body
+post_req = requests.post(URL, data=data, headers=headers)
+req_body = post_req.text
+
+# Print the response body
+print(req_body)
+```
