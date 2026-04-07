@@ -53,3 +53,29 @@ if method not in ("GET", "HEAD", "OPTIONS"):
 ```
 curl -X POST -v http://web-10.challs.olicyber.it/
 ```
+## Python solution
+```Python
+import requests
+
+URL = 'http://web-10.challs.olicyber.it/'
+ 
+# Make an options request to the endpoint
+# and save the reponse headers
+opt_req = requests.options(URL)
+res_head = opt_req.headers
+
+# Print the response headers
+print("OPTIONS Request: Reponse Headers")
+print("--------------------------------")
+print(res_head)
+
+# Send another request with an "unusual" method
+# to the same endpoint
+put_req = requests.put(URL)
+res_head = put_req.headers 
+
+# Print the new response headers
+print("PUT Request: Reponse Headers")
+print("--------------------------------")
+print(res_head)
+```
