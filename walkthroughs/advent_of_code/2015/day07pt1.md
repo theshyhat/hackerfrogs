@@ -59,4 +59,7 @@ with open(file_path, 'r') as file:
 # Format the instruction strings
 
 format_list = []
+
+for i in raw_input:
+  format_list.append(i[:-1])
 ```
