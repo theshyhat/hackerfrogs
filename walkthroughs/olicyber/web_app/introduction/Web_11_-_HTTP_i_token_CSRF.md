@@ -15,3 +15,33 @@ curl -b "session=09bc34eb-3564-4c6f-8519-12a88b25287a" -v 'http://web-11.challs.
 ```
 * note that both the CSRF token parameter and the index parameter must be sent in the URL to access the piece of the flag
 * repeat this 3 times to get the entire flag
+## Python Method
+```Python
+import requests
+
+login_URL = 'http://web-11.challs.olicyber.it/login'
+flag_URL = 'http://web-11.challs.olicyber.it/flag_piece'
+
+credentials = {"username": "admin","password": "admin"}
+
+with requests.Session() as s:
+  # login with credentials with POST
+  login_res = s.post(url=login_URL, json=credentials)
+  print(f"Login request sent! Received the following response:\n{login_res.text}")
+  # retrieve the CSRF token in the response
+  csrf_token = login_res.json()["csrf"]
+  # retrieve the flag by making 4 GET requests to the flag endpoint
+  flag_parts = []
+
+  for i in range(4):
+    res = s.get(url=flag_URL, params={"index": i, "csrf": csrf_token})
+    print(f"Sending request number {i} to flag endpoint:")
+    print(f"Received the following response:\n{res.text}")
+    # update the flag parts and the CSRF token
+    flag_parts.append(res.json()["flag_piece"])
+    csrf_token = res.json()["csrf"]
+
+  # print the combined flag
+  print("This is the flag:")
+  print("".join(flag_parts))
+```
