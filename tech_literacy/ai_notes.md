@@ -16,4 +16,11 @@ AI that handles one task.
 A “mind” that is genuinely intelligent and self-conscious.
 ### Weak AI
 Systems that exhibit intelligent behaviors despite being “mere“ computers.
-
+## Forecasts
+* a system which predicts whether something will happen or not is not proven to be good or bad with a single event
+* a system has to be observed over a large number of events to be determine if its predictions are reliable or not
+## Odds
+* the odds of something happening are expressed in the `times it happens:times it doesn't happen` format, e.g., `3:1` odds means that something happens 3 times for every time it doesn't happen
+* the total number of events involved is the sum of the two numbers, so `3:1` odds means that there are `3 + 1 = 4` events in total, in which 3 times it happens, and 1 time it doesn't
+* if we divide the total number of events by the the first number, we get the percentage that the event occurs, e.g., `3:1` odds means there are `3 + 1 = 4` events, then we divide 3 by 4 and get `0.75`, meaning that the event happens 75 percent of the time
+* 
