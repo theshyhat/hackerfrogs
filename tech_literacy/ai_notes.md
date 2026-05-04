@@ -32,3 +32,9 @@ Systems that exhibit intelligent behaviors despite being “mere“ computers.
   * `likelihood ratio` is the combination of odds between an event happening and an event not happening
     * it is calculated in the following way: `odds of happening / odds of not happening`
     * in this calculation, we must express the odds as a number, e.g., `0.5`, in the case of `1:1` odds
+    * we could use this Python script to perform the calculation:
+```Python
+prior_odds_true = input("What are the prior odds of the event happening? (in XX:YY format)")
+prior_odds_true = input("What are the prior odds of the event happening? (in XX:YY format)")
+
+```
