@@ -11,8 +11,17 @@ https://training.olicyber.it/challenges#challenge-245
 * `ip.addr == 192.168.100.1 or ip.addr == 192.168.100.2`
 * and then observe there is a packet in the list that has a larger length
 * click into the `packet details pane` and scroll to the bottom
-* in the `Data` section at the bottom, right-click and select `copy value`
-* paste the value into a file
-* when we look at the value of the file
-
+* in the `Data` section at the bottom
+* in the `File` tab, click on `Extract Packet Bytes`, then save the extracted bytes as a file
+* when we look at the contents of the file, we see it's a Gzip file
+```
+mv extracted_bytes extracted.gz
+gunzip extracted.gz
+file extracted
+```
+* and now it's a tar archive
+```
+tar -xvf extracted
+```
+* and there's `flag.txt`
 
