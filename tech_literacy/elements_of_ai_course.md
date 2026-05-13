@@ -1,4 +1,4 @@
-# Notes on AI Terms and Technologies
+# Chapter 1: What is AI?
 ## Key Terms
 ### Autonomy
 The ability to perform tasks in complex environments without constant guidance by a user.
@@ -33,8 +33,14 @@ Systems that exhibit intelligent behaviors despite being “mere“ computers.
     * it is calculated in the following way: `odds of happening / odds of not happening`
     * in this calculation, we must express the odds as a number, e.g., `0.5`, in the case of `1:1` odds
     * we could use this Python script to perform the calculation:
-```Python
-prior_odds_true = input("What are the prior odds of the event happening? (in XX:YY format)")
-prior_odds_true = input("What are the prior odds of the event happening? (in XX:YY format)")
-
-```
+# Chapter 4: Machine Learning
+## Key Terms
+### Types of Machine Learning
+#### Supervised Learning
+We are given an input, for example a photograph with a traffic sign, and the task is to predict the correct output or label, for example which traffic sign is in the picture (speed limit, stop sign, etc.). In the simplest cases, the answers are in the form of yes/no (we call these binary classification problems).
+#### Unsupervised Learning
+There are no labels or correct outputs. The task is to discover the structure of the data: for example, grouping similar items to form “clusters”, or reducing the data to a small number of important “dimensions”. Data visualization can also be considered unsupervised learning.
+#### Reinforcement Learning
+Commonly used in situations where an AI agent like a self-driving car must operate in an environment and where feedback about good or bad choices is available with some delay. Also used in games where the outcome may be decided only at the end of the game.
+### Regression
+A supervised learning method used to predict a continuous value, such as the price of a house, temperature, or sales volume
