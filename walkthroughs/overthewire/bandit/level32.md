@@ -8,6 +8,6 @@ bandit32
 * this is a shell escape scenario
 * we are not allowed to use any commands which use lowercase characters, but special characters are unaffected
 ```
-0$
+$0
 cat /etc/bandit_pass/bandit33
 ```
