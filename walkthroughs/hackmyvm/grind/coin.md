@@ -45,13 +45,22 @@ select amount, status from transactions where status == "completed";
 select sum(replace(amount, '€', '')) from transactions where status == "completed";
 ```
 ## Question 3: What is the ID of the user who has generated the most successful transactions?
-* for this question, we need to pay attention to the `user_id` and `status` columns in the `transactions` table
-* 
-
-
-
-
-
-
+* for this question, we need to pay attention to the `user_id` `amount` and `status` columns in the `transactions` table
+* what the question is actually looking for is the user with the most transaction amounts
+* so this SQL query will let us know:
+```
+SELECT user_id, SUM(replace(amount, '€', '')) AS total_amount FROM transactions WHERE status == "completed" GROUP BY user_id order by total_amount;
+```
+## Question 4: We need to see if our friend left a trace; tell us which user ID has the most IPs in a single day.
+* we need pay attention to the `user_id` and `ip` columns in the `logins` table
+* we need to `group by` with a count of the `ip` column as well:
+```
+SELECT user_id, COUNT(ip) FROM logins GROUP BY user_id ORDER BY COUNT(ip) ASC;
+```
+## Question 5: It appears the system left a fragmented message.
+* there is a hidden message in the `messages` table in the `part` column, and we can put the whole thing together with the `group_concat` function:
+```
+select group_concat(part, '') from message;
+```
 
 
