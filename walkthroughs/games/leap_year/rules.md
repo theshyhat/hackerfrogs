@@ -8,4 +8,5 @@
 * if you walk on the same plane as spikes, you don't die (level 7)
 * if you fall more than 5 blocks in height, then you bounce up 4 blocks in height (level 15)
 * if you fall more than 7 blocks in height, then you can tunnel into dirt (level 15)
+* if you land on a snowman, it breaks your fall, and you don't die (level 19)
 
