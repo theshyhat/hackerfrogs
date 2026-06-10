@@ -26,6 +26,10 @@
 
 [Evil-WinRM](https://github.com/hackplayers/evil-winrm)
 
+[Kerbrute](https://github.com/ropnop/kerbrute/)
+
+[CertiPy](https://github.com/ly4k/Certipy/)
+
 [Responder](https://github.com/SpiderLabs/Responder)
 
 [Bloodhound AD](https://github.com/specterops/bloodhound)
