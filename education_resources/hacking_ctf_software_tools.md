@@ -83,6 +83,9 @@
 ### Hash Identifying
 [Haiti](https://github.com/noraj/haiti)
 
+[Tunnels Up - Hash Identifier](https://www.tunnelsup.com/hash-analyzer/)
+
+[Hashes Dot Com - Hash Identifier](https://hashes.com/en/tools/hash_identifier)
 ## Digital Forensics
 ### Disk Image
 [The Sleuth Kit](https://github.com/sleuthkit/sleuthkit)
