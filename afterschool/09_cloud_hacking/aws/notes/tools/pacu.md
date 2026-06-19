@@ -9,4 +9,12 @@ cd myenv
 source bin/activate
 pip install -U pacu
 ```
-#
+# Starting Pacu
+```
+pacu
+```
+# Common Checks
+## Checking Account Permissions
+```
+run iam__bruteforce_permissions
+```
