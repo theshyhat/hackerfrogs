@@ -24,5 +24,5 @@ print(chars)
 ```
 ## With Bash
 ```
-awk '{ printf "%c", $1 } END{ printf "\n" }' output.txt
+awk '{ printf "%c", $1 }' output.txt
 ```
