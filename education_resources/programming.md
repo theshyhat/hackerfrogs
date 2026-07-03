@@ -30,7 +30,12 @@
 
 [Net Academy: C++ Essentials 2](https://www.netacad.com/courses/c-plus-plus-essentials-2)
 * 42-hour course
+## C Programming Resources
+[OpenEDG: C Essentials 1](https://www.edube.org/study/ce1)
+* 42-hour course
 
+[OpenEDG: C Essentials 2](https://edube.org/study/ce2)
+* 42-hour course
 ## General Programming Language Learning Platforms
 [Exercism](https://exercism.org/)
 * has a lot of different courses for languages, including `Python`, `x86 Asm`, `PHP`, `Rust`, `Go`, `Java`, etc, etc
