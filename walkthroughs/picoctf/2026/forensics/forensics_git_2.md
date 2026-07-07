@@ -4,7 +4,7 @@ https://learn.cylabacademy.org/library/707
 * Git repo reconstruction
 * Git commit recovery
 # Method of solve
-First, we get the locations of the partitions in the disk iamge:
+First, we get the locations of the partitions in the disk image:
 ```
 mmls disk.img
 ```
