@@ -1,5 +1,5 @@
 # URL
-https://play.picoctf.org/practice/challenge/8
+https://learn.cylabacademy.org/library/8
 # concept
 * SQL injection, auth bypass
 * strange input encryption
