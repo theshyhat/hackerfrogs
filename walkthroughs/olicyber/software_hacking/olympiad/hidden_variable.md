@@ -33,3 +33,13 @@ int main(int argc, char **argv) {
 }
 ```
 * the `wchar_t` data type in C is used with wide characters in the `UTF32` and `UTF16` encoding schemes
+* what's actually going on, is that there is an object called `fl4g` that is stored at a specific memory address:
+```
+is # gives us the list of objects in the binary. fl4g is at memory address `0x5580b9c2e020`
+px @ 0x5580b9c2e020
+```
+* the flag is here, but it's messy
+* save the output from the hex dump into a file, then:
+```
+awk '{print $10}' flag.dump | tr -d "." | tr -d "\n"
+```
