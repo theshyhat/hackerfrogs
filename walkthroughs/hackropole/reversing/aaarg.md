@@ -3,6 +3,8 @@ https://hackropole.fr/en/challenges/reverse/fcsc2023-reverse-aaarg/
 # Concept
 * binary read-only data
 * extracting the .rodata section from a binary
+## Lessons learned
+* we should be examining different sections from the pre-compiled binary data, such as `.data`, `.rodata`, `.bss`, etc...
 # Method of solve
 * in this challenge there's hidden data in the `.rodata` section that was no stripped out of the binary
 ## Using Linux tools
