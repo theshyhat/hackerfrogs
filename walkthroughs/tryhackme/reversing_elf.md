@@ -55,9 +55,43 @@ dc            # run the binary, and supply a test password
 test          # the test password
 px @ rsi      # this register contains the string to compare against
 ```
-##
-##
-##
-
+## Crackme6
+* in this binary, the password is being compared byte by byte instead of compared using a function like `strcmp`
+* we need to examine the function doing the byte-by-byte comparison to obtain the password
+```
+r2 -d ./crackme6
+aaa
+pdf @ main                # observe that sym.compare_pwd is being called
+pdf @ sym.compare_pwd     # another function sym.my_secure_test, is being called
+pdf @ sym.my_secure_test  # note that the byte-by-byte comparisons tell us the password
+```
+## Crackme7
+* in this challenge, we see a special message after a comparison instruction
+* we need to figure what triggers the comparison instruction
+```
+r2 -d ./crackme7
+aaa
+pdf @ main         # there is a string printed out tell us "we won" and then runs a function to
+                   # print the flag
+                   # if we look at the memory location being compared, we see that it's
+                   # the same memory location that is used to record our user input
+                   # from the main menu of the program
+db 0x08048665      # set the breakpoint for right before the comparison
+dc                 # run the program, but put in the number being compared `31337` in the menu
+px @ ebp-0xc       # we can see our user input in the this memory location
+```
+## Crackme8
+* one thing we take note of when we look at the strings for this binary is that it's using the `atoi` function
+  * this function converts ASCII characters to integers
+* we also observe a `cmp` instruction that compares `eax` (likely our user input) to `0xcafef00d`
+* if we convert those hex bytes to an integer, we get `-889262067`
+* we submit this as the argument to the binary and get the flag
+```
+r2 -d ./crackme8
+aaa
+pdf @ main        # we observe that there's a cmp instruction with the hex bytes 0xcafef00d
+                  # we also observe that there's an atoi function being used, likely on our                       # user input
+                  # so we supply the integer equivalent of 0xcafef00d as an argument                              # (-889262067) to get the flag
+```
 
 
