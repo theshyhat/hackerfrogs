@@ -116,6 +116,12 @@
 ## Binary Exploitation
 [Radare2](https://github.com/radareorg/radare2)
 
+[Cutter](https://github.com/rizinorg/cutter)
+* Kali install
+```
+sudo apt install rizin-cutter rz-ghidra
+```
+
 [Pwntools](https://docs.pwntools.com/en/stable/)
 
 ## OSINT
