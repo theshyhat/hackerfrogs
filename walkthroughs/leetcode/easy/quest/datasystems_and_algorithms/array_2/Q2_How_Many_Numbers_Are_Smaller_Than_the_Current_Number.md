@@ -39,3 +39,28 @@ Constraints:
 
 
 # Method of solve
+```Python
+'''
+This program has to take in a certain element of a list
+and return the number of elements in that list which
+are less than the target element's value
+'''
+
+class Solution:
+  def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
+    results = []
+    smaller = 0
+    for i in nums:
+      for j in nums:
+        if i > j:
+          smaller += 1 
+      results.append(smaller)
+      smaller = 0
+    return results
+
+sample_list = [7,7,7,7]
+
+
+solve = Solution()
+print(solve.smallerNumbersThanCurrent(sample_list))
+```
