@@ -1,7 +1,7 @@
 # SSH Command / Creds
 ssh narnia1@narnia.labs.overthewire.org -p2226
 
-narnia1 / WDcYUTG5ul
+narnia1 / O8dJypubLr
 # concept
 * arbitrary ret() function abuse
 * ret2shellcode
