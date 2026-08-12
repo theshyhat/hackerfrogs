@@ -1,7 +1,7 @@
 # SSH Command / Creds
 ssh narnia2@narnia.labs.overthewire.org -p2226
 
-narnia2 / 5agRAXeBdG
+narnia2 / 0h8Tj5fxbv
 # concept
 * stack buffer overflow via binary command arguments
 # method of solve
