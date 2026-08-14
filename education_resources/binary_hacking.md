@@ -55,3 +55,6 @@
 
 [Dogbolt: Decompiler Explorer](https://dogbolt.org/)
 * Online decompiler
+
+[Shellcode Github Repo by 7feilee](https://github.com/7feilee/shellcode/tree/master)
+* a repository of shellcode for different CPU types and architectures
