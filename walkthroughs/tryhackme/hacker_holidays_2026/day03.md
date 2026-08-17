@@ -10,14 +10,14 @@ https://tryhackme.com/room/hh-complimentary-05e0b604/
 ```JS
 var dynamodb = new AWS.DynamoDB({ region: "us-east-1" });
 
-dynamodb.getItem({
-    TableName: "complimentary-GuestWellnessProfiles",
-    Key: { "guest_id": { "S": "TARGET_GUEST_ID_HERE" } } // Replace with a different guest's ID
+dynamodb.scan({
+    TableName: "complimentary-GuestWellnessProfiles"
 }, function(err, data) {
     if (err) {
-        console.log("❌ Access Denied:", err.message);
+        console.log("❌ Error:", err.message);
     } else {
-        console.log("🔓 Item retrieved successfully:", data.Item);
+        console.log("🔓 Items retrieved successfully:", data.Items);
+        console.log("Total items found:", data.Count);
     }
 });
 ```
