@@ -53,12 +53,7 @@ az storage container list \
 ```
 STORAGE_ACCOUNT="cryptocabanaf5scjagc"
 SAS_TOKEN="?sv=2022-11-02&ss=b&srt=sco&sp=rl&se=2099-12-31T23:59:59Z&st=2024-01-01T00:00:00Z&spr=https&sig=ZAo05W8KXdSLM9afYCNGogNRV2N5a6aB4dQI3LXz%2Fh0%3D"
-az storage blob list \    
-  --account-name "$STORAGE_ACCOUNT" \
-  --container-name vault \
-  --sas-token "$SAS_TOKEN" \
-  --query "[].name" \       
-  --output tsv
+az storage blob list --account-name "$STORAGE_ACCOUNT" --container-name "vault" --sas-token "$SAS_TOKEN" --query "[].name" --output tsv
 ```
 ### With Python
 ```Python
