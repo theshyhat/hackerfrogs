@@ -93,9 +93,9 @@ for blob in container_client.list_blobs():
 az storage blob download \
   --account-name "$STORAGE_ACCOUNT" \
   --container-name vault \
-  --name seed_phrase.txt \
+  --name backup-service-account.json \
   --sas-token "$SAS_TOKEN" \
-  --file seed_phrase.txt
+  --file backup-service-account.json
 ```
 ### With Python
 ```Python
