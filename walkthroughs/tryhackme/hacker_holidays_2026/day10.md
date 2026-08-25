@@ -191,7 +191,7 @@ if __name__ == "__main__":
   * we are told on the upload function page that hooks for the shell are allowed, and we infer that the hooks are stored and executed by the app
   * we'll include a hook file in the form of a Python reverse shell script, and we'll put in the `/hooks` endpoint via an attack called Zip Slip
     * Zip Slip attacks are where apps download user-supplied zip files and unzip them, but the zip file explicitly provides a directory traversal payload in the unzip path (e.g., `../../webshell.php` may place the `webshell.php` file directly on the web app root directory)
-* we'll use this script to create the malicious zip file with the JSON and Python script contents (code provided by EpisticalAnarchist):
+* we'll use this script to create the malicious zip file with the JSON and Python script contents (code provided by EpisticalAnarchist and SysosMaster):
 ```Python
 #!/usr/bin/env python3
 from zipfile import ZipFile
