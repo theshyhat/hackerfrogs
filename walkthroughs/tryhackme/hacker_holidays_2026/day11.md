@@ -3,6 +3,7 @@ https://tryhackme.com/room/hh-infinitypool-5b3548af
 # Concept
 * OS command injection
 * robots.txt
+* network pivoting / local port forwarding
 # Method of solve
 ## Starting Scans
 * there are two ports open, `22` and `80`
