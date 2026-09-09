@@ -66,6 +66,11 @@ impacket-dpapi masterkey -file ./management-wants-a-word-forensics-hh-day-14/KAP
 impacket-dpapi unprotect -file browser_blob.bin -key 0x5e5715ec9b6df5a86e97902692a66d28e691f05d5bc1e04d0159cfe960e94c978c07e5004a0179d3a96df2468885a28175b0b02cc064445f116a752d2b3e9d40
 ```
 * the output is a 32-byte hexadecimal key we can use to decrypt and read the secrets in the Chrome database file
+* the output isn't very usable, since we'd like a straight hex string with no spaces
+* this command can pull out only the bytes and put them back together:
+```
+cat aes_key_raw| grep -oP '\b[[:xdigit:]]{2}\b' | tr -d "\n" > aes256key
+```
 ## Get the Secrets Using A Python Script
 * this Python script will extract the secrets (shoutout to my friend Gemini)
 ```Python
