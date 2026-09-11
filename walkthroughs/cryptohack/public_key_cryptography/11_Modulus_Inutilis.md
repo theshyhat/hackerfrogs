@@ -1,4 +1,3 @@
-# WORK IN PROGRESS
 # URL
 https://cryptohack.org/courses/public-key/modulus_inutilis/
 # Concept
