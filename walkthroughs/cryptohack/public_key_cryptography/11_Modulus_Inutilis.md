@@ -2,8 +2,13 @@
 # URL
 https://cryptohack.org/courses/public-key/modulus_inutilis/
 # Concept
-
+* RSA cube root attack
 # Method of solve
+* this implementation of RSA is vulnerable to a cube root attack, which would let us decrypt the message without calculating the `d` value (from the private key)
+* in order for this attack to work, we require the following:
+  * a small `e` value (e.g., 3)
+  * a small `m` message / `ct` ciphertext (such that `m` < (N / 3))
+  * an absence of padding (which would increase the length of the message) (e.g, OAEP or PKCS#1 v1.5)
 ```Python
 from Crypto.Util.number import long_to_bytes
 
