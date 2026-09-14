@@ -1,3 +1,4 @@
+# WORK IN PROGRESS
 # RSA Security Flaws Checklist
 ## E value is small
 ### If E is 1
@@ -8,3 +9,9 @@
   * the ciphertext is significantly smaller than N ((`ct` ** 3) < `n`)
   * there is no padding involved
 * then the ciphertext will be vulnerable to a `cube root attack`
+## If the P and Q Values are Known
+## If N is Monoprime
+## If N is Multiprime
+## If N is Comprised of Close Primes P and Q
+
+
