@@ -14,9 +14,7 @@ The Diffie-Hellman protocol works with elements of some finite field FpFp​, wh
 Given the prime p=991p=991, and the element g=209g=209, find the inverse element d=g−1d=g−1 such that g⋅dmod  991=1g⋅dmod991=1. 
 ```
 # New Terminology
-```
 $\mathbb{F}_p^\times$
-```
 
 # Method of solve
 * we're given a prime number `p = 991` and an element `g = 209`
