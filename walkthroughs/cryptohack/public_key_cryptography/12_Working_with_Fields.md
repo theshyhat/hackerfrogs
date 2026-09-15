@@ -15,7 +15,8 @@ Given the prime p=991p=991, and the element g=209g=209, find the inverse element
 ```
 # New Terminology
 $\mathbb{F}_p^\times$
-
+* this is `F sub p times` or `the multiplicative group of the finite field F p`
+* 
 # Method of solve
 * we're given a prime number `p = 991` and an element `g = 209`
 * we're asked to return the inverse element `d = g ** -1`
