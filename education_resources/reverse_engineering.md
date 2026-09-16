@@ -13,6 +13,8 @@
 [Exercism: x86-64 Assembly Track](https://exercism.org/tracks/x86-64-assembly)
 * Another course
 
+[Rasmurtech x86 Assembly Language YouTube Playlist](https://www.youtube.com/playlist?list=PLPedo-T7QiNsIji329HyTzbKBuCAHwNFC)
+
 ## C Language Courses and Modules
 [C Institute: C Essentials 1](https://www.netacad.com/courses/c-essentials-1)
 * 40-hour course
