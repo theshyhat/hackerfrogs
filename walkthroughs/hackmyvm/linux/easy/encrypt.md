@@ -11,9 +11,8 @@ https://hackmyvm.eu/machines/machine.php?vm=Encrypt
 * we use those to login
 ## Privilege Escalation
 * there is are extra capabilities associated with the ruby binary:
-  * unfortunately the regular commands we'd use to enumerate capabilities are not available, so we use `linpeas`
 ```
-/usr/bin/ruby3.3 cap_setuid=ep
+/usr/sbin/getcap -r / 2>/dev/null
 ```
 * we can use ruby to escalate privileges, which is highlighted on this page:
   * `https://gtfobins.org/gtfobins/ruby/#shell`
