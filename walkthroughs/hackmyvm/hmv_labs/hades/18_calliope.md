@@ -1,7 +1,7 @@
 # username
 calliope
 # password
-access via SSH private key
+IlhyWxZuqIHAuqVOpXfQ
 # mission contents
 The user calypso often uses write to communicate.
 # method of solve
