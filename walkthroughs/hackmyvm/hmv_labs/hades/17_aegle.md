@@ -9,5 +9,5 @@ User calliope likes to have her things looked at.
 * because this is a `privileged file read` vulnerability we're taking advantage of, we can leverage an common technique for `local file inclusion`
 * try to read the `calliope` user's `ssh` private key...
 ```
-sudo -u /pwned/calliope/.ssh/id_rsa
+sudo -u calliope cat /pwned/calliope/.ssh/id_rsa
 ```
