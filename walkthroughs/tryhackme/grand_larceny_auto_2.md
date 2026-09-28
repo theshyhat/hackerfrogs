@@ -3,6 +3,16 @@ https://tryhackme.com/room/grandlarcenyautoii
 # Concept
 * reverse engineering  
 * dot-net binary reversing
+# Method of solve
+* once we've unzipped all the files we see there's a dll file named `GrandLarcenyAuto.dll`
+* if we decompile that file (using decompiler.com), then download all the files
+* the file with all the networking details is the `PoPClient.cs` file
+* we find a lot of interesting details in here:
+  * there's a signing key string
+  * ```C#
+    SignKey = Encoding.UTF8.GetBytes("gla2_crew_sign_v1_2f9b6c8ad14e")
+    ```
+  * there's a 
 # Code
 ```Python
 import requests
