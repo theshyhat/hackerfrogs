@@ -1,8 +1,8 @@
-# This script is intended to solve the levels in the OverTheWire Natas game in a programatic way, in order to get passwords and access the levels for educational purposes
 import requests
 import re
 from bs4 import BeautifulSoup, Comment
 import base64
+from urllib.parse import unquote
 
 url_dict = {}
 
@@ -213,8 +213,6 @@ try:
   soup = BeautifulSoup(response.text, "html.parser")
   text_only = soup.get_text(separator=" ", strip=True)
   cred_dict["natas11"] = ("natas11",text_only.split()[-3].split(":")[-1])
- 
+
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
-
-print(cred_dict)
