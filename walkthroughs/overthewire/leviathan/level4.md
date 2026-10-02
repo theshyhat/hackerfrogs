@@ -1,5 +1,5 @@
 # password
-XIyBbRwAPt
+redacted
 # Concept
 * binary to ASCII output
 # Method of solve
