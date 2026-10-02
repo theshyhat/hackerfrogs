@@ -1,5 +1,5 @@
 # username / password
-leviathan2 / NsN1HwFoyN
+leviathan2 / redacted
 # concept
 * more SUID binaries :D
 # method of solve
