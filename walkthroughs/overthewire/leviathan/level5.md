@@ -1,5 +1,5 @@
 # Password
-Bub9gZ3BGU
+redacted
 # Concept
 * understanding symbolic links
 # Method of solve
