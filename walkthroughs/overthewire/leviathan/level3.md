@@ -1,5 +1,5 @@
 # username / password
-leviathan3 / f0n8h2iWLP
+leviathan3 / redacted
 # concept
 * finding the right function to follow
 * comparing strings for strcmp function
