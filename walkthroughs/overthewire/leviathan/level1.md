@@ -1,5 +1,5 @@
 # username / password
-leviathan1 / 3QJ3TgzHDq
+leviathan1 / redacted
 # concept
 * inspecting the dynamic library calls and system calls used by a process using the `ltrace` command
 # method of solve
