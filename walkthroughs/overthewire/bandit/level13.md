@@ -1,7 +1,7 @@
 # username
 bandit13
 # password
-FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+redacted
 # method of solve
 Use the SSH private key to login to the next level
 ```
