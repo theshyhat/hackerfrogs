@@ -65,5 +65,38 @@ tcpdump -l -nn tcp or udp -r TCPDump-lab-2.pcap | cut -d " " -f 3,5 | tr -d ":" 
     tcpdump -l -S -nn port 53 -r TCPDump-lab-2.pcap | cut -d " " -f 7,8
     ```
   * this lets us know that the DNS records being sent are `A`, `AAAA`, and `CNAME`
+* What information does an A record provide?
+  * `A` records map a domain to an IPv4 address
+  * `AAAA` records map a domain to an IPv6 address
+* Who is the responding DNS server in the pcap? (hostname or IP)
+  * this command lets us know which servers were contacted over port 53 (DNS):
+```
+tcpdump -l -S -nn dst port 53 -r TCPDump-lab-2.pcap
+```
+  * and the answer is `172.16.146.1`
+## Task 6 - Filter for TCP traffic.
+* Filter out the view so that we only see the traffic pertaining to HTTP or HTTPS. What web pages were requested?
+  * we can use this command to see all of the traffic going over port 80 (HTTP)
+```
+tcpdump -l -s 0 -S -A -nn port 80 -r TCPDump-lab-2.pcap
+```
+  * and we can use this command to see which domains were queried using DNS:
+```
+tcpdump -l -S -nn dst port 53 -r TCPDump-lab-2.pcap
+```
+* What are the most common HTTP request methods from this PCAP?
+  * from the previous command that covered port 80, the most common request methods were `POST`
+* What is the most common HTTP response from this PCAP?
+  * likewise, from the same previous command, the most common response code for HTTP is `200`
+## Task 7 - What can you determine about the server in the first conversation.
+* What can be determined about the webserver in the first conversation?
+  * we can identify the first two hosts that communicate and try to establish a three-way handshake by using this command, then noting the IP addresses of the source and destination
+```
+tcpdump -l -S -nn -A 'tcp[13] & 2 != 0' -r TCPDump-lab-2.pcap | head
+```
+  * then we can isolate the packets sent between these two hosts:
+```
+tcpdump -l -s 0 -S -nn -A src 151.139.128.14 and src port 80 -r TCPDump-lab-2.pcap
+```
 
-
+ 
