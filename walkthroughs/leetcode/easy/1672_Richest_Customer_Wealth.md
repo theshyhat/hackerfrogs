@@ -34,8 +34,8 @@ Output: 17
 # Concept
 * summing up all the numbers in different lists
 * returning the largest number
-# Code
-```
+# Python Code
+```Python
 class Solution:
     def maximumWealth(self, accounts: list[list[int]]) -> int:
         richest_value = 0
@@ -49,4 +49,64 @@ test_account = [[1,5],[7,3],[3,5]]
 solve = Solution()
 run = solve.maximumWealth(accounts=test_account)
 print(run)
+```
+# C Code
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+// The function declaration
+int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
+int i = 0, j = 0;
+  int biggest = 0;
+  int current = 0;
+  for (i = 0; i < accountsSize; i++) {
+    for (j = 0; j < accountsColSize[i]; j++) {
+      current += accounts[i][j];
+    }
+    if (current > biggest) {
+        biggest = current;
+    }
+    current = 0;
+  }
+  return biggest;
+}
+
+int main() {
+    // Let's create a 3x2 grid (3 customers, 2 accounts each)
+    int rows = 3;
+    int cols = 2;
+
+    // 1. Set up 'accounts' (int**)
+    int** accounts = (int**)malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++) {
+        accounts[i] = (int*)malloc(cols * sizeof(int));
+    }
+
+    // Populate the grid with some money data
+    // Customer 0: [$1, $2] -> Total $3
+    accounts[0][0] = 1; accounts[0][1] = 2; 
+    // Customer 1: [$3, $5] -> Total $8 (Richest!)
+    accounts[1][0] = 3; accounts[1][1] = 5; 
+    // Customer 2: [$2, $1] -> Total $3
+    accounts[2][0] = 2; accounts[2][1] = 1; 
+
+    // 2. Set up 'accountsSize' (int)
+    int accountsSize = rows;
+
+    // 3. Set up 'accountsColSize' (int*)
+    // We need an array of size 3, where each element is '2' (columns)
+    int* accountsColSize = (int*)malloc(rows * sizeof(int));
+    for (int i = 0; i < rows; i++) {
+        accountsColSize[i] = cols;
+    }
+
+    // --- MAKING THE CALL ---
+    int richest = maximumWealth(accounts, accountsSize, accountsColSize);
+
+    printf("The maximum wealth is: %d\n", richest); // Output should be 8
+
+    // (Good practice: free memory here afterward)
+    return 0;
+}
 ```
