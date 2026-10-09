@@ -545,7 +545,7 @@ try:
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 '''
-# Level 23
+# Level 24
 try:
   print("\nLevel 24")
   print("Performing second PHP Type Juggling Attack...")
