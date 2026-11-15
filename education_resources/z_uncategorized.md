@@ -57,6 +57,11 @@
 ## Email Enumeration Tools
 [Mx Toolbox](https://mxtoolbox.com)
 
+## Wordlists
+[Weak Pass Dot Com](https://weakpass.com/)
+
+[Weak Passwords Dot Net](https://weakpasswords.net/)
+
 [Epieos Reverse Email Search](https://epieos.com)
 
 [Hunter Dot IO - Domain-Based Email Enumeration](https://hunter.io)
