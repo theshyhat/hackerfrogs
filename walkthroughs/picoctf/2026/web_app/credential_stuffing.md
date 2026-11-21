@@ -31,7 +31,7 @@ def talk_to_server(host, port, username, password):
     data4 = s.recv(1024)
     print(data4)
 
-    if b"picoCTF" in data4:
+    if b"academy" in data4:
       flag = data4
       with open("flag.txt", "wb") as f:
         f.write(data4)
